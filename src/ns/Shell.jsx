@@ -20,8 +20,13 @@ export default function Shell({ children }) {
       const url = new URL(a.href, location.href)
       if (url.origin !== location.origin || /\.\w+$/.test(url.pathname)) return
       if (url.pathname === location.pathname && url.search === location.search) {
-        // mismo lugar: un #ancla la resuelve el navegador; sin ancla, vuelve arriba
-        if (!url.hash) { e.preventDefault(); scrollTo({ top: 0, behavior: 'smooth' }) }
+        // mismo lugar: sin ancla, vuelve arriba; con #ancla baja a la sección acá mismo (si se lo dejábamos al
+        // navegador, el ScrollManager de App.jsx se cruzaba con su scroll y la página quedaba arriba)
+        e.preventDefault()
+        const el = url.hash && document.getElementById(decodeURIComponent(url.hash.slice(1)))
+        if (!el) return scrollTo({ top: 0, behavior: 'smooth' })
+        history.pushState(history.state, '', url.hash)
+        el.scrollIntoView({ behavior: 'smooth' })
         return
       }
       e.preventDefault()

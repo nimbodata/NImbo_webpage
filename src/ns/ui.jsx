@@ -7,12 +7,17 @@ import { Hero, HERO } from './scenes/Hero'
 import './styles.css'
 
 const LINKS = [['/#servicios', 'Servicios'], ['/casos', 'Casos'], ['/blog', 'Blog'], ['/beta', 'Beta']]
+// /pyme (la consultora) tiene su propia barra: las secciones de la página y el contacto con el tema marcado
+const PYME = { home: '/pyme', contact: '/contacto?s=pyme',
+  links: [['/pyme#servicios', 'Servicios'], ['/pyme#clientes', 'Clientes'], ['/pyme#propuesta', 'Por qué Nimbo'], ['/pyme#equipo', 'Equipo']] }
+const SITE = { home: '/', contact: '/contacto', links: LINKS }
 
 // En el celular los links van en un menú desplegable (botón "Menú"); se cierra al elegir, al tocar afuera o con Escape.
 export function Nav() {
   const [open, setOpen] = useState(false)
   const nav = useRef(null)
   const { pathname, hash } = useLocation()
+  const { home, contact, links } = pathname.startsWith('/pyme') ? PYME : SITE
   useEffect(() => setOpen(false), [pathname, hash])
   useEffect(() => {
     if (!open) return
@@ -24,19 +29,19 @@ export function Nav() {
   }, [open])
   return (
     <nav ref={nav} className={`nav${open ? ' open' : ''}`}>
-      <a href="/" className="logo"><Logo /> nimbo</a>
+      <a href={home} className="logo"><Logo /> nimbo</a>
       <div className="nav-links">
-        {LINKS.map(([href, t]) => <a key={href} href={href}>{t}</a>)}
+        {links.map(([href, t]) => <a key={href} href={href}>{t}</a>)}
       </div>
       <div className="nav-end">
         <button type="button" className="nav-menu" aria-expanded={open} aria-controls="nav-sheet" onClick={() => setOpen((o) => !o)}>
           <span aria-hidden="true"><i /><i /></span>{open ? 'Cerrar' : 'Menú'}
         </button>
-        <a href="/contacto" className="btn btn-acc btn-sm">Hablemos</a>
+        <a href={contact} className="btn btn-acc btn-sm">Hablemos</a>
       </div>
       <div id="nav-sheet" className="nav-sheet" hidden={!open}>
-        {LINKS.map(([href, t]) => <a key={href} href={href} onClick={() => setOpen(false)}>{t}</a>)}
-        <a href="/contacto" onClick={() => setOpen(false)}>Contacto</a>
+        {links.map(([href, t]) => <a key={href} href={href} onClick={() => setOpen(false)}>{t}</a>)}
+        <a href={contact} onClick={() => setOpen(false)}>Contacto</a>
       </div>
     </nav>
   )
