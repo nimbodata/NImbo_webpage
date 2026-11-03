@@ -27,11 +27,13 @@ export default function Contact() {
   const params = new URLSearchParams(useLocation().search)
   const pre = params.get('s')
   const rubro = RUBROS.find((x) => x.slug === params.get('r')) // ?r=…: viene de "Para quién trabajamos"
-  const temas = pre === 'beta' ? [...TEMAS, ['beta', 'Sumarme a BETA']] : TEMAS
+  // temas que solo aparecen si se llega desde su página (/beta, /pyme)
+  const extra = { beta: 'Sumarme a BETA', pyme: 'Un diagnóstico de mi empresa' }[pre]
+  const temas = extra ? [...TEMAS, [pre, extra]] : TEMAS
   const [step, setStep] = useState(0)
   const [d, setD] = useState({
     name: '', company: '', cc: '+54', phone: '', email: '',
-    temas: pre === 'beta' || TEMAS.some(([k]) => k === pre) ? [pre] : [], msg: '',
+    temas: extra || TEMAS.some(([k]) => k === pre) ? [pre] : [], msg: '',
   })
   const [err, setErr] = useState('')
   const [sent, setSent] = useState(false)

@@ -700,6 +700,17 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
 .ba-card:hover .pv-c { transform: translateX(3%); }
 .ba-meta { font-size: 13px; color: var(--muted); }
 
+/* ——— /pyme (consultoría) ——— */
+.py-kicker { margin-bottom: 18px; }
+.py-about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
+.py-about .lead + .lead { margin-top: 18px; }
+.py-num { display: block; color: var(--muted); margin-bottom: 14px; }
+.py-sub { margin-top: 72px; }
+.ev-grid-3 { grid-template-columns: repeat(3, 1fr); }
+.ev-grid-3 > * { grid-column: span 1 !important; }
+.team-3 { grid-template-columns: repeat(3, 1fr); }
+.team-3 .person-cover { height: 110px; }
+
 @media (max-width: 900px) {
   .ba { padding-top: 64px; }
   .ba-hero { grid-template-columns: 1fr; padding: 32px 0 40px; }
@@ -749,7 +760,9 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
   .steps-3 li + li { border-top: 1px solid var(--line); }
   .cs-hero { padding-top: 112px; padding-bottom: 48px; }
   .bt-hero { padding-top: 112px; }
-  .ev-grid, .ev-grid-4 { grid-template-columns: 1fr; }
+  .ev-grid, .ev-grid-4, .ev-grid-3, .team-3, .py-about { grid-template-columns: 1fr; }
+  .py-about { gap: 20px; }
+  .py-sub { margin-top: 48px; }
   .ev-grid > * { grid-column: auto !important; }
   .polas-row { flex-direction: column; gap: 22px; }
   .polas-row .pola { width: 100%; flex: none !important; }

@@ -30,6 +30,7 @@ const Inicio = lazy(() => import('./pages/Inicio'))
 const Servicio = lazy(() => import('./pages/Servicio'))
 const Casos = lazy(() => import('./pages/Casos'))
 const BetaPage = lazy(() => import('./pages/Beta'))
+const PymePage = lazy(() => import('./pages/Pyme'))
 const BlogIndice = lazy(() => import('./pages/BlogIndice'))
 const Articulo = lazy(() => import('./pages/Articulo'))
 const Empecemos = lazy(() => import('./pages/Empecemos'))
@@ -39,7 +40,7 @@ const IS_ROBOTS_HOST = typeof window !== 'undefined' && window.location.hostname
 // automatizaciones.nimbodata.com muestra la landing de automatizaciones en la raíz.
 const IS_AUTO_HOST = typeof window !== 'undefined' && window.location.hostname.startsWith('automatizaciones.')
 // rutas del sitio nuevo: van dentro de su marco (src/ns/Shell.jsx) en lugar del encabezado y el pie de antes
-const NS_PATH = /^\/(casos|beta|contacto|blog(\/[^/]+)?|agentes-de-ia|automatizacion-e-integracion|datos-y-tableros|software-a-medida)?\/?$/
+const NS_PATH = /^\/(casos|beta|pyme|contacto|blog(\/[^/]+)?|agentes-de-ia|automatizacion-e-integracion|datos-y-tableros|software-a-medida)?\/?$/
 
 /* Al navegar entre páginas: ir arriba. Si hay #hash (links del nav a
    secciones de la home), scrollear a la sección. */
@@ -131,6 +132,7 @@ export default function App() {
               <Route path="/software-a-medida" element={<Servicio slug="software-a-medida" />} />
               <Route path="/casos" element={<Casos />} />
               <Route path="/beta" element={<BetaPage />} />
+              <Route path="/pyme" element={<PymePage />} />
               <Route path="/proyectos" element={<Proyectos />} />
               <Route path="/trabajos/:slug" element={<LegacyProject />} />
               <Route path="/nosotros" element={<Nosotros />} />
