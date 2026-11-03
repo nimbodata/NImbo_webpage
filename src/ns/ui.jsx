@@ -9,7 +9,7 @@ import './styles.css'
 const LINKS = [['/#servicios', 'Servicios'], ['/casos', 'Casos'], ['/blog', 'Blog'], ['/beta', 'Beta']]
 // /pyme (la consultora) tiene su propia barra: las secciones de la página y el contacto con el tema marcado
 const PYME = { home: '/pyme', contact: '/pyme/contacto',
-  links: [['/pyme#servicios', 'Servicios'], ['/pyme#clientes', 'Clientes'], ['/pyme#propuesta', 'Por qué Nimbo'], ['/pyme#equipo', 'Equipo']] }
+  links: [['/pyme#servicios', 'Servicios'], ['/pyme#clientes', 'Clientes'], ['/pyme#caso', 'Caso'], ['/pyme#equipo', 'Equipo']] }
 const SITE = { home: '/', contact: '/contacto', links: LINKS }
 
 // En el celular los links van en un menú desplegable (botón "Menú"); se cierra al elegir, al tocar afuera o con Escape.
@@ -72,12 +72,12 @@ function PymeFooter() {
     <footer className="wrap foot">
       <div>
         <a href="/pyme" className="logo"><Logo /> nimbo</a>
-        <p>Consultoría para pymes: diagnóstico, procesos y seguimiento. Un equipo chico de Buenos Aires.</p>
+        <p>Nimbodata Consultoría: diagnóstico y mejora de procesos de gestión para pymes del AMBA.</p>
       </div>
-      <div><h5>Servicios</h5><a href="/pyme#servicios">Diagnóstico integral</a><a href="/pyme#servicios">Organización y procesos</a><a href="/pyme#servicios">Control y seguimiento</a></div>
-      <div><h5>Explorar</h5><a href="/pyme#nosotros">Quiénes somos</a><a href="/pyme#clientes">A quién ayudamos</a><a href="/pyme#propuesta">Por qué Nimbo</a><a href="/pyme#proceso">Cómo trabajamos</a><a href="/pyme#equipo">Equipo</a></div>
+      <div><h5>Servicios</h5><a href="/pyme#servicios">Diagnóstico de gestión</a><a href="/pyme#servicios">Diseño de procesos y roles</a><a href="/pyme#servicios">Implementación y capacitación</a><a href="/pyme#servicios">Seguimiento</a></div>
+      <div><h5>Explorar</h5><a href="/pyme#nosotros">Quiénes somos</a><a href="/pyme#clientes">A quién ayudamos</a><a href="/pyme#caso">Primer caso</a><a href="/pyme#proceso">Cómo trabajamos</a><a href="/pyme#propuesta">Por qué Nimbodata</a><a href="/pyme#equipo">Equipo</a></div>
       <div><h5>Contacto</h5><a href="/pyme/contacto">Formulario</a><a href={WA_PYME}>WhatsApp</a><a href="https://instagram.com/nimbodata">Instagram</a><a href="https://linkedin.com/company/nimboconsulting">LinkedIn</a></div>
-      <p className="foot-bottom">© 2026 Nimbo. Hecho en Argentina.</p>
+      <p className="foot-bottom">© 2026 Nimbodata Consultoría, una unidad de Nimbodata. Hecho en Argentina.</p>
     </footer>
   )
 }

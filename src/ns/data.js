@@ -2,7 +2,7 @@
 // (src/data/projects.js del sitio). Las imágenes están copiadas en public/.
 
 export const WA = 'https://wa.me/5491124036836?text=' + encodeURIComponent('¡Hola! Vi el sitio de Nimbo y quiero contarles un proceso de mi empresa.')
-export const WA_PYME = 'https://wa.me/5491124036836?text=' + encodeURIComponent('¡Hola! Vi la consultoría de Nimbo para pymes y quiero contarles sobre mi empresa.')
+export const WA_PYME = 'https://wa.me/5491124036836?text=' + encodeURIComponent('¡Hola! Vi Nimbodata Consultoría y quiero contarles sobre la gestión de mi empresa.')
 export const PROYECTOS_URL = '/proyectos'
 
 // `url` solo en los que tienen ficha en nimbodata.com/proyectos; los mockups de apps (public/mockups) no

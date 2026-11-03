@@ -23,9 +23,11 @@ const TEMAS = [
 ]
 // /pyme/contacto: el mismo formulario con los temas de la consultoría y sin links fuera de /pyme
 const TEMAS_PYME = [
-  ['pyme-diagnostico', 'Un diagnóstico de mi empresa'],
-  ['pyme-procesos', 'Ordenar procesos y roles'],
-  ['pyme-seguimiento', 'Medir y seguir indicadores'],
+  ['pyme-diagnostico', 'Un diagnóstico de gestión'],
+  ['pyme-procesos', 'Diseñar procesos y roles'],
+  ['pyme-implementacion', 'Implementar y capacitar al equipo'],
+  ['pyme-seguimiento', 'Seguimiento de indicadores'],
+  ['pyme-herramientas', 'Elegir herramientas de gestión'],
   ['otro', 'Todavía no sé'],
 ]
 const PASOS = ['Vos', 'Contacto', 'Tu caso']
@@ -82,7 +84,7 @@ export default function Contact({ pyme = false }) {
     d.temas.length ? `Me interesa: ${d.temas.map((k) => temas.find(([t]) => t === k)[1].toLowerCase()).join(', ')}.` : '',
     d.msg.trim(),
   ].filter(Boolean).join(' ')
-  const hola = pyme ? '¡Hola! Vi la consultoría de Nimbo para pymes y quiero contarles sobre mi empresa.' : '¡Hola! Vi el sitio de Nimbo y quiero contarles un proceso de mi empresa.'
+  const hola = pyme ? '¡Hola! Vi Nimbodata Consultoría y quiero contarles sobre la gestión de mi empresa.' : '¡Hola! Vi el sitio de Nimbo y quiero contarles un proceso de mi empresa.'
   const waLink = `https://wa.me/${WA_NUM}?text=${encodeURIComponent(sent ? resumen : hola)}`
   const servicio = pyme ? null : pre === 'beta' ? { t: 'BETA' } : AREAS.find((a) => a.slug === pre) || rubro
 
@@ -145,7 +147,7 @@ export default function Contact({ pyme = false }) {
                         </div>
                       </div>
                       <label className="field">Contanos un poco <i>(opcional)</i>
-                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder={pyme ? 'Ej.: somos 25 personas, todo pasa por mí y cada área trabaja a su manera.' : 'Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla.'} />
+                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder={pyme ? 'Ej.: somos 25 personas, tenemos planillas y sistema contable, pero no logramos explicar los gastos.' : 'Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla.'} />
                       </label>
                     </>
                   )}
@@ -193,7 +195,7 @@ export default function Contact({ pyme = false }) {
         <ol className="steps steps-3" data-reveal>
           <li><span className="mono">01</span><h4>Te respondemos</h4><p>En menos de 24 h, por el canal que elegiste.</p></li>
           <li><span className="mono">02</span><h4>Charla de 20 minutos</h4><p>Nos contás cómo trabajan y dónde se traba.</p></li>
-          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>{pyme ? 'Qué incluye el diagnóstico, los tiempos y el costo.' : 'Qué incluye, la puesta en marcha y el abono mensual.'}</p></li>
+          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>{pyme ? 'Qué área analizamos, qué entregamos, el precio cerrado y los plazos.' : 'Qué incluye, la puesta en marcha y el abono mensual.'}</p></li>
         </ol>
       </section>
     </>

@@ -711,6 +711,8 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
 .team-3 { grid-template-columns: repeat(3, 1fr); }
 .team-3 .person-cover { height: 110px; }
 .others-2 { grid-template-columns: repeat(2, 1fr); }
+.py-benefits { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; margin-top: 72px; padding-top: 48px; border-top: 1px solid var(--line); }
+.ev-card .py-num { margin-bottom: 24px; }
 
 @media (max-width: 900px) {
   .ba { padding-top: 64px; }
@@ -761,7 +763,8 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
   .steps-3 li + li { border-top: 1px solid var(--line); }
   .cs-hero { padding-top: 112px; padding-bottom: 48px; }
   .bt-hero { padding-top: 112px; }
-  .ev-grid, .ev-grid-4, .ev-grid-3, .team-3, .py-about { grid-template-columns: 1fr; }
+  .ev-grid, .ev-grid-4, .ev-grid-3, .team-3, .py-about, .py-benefits { grid-template-columns: 1fr; }
+  .py-benefits { gap: 20px; margin-top: 48px; }
   .py-about { gap: 20px; }
   .py-sub { margin-top: 48px; }
   .ev-grid > * { grid-column: auto !important; }

@@ -1,12 +1,12 @@
-// /pyme: Nimbo como consultora para pymes — diagnóstico, procesos y seguimiento (src/ns/Pyme.jsx).
+// /pyme: Nimbodata Consultoría — diagnóstico y mejora de procesos para pymes (src/ns/Pyme.jsx).
 import { useSeo } from '../hooks/useSeo'
 import Pyme from '../ns/Pyme'
 
 export default function PymePage() {
   useSeo({
-    title: 'Consultoría para pymes: diagnóstico, procesos y seguimiento | Nimbo',
+    title: 'Nimbodata Consultoría — Diagnóstico y procesos para pymes del AMBA',
     description:
-      'Nimbo es una consultora para pymes de Buenos Aires: diagnosticamos cómo funciona tu empresa, ordenamos los procesos con tu equipo y medimos cada mes que la mejora se sostenga.',
+      'Nimbodata Consultoría: diagnóstico y mejora de procesos de gestión para pymes de servicios y obras del AMBA, de 10 a 50 personas. Primera reunión sin cargo.',
     path: '/pyme',
   })
   return <Pyme />
