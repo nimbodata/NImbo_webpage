@@ -2,7 +2,7 @@
 // la solución. Es la cara al mercado del plan de negocio (Parte C del trabajo de la facultad): identidad, equipo,
 // servicios, clientes, propuesta de valor y contacto. La tecnología (automatización, tableros) va como complemento.
 import Fig from './Fig'
-import { WA } from './data'
+import { WA_PYME } from './data'
 import { FIGS } from './scenes'
 import { Arrow, Final, Icon } from './ui'
 import { Words } from './motion'
@@ -43,10 +43,10 @@ const SERVICIOS = [
 ]
 
 const COMPLEMENTOS = [
-  ['M5 19V11 M12 19V5 M19 19v-6', 'Tablero de indicadores', 'Ventas, costos, stock y cobranzas en un tablero que se actualiza solo.', '/datos-y-tableros'],
-  ['M6 6m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0 M18 18m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0 M8.5 6H14a4 4 0 0 1 4 4v5.5', 'Automatizaciones', 'Lo que se copia a mano entre WhatsApp, planillas y facturación pasa solo.', '/automatizacion-e-integracion'],
+  ['M5 19V11 M12 19V5 M19 19v-6', 'Tablero de indicadores', 'Ventas, costos, stock y cobranzas en un tablero que se actualiza solo.'],
+  ['M6 6m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0 M18 18m-2.5 0a2.5 2.5 0 1 0 5 0a2.5 2.5 0 1 0-5 0 M8.5 6H14a4 4 0 0 1 4 4v5.5', 'Automatizaciones', 'Lo que se copia a mano entre WhatsApp, planillas y facturación pasa solo.'],
   ['M4 19h16 M6 15l4-8 4 5 4-7', 'Capacitación del equipo', 'Talleres cortos para que el equipo adopte los procesos y las herramientas nuevas.'],
-  ['M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z', 'Atención con IA', 'Un agente que responde consultas y pedidos por WhatsApp a cualquier hora.', '/agentes-de-ia'],
+  ['M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z', 'Atención con IA', 'Un agente que responde consultas y pedidos por WhatsApp a cualquier hora.'],
 ]
 
 const CLIENTES = [
@@ -110,7 +110,7 @@ export default function Pyme() {
           <div data-reveal style={{ '--d': '120ms' }}>
             <p className="lead"><Words>Diagnosticamos cómo funciona tu empresa, ordenamos los procesos con tu equipo y te acompañamos hasta que la mejora se sostiene.</Words></p>
             <div className="btns">
-              <a className="btn btn-acc" href="/contacto?s=pyme" data-cta="pyme-hero">Pedí un diagnóstico <Arrow /></a>
+              <a className="btn btn-acc" href="/pyme/contacto" data-cta="pyme-hero">Pedí un diagnóstico <Arrow /></a>
               <a className="btn" href="#servicios">Ver servicios <Arrow /></a>
             </div>
           </div>
@@ -177,19 +177,13 @@ export default function Pyme() {
             </div>
           </div>
           <div className="ev-grid ev-grid-4">
-            {COMPLEMENTOS.map(([icon, t, d, href], i) => {
-              const body = (
-                <>
-                  <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
-                  <h4>{t}</h4>
-                  <p>{d}</p>
-                  {href && <span className="other-go">Ver más <Arrow /></span>}
-                </>
-              )
-              return href
-                ? <a key={t} className="ev-card" href={href} data-reveal style={{ '--d': `${i * 70}ms` }}>{body}</a>
-                : <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 70}ms` }}>{body}</div>
-            })}
+            {COMPLEMENTOS.map(([icon, t, d], i) => (
+              <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 70}ms` }}>
+                <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
+                <h4>{t}</h4>
+                <p>{d}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -202,7 +196,7 @@ export default function Pyme() {
           </div>
           <div className="ev-grid ev-grid-3">
             {CLIENTES.map(([icon, t, d], i) => (
-              <a key={t} className="ev-card" href="/contacto?s=pyme" data-reveal style={{ '--d': `${i * 80}ms` }}>
+              <a key={t} className="ev-card" href="/pyme/contacto" data-reveal style={{ '--d': `${i * 80}ms` }}>
                 <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
                 <h4>{t}</h4>
                 <p>{d}</p>
@@ -264,7 +258,7 @@ export default function Pyme() {
               <div className="ask">
                 <span className="chip chip-sq"><Icon d="M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" /></span>
                 <div><b>¿Preferís WhatsApp?</b><span>Escribinos y te responde alguien del equipo.</span></div>
-                <a className="btn btn-wide" href={WA} data-cta="pyme-wa">WhatsApp <Arrow /></a>
+                <a className="btn btn-wide" href={WA_PYME} data-cta="pyme-wa">WhatsApp <Arrow /></a>
               </div>
             </div>
             <div className="faq" data-reveal style={{ '--d': '100ms' }}>
@@ -275,7 +269,7 @@ export default function Pyme() {
           </div>
         </section>
 
-        <Final title="Contanos qué te preocupa de tu empresa." s="pyme" />
+        <Final title="Contanos qué te preocupa de tu empresa." cta="/pyme/contacto" alt={['/pyme#servicios', 'Ver servicios']} />
       </div>
     </>
   )

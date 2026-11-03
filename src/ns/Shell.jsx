@@ -42,7 +42,7 @@ export default function Shell({ children }) {
         <Nav />
         {children}
         <Footer />
-        <Buddy path={pathname} />
+        {!pathname.startsWith('/pyme') && <Buddy path={pathname} />}
         <ScrollFx />
         <Cursor />
       </div>

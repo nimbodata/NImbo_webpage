@@ -21,19 +21,24 @@ const TEMAS = [
   ['software-a-medida', 'Un sistema a medida'],
   ['otro', 'Todavía no sé'],
 ]
+// /pyme/contacto: el mismo formulario con los temas de la consultoría y sin links fuera de /pyme
+const TEMAS_PYME = [
+  ['pyme-diagnostico', 'Un diagnóstico de mi empresa'],
+  ['pyme-procesos', 'Ordenar procesos y roles'],
+  ['pyme-seguimiento', 'Medir y seguir indicadores'],
+  ['otro', 'Todavía no sé'],
+]
 const PASOS = ['Vos', 'Contacto', 'Tu caso']
 
-export default function Contact() {
+export default function Contact({ pyme = false }) {
   const params = new URLSearchParams(useLocation().search)
-  const pre = params.get('s')
-  const rubro = RUBROS.find((x) => x.slug === params.get('r')) // ?r=…: viene de "Para quién trabajamos"
-  // temas que solo aparecen si se llega desde su página (/beta, /pyme)
-  const extra = { beta: 'Sumarme a BETA', pyme: 'Un diagnóstico de mi empresa' }[pre]
-  const temas = extra ? [...TEMAS, [pre, extra]] : TEMAS
+  const pre = pyme ? 'pyme-diagnostico' : params.get('s')
+  const rubro = pyme ? null : RUBROS.find((x) => x.slug === params.get('r')) // ?r=…: viene de "Para quién trabajamos"
+  const temas = pyme ? TEMAS_PYME : pre === 'beta' ? [...TEMAS, ['beta', 'Sumarme a BETA']] : TEMAS
   const [step, setStep] = useState(0)
   const [d, setD] = useState({
     name: '', company: '', cc: '+54', phone: '', email: '',
-    temas: extra || TEMAS.some(([k]) => k === pre) ? [pre] : [], msg: '',
+    temas: temas.some(([k]) => k === pre) ? [pre] : [], msg: '',
   })
   const [err, setErr] = useState('')
   const [sent, setSent] = useState(false)
@@ -61,7 +66,7 @@ export default function Contact() {
       await submitContact({
         firstName, lastName: rest.join(' '), company: d.company.trim(), email: d.email.trim(),
         countryCode: d.phone.trim() ? d.cc : '', phone: d.phone.trim(), topics: d.temas, topic: d.temas[0] || 'otro',
-        message: d.msg.trim(), source: 'form', page: pre ? `/contacto?s=${pre}` : rubro ? `/contacto?r=${rubro.slug}` : '/contacto',
+        message: d.msg.trim(), source: 'form', page: pyme ? '/pyme/contacto' : pre ? `/contacto?s=${pre}` : rubro ? `/contacto?r=${rubro.slug}` : '/contacto',
         rubro: rubro ? rubro.t : '', lang: 'es',
       })
       setSent(true)
@@ -77,8 +82,9 @@ export default function Contact() {
     d.temas.length ? `Me interesa: ${d.temas.map((k) => temas.find(([t]) => t === k)[1].toLowerCase()).join(', ')}.` : '',
     d.msg.trim(),
   ].filter(Boolean).join(' ')
-  const waLink = `https://wa.me/${WA_NUM}?text=${encodeURIComponent(sent ? resumen : '¡Hola! Vi el sitio de Nimbo y quiero contarles un proceso de mi empresa.')}`
-  const servicio = pre === 'beta' ? { t: 'BETA' } : AREAS.find((a) => a.slug === pre) || rubro
+  const hola = pyme ? '¡Hola! Vi la consultoría de Nimbo para pymes y quiero contarles sobre mi empresa.' : '¡Hola! Vi el sitio de Nimbo y quiero contarles un proceso de mi empresa.'
+  const waLink = `https://wa.me/${WA_NUM}?text=${encodeURIComponent(sent ? resumen : hola)}`
+  const servicio = pyme ? null : pre === 'beta' ? { t: 'BETA' } : AREAS.find((a) => a.slug === pre) || rubro
 
   return (
     <>
@@ -139,7 +145,7 @@ export default function Contact() {
                         </div>
                       </div>
                       <label className="field">Contanos un poco <i>(opcional)</i>
-                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder="Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla." />
+                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder={pyme ? 'Ej.: somos 25 personas, todo pasa por mí y cada área trabaja a su manera.' : 'Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla.'} />
                       </label>
                     </>
                   )}
@@ -150,7 +156,7 @@ export default function Contact() {
                 <div className="form-foot">
                   {step > 0
                     ? <button type="button" className="back" onClick={() => { setErr(''); setStep(step - 1) }}>← Atrás</button>
-                    : <a className="cal" href={AGENDAR}><Icon d="M7 5h10a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z M4 10h16 M8 3v4 M16 3v4" />Agendá una llamada</a>}
+                    : pyme ? <span /> : <a className="cal" href={AGENDAR}><Icon d="M7 5h10a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z M4 10h16 M8 3v4 M16 3v4" />Agendá una llamada</a>}
                   <button type="submit" className="btn btn-acc" disabled={sending}>{step < 2 ? 'Siguiente' : sending ? 'Enviando…' : 'Enviar'} <Arrow /></button>
                 </div>
               </form>
@@ -167,7 +173,7 @@ export default function Contact() {
             <p className="lead">Escribinos por donde te quede más cómodo. Del otro lado está el equipo, no un bot.</p>
           </div>
         </div>
-        <div className="others">
+        <div className={`others${pyme ? ' others-2' : ''}`}>
           <a className="other" href={waLink} data-reveal>
             <span className="chip chip-sm"><Icon d="M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" /></span>
             <h4>WhatsApp</h4><p>+54 9 11 2403-6836 · respondemos el mismo día.</p>
@@ -178,16 +184,16 @@ export default function Contact() {
             <h4>Mail</h4><p>{MAIL}</p>
             <span className="other-go">Escribir <Arrow /></span>
           </a>
-          <a className="other" href={AGENDAR} data-reveal style={{ '--d': '160ms' }}>
+          {!pyme && <a className="other" href={AGENDAR} data-reveal style={{ '--d': '160ms' }}>
             <span className="chip chip-sm"><Icon d="M7 5h10a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z M4 10h16 M8 3v4 M16 3v4" /></span>
             <h4>Videollamada</h4><p>Elegí un horario de 20 minutos en el calendario.</p>
             <span className="other-go">Agendar <Arrow /></span>
-          </a>
+          </a>}
         </div>
         <ol className="steps steps-3" data-reveal>
           <li><span className="mono">01</span><h4>Te respondemos</h4><p>En menos de 24 h, por el canal que elegiste.</p></li>
           <li><span className="mono">02</span><h4>Charla de 20 minutos</h4><p>Nos contás cómo trabajan y dónde se traba.</p></li>
-          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>Qué incluye, la puesta en marcha y el abono mensual.</p></li>
+          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>{pyme ? 'Qué incluye el diagnóstico, los tiempos y el costo.' : 'Qué incluye, la puesta en marcha y el abono mensual.'}</p></li>
         </ol>
       </section>
     </>

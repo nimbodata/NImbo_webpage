@@ -2,13 +2,13 @@
 import { Player } from '@remotion/player'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { useLocation } from 'react-router-dom'
-import { AREAS, WA } from './data'
+import { AREAS, WA, WA_PYME } from './data'
 import { Hero, HERO } from './scenes/Hero'
 import './styles.css'
 
 const LINKS = [['/#servicios', 'Servicios'], ['/casos', 'Casos'], ['/blog', 'Blog'], ['/beta', 'Beta']]
 // /pyme (la consultora) tiene su propia barra: las secciones de la página y el contacto con el tema marcado
-const PYME = { home: '/pyme', contact: '/contacto?s=pyme',
+const PYME = { home: '/pyme', contact: '/pyme/contacto',
   links: [['/pyme#servicios', 'Servicios'], ['/pyme#clientes', 'Clientes'], ['/pyme#propuesta', 'Por qué Nimbo'], ['/pyme#equipo', 'Equipo']] }
 const SITE = { home: '/', contact: '/contacto', links: LINKS }
 
@@ -47,8 +47,8 @@ export function Nav() {
   )
 }
 
-// `s` deja marcado el servicio en el formulario de contacto
-export function Final({ title = 'Hagamos más simple lo que hoy te frena.', s }) {
+// `s` deja marcado el servicio en el formulario de contacto; `cta` y `alt` ([href, texto]) cambian los botones (/pyme)
+export function Final({ title = 'Hagamos más simple lo que hoy te frena.', s, cta, alt = ['/casos', 'Ver casos'] }) {
   return (
     <section className="wrap" id="cierre">
       <div className="final" data-reveal>
@@ -56,8 +56,8 @@ export function Final({ title = 'Hagamos más simple lo que hoy te frena.', s })
           <h2>{title}</h2>
           <p className="lead">Contanos cómo trabaja tu empresa. Te ayudamos a encontrar una solución posible.</p>
           <div className="btns">
-            <a className="btn btn-acc" href={s ? `/contacto?s=${s}` : '/contacto'}>Empecemos <Arrow /></a>
-            <a className="btn" href="/casos">Ver casos <Arrow /></a>
+            <a className="btn btn-acc" href={cta || (s ? `/contacto?s=${s}` : '/contacto')}>Empecemos <Arrow /></a>
+            <a className="btn" href={alt[0]}>{alt[1]} <Arrow /></a>
           </div>
         </div>
         <LiveEngraving className="final-art" />
@@ -66,7 +66,25 @@ export function Final({ title = 'Hagamos más simple lo que hoy te frena.', s })
   )
 }
 
+// en /pyme el pie también se queda dentro de la consultora
+function PymeFooter() {
+  return (
+    <footer className="wrap foot">
+      <div>
+        <a href="/pyme" className="logo"><Logo /> nimbo</a>
+        <p>Consultoría para pymes: diagnóstico, procesos y seguimiento. Un equipo chico de Buenos Aires.</p>
+      </div>
+      <div><h5>Servicios</h5><a href="/pyme#servicios">Diagnóstico integral</a><a href="/pyme#servicios">Organización y procesos</a><a href="/pyme#servicios">Control y seguimiento</a></div>
+      <div><h5>Explorar</h5><a href="/pyme#nosotros">Quiénes somos</a><a href="/pyme#clientes">A quién ayudamos</a><a href="/pyme#propuesta">Por qué Nimbo</a><a href="/pyme#proceso">Cómo trabajamos</a><a href="/pyme#equipo">Equipo</a></div>
+      <div><h5>Contacto</h5><a href="/pyme/contacto">Formulario</a><a href={WA_PYME}>WhatsApp</a><a href="https://instagram.com/nimbodata">Instagram</a><a href="https://linkedin.com/company/nimboconsulting">LinkedIn</a></div>
+      <p className="foot-bottom">© 2026 Nimbo. Hecho en Argentina.</p>
+    </footer>
+  )
+}
+
 export function Footer() {
+  const { pathname } = useLocation()
+  if (pathname.startsWith('/pyme')) return <PymeFooter />
   return (
     <footer className="wrap foot">
       <div>

@@ -710,6 +710,7 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
 .ev-grid-3 > * { grid-column: span 1 !important; }
 .team-3 { grid-template-columns: repeat(3, 1fr); }
 .team-3 .person-cover { height: 110px; }
+.others-2 { grid-template-columns: repeat(2, 1fr); }
 
 @media (max-width: 900px) {
   .ba { padding-top: 64px; }
@@ -746,7 +747,7 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
   .sv-hero { padding-top: 104px; }
   .sv-fig { aspect-ratio: 4 / 3; margin: 40px 0 64px; }
   .sv-split, .ej { grid-template-columns: 1fr; gap: 28px; }
-  .para, .others { grid-template-columns: 1fr; }
+  .para, .others, .others-2 { grid-template-columns: 1fr; }
   .neg-card { grid-template-columns: 1fr; padding: 22px; }
   .start { padding-top: 84px; }
   .start-panel { padding: 52px 14px 0; }
