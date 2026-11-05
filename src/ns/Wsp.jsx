@@ -1,4 +1,5 @@
 // /wsp: el agente de WhatsApp para distribuidoras como paquete estándar (n8n), con precio desde y todo a WhatsApp.
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import Fig from './Fig'
 import { FIGS } from './scenes'
 import { Arrow } from './ui'
@@ -94,14 +95,7 @@ export default function Wsp() {
             <p className="sv-text">El cliente escribe como siempre. El agente conoce tu lista de precios, tu stock y tus zonas de reparto: responde al instante, confirma el pedido y lo deja anotado para que tu equipo lo prepare a la mañana.</p>
             <p className="mono ws-note">Ejemplo de conversación</p>
           </div>
-          <div className="ws-chat" data-reveal style={{ '--d': '100ms' }}>
-            <div className="ws-chat-top"><b>Distribuidora</b><span>en línea</span></div>
-            <div className="ws-chat-body">
-              {CHAT.map(([side, h, t]) => (
-                <p key={h + t} className={`ws-msg ws-${side}`}>{t}<time>{h}</time></p>
-              ))}
-            </div>
-          </div>
+          <Chat />
         </section>
 
         <section className="sec wrap" id="incluye">
@@ -175,5 +169,50 @@ export default function Wsp() {
         </section>
       </div>
     </>
+  )
+}
+
+// en el prerender (Node) no hay layout: ahí va un useEffect común para que React no avise
+const useBrowserLayoutEffect = typeof window === 'undefined' ? useEffect : useLayoutEffect
+
+// El chat de "Así atiende" se va escribiendo solo mientras está en pantalla: el cliente manda, el agente
+// "escribe…" y responde, y vuelve a empezar. En el prerender y con movimiento reducido se ve completo.
+// El alto queda fijo desde el principio para que la página no salte cuando aparece cada mensaje.
+function Chat() {
+  const box = useRef(null)
+  const body = useRef(null)
+  const [shown, setShown] = useState(CHAT.length)
+  const [typing, setTyping] = useState(false)
+  const [visible, setVisible] = useState(false)
+
+  useBrowserLayoutEffect(() => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    body.current.style.minHeight = body.current.offsetHeight + 'px'
+    setShown(0)
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting), { threshold: 0.35 })
+    io.observe(box.current)
+    return () => io.disconnect()
+  }, [])
+
+  useEffect(() => {
+    if (!visible) return
+    let t
+    if (shown >= CHAT.length) t = setTimeout(() => setShown(0), 4500)
+    else if (CHAT[shown][0] === 'in') t = setTimeout(() => setShown(shown + 1), shown ? 1100 : 500)
+    else if (!typing) t = setTimeout(() => setTyping(true), 500)
+    else t = setTimeout(() => { setTyping(false); setShown(shown + 1) }, 1500)
+    return () => clearTimeout(t)
+  }, [visible, shown, typing])
+
+  return (
+    <div ref={box} className="ws-chat" data-reveal style={{ '--d': '100ms' }}>
+      <div className="ws-chat-top"><b>Distribuidora</b><span>{typing ? 'escribiendo…' : 'en línea'}</span></div>
+      <div ref={body} className="ws-chat-body">
+        {CHAT.slice(0, shown).map(([side, h, t]) => (
+          <p key={h + t} className={`ws-msg ws-${side}`}>{t}<time>{h}</time></p>
+        ))}
+        {typing && <p className="ws-msg ws-out ws-typing" aria-label="Escribiendo"><i /><i /><i /></p>}
+      </div>
+    </div>
   )
 }
