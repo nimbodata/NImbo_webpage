@@ -42,7 +42,8 @@ export default function Shell({ children }) {
         <Nav />
         {children}
         <Footer />
-        {!pathname.startsWith('/pyme') && <Buddy path={pathname} />}
+        {/* en /wsp todo va a WhatsApp: la nube competía con el botón */}
+        {!pathname.startsWith('/pyme') && pathname !== '/wsp' && <Buddy path={pathname} />}
         <ScrollFx />
         <Cursor />
       </div>

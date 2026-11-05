@@ -792,4 +792,38 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
   .bl-row .cs-go { grid-row: 1; grid-column: 2; }
 }
 
+/* ——— /wsp (agente de WhatsApp para distribuidoras) ——— */
+.ws-split h2 + .sv-text { margin-top: 18px; }
+.ws-note { margin-top: 28px; }
+.ws-chat { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #efeae2; max-width: 460px; justify-self: end; width: 100%; }
+.ws-chat-top { display: flex; align-items: baseline; gap: 10px; padding: 14px 18px; background: #fff; border-bottom: 1px solid var(--line); }
+.ws-chat-top span { font-size: 12px; color: #1c7a47; }
+.ws-chat-body { display: flex; flex-direction: column; gap: 8px; padding: 18px 14px 22px; }
+.ws-msg { max-width: 84%; padding: 8px 10px 6px; border-radius: 10px; font-size: 14.5px; line-height: 1.45; color: #111; box-shadow: 0 1px 0 rgba(0, 0, 0, .06); }
+.ws-msg time { display: block; text-align: right; font-size: 10.5px; color: #667781; margin-top: 2px; }
+.ws-in { align-self: flex-start; background: #fff; border-top-left-radius: 2px; }
+.ws-out { align-self: flex-end; background: #d9fdd3; border-top-right-radius: 2px; }
+.ws-lists { display: grid; grid-template-columns: 1.2fr 1fr; gap: 18px; }
+.ws-list { border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: #fff; }
+.ws-list-no { background: var(--soft); }
+.ws-list h4 { margin-bottom: 18px; }
+.ws-list ul { list-style: none; display: grid; gap: 14px; }
+.ws-list li { position: relative; padding-left: 28px; font-size: 15px; line-height: 1.55; }
+.ws-list-no li { color: var(--muted); }
+.ws-list li::before { content: ''; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border-radius: 50%; }
+.ws-yes::before { background: var(--acc) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M5.5 9.2l2.3 2.3 4.7-4.9' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); }
+.ws-no::before { border: 1px solid #cfcde2; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M6.5 6.5l5 5M11.5 6.5l-5 5' fill='none' stroke='%236b6985' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E"); }
+.ws-price { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.ws-price > div { padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.ws-price b { display: block; font-size: clamp(26px, 2.6vw, 34px); font-weight: 600; letter-spacing: -0.03em; margin: 14px 0 8px; color: var(--ink); }
+.ws-price small { font-size: 15px; font-weight: 400; color: var(--muted); letter-spacing: 0; }
+.ws-price p { color: var(--muted); font-size: 14px; line-height: 1.55; }
+.ws-price .btn { grid-column: 1 / -1; }
+.faq-grid .faq-title + .btn { max-width: 320px; }
+@media (max-width: 900px) {
+  .ws-chat { justify-self: stretch; max-width: none; }
+  .ws-lists, .ws-price { grid-template-columns: 1fr; }
+  .ws-list { padding: 22px; }
+}
+
 @keyframes fade { from { opacity: 0 } to { opacity: 1 } }
