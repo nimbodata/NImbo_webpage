@@ -80,7 +80,7 @@ const PORQUE = [
 const EQUIPO = [
   { initials: 'VE', name: 'Valentín Elizari', role: 'Dirección y comercial', pos: '70% 40%',
     bio: 'Relación con los clientes, propuestas, contratos y coordinación general.' },
-  { initials: 'AS', name: 'Ariana Sosa', role: 'Metodología y diagnóstico', pos: '80% 70%',
+  { photo: '/equipo-ariana.jpg', name: 'Ariana Sosa', role: 'Metodología y diagnóstico', pos: '80% 70%',
     bio: 'Guías de entrevista, matriz de alternativas y calidad de cada informe.' },
   { initials: 'CA', name: 'Cameron Avelino Melia', role: 'Administración y finanzas', pos: '10% 60%',
     bio: 'Cotizaciones, cobranzas, presupuesto y vínculo con el contador y el abogado.' },
@@ -88,7 +88,7 @@ const EQUIPO = [
     bio: 'Sitio web, LinkedIn, contenidos, eventos y cámaras pyme.' },
   { photo: '/seba.jpg', name: 'Sebastián Deina', role: 'Datos e IA', pos: '20% 30%',
     bio: 'Procesa la información de cada cliente, arma los tableros y hace de puente con Nimbodata.' },
-  { initials: 'KP', name: 'Katerina Prada', role: 'Seguimiento y calidad', pos: '50% 20%',
+  { photo: '/equipo-katerina.jpg', name: 'Katerina Prada', role: 'Seguimiento y calidad', pos: '50% 20%',
     bio: 'Mide los indicadores después de cada proyecto, la satisfacción y la retención de clientes.' },
 ]
 
