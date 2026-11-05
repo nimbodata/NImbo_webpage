@@ -78,17 +78,17 @@ const PORQUE = [
 
 // las seis áreas del plan (punto 7.5); la asignación de cada integrante es provisoria
 const EQUIPO = [
-  { initials: 'V', name: 'Valentín', role: 'Dirección y comercial', pos: '70% 40%',
+  { initials: 'VE', name: 'Valentín Elizari', role: 'Dirección y comercial', pos: '70% 40%',
     bio: 'Relación con los clientes, propuestas, contratos y coordinación general.' },
-  { initials: 'A', name: 'Ari', role: 'Metodología y diagnóstico', pos: '80% 70%',
+  { initials: 'AS', name: 'Ariana Sosa', role: 'Metodología y diagnóstico', pos: '80% 70%',
     bio: 'Guías de entrevista, matriz de alternativas y calidad de cada informe.' },
-  { initials: 'C', name: 'Cameron', role: 'Administración y finanzas', pos: '10% 60%',
+  { initials: 'CA', name: 'Cameron Avelino Melia', role: 'Administración y finanzas', pos: '10% 60%',
     bio: 'Cotizaciones, cobranzas, presupuesto y vínculo con el contador y el abogado.' },
-  { initials: 'A', name: 'Agustín', role: 'Marketing y marca', pos: '30% 80%',
+  { initials: 'AM', name: 'Agustín Marcos', role: 'Marketing y marca', pos: '30% 80%',
     bio: 'Sitio web, LinkedIn, contenidos, eventos y cámaras pyme.' },
   { photo: '/seba.jpg', name: 'Sebastián Deina', role: 'Datos e IA', pos: '20% 30%',
     bio: 'Procesa la información de cada cliente, arma los tableros y hace de puente con Nimbodata.' },
-  { initials: 'K', name: 'Kate', role: 'Seguimiento y calidad', pos: '50% 20%',
+  { initials: 'KP', name: 'Katerina Prada', role: 'Seguimiento y calidad', pos: '50% 20%',
     bio: 'Mide los indicadores después de cada proyecto, la satisfacción y la retención de clientes.' },
 ]
 
