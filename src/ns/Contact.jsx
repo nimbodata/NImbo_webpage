@@ -24,10 +24,10 @@ const TEMAS = [
 // /pyme/contacto: el mismo formulario con los temas de la consultoría y sin links fuera de /pyme
 const TEMAS_PYME = [
   ['pyme-diagnostico', 'Un diagnóstico de gestión'],
-  ['pyme-procesos', 'Diseñar procesos y roles'],
-  ['pyme-implementacion', 'Implementar y capacitar al equipo'],
-  ['pyme-seguimiento', 'Seguimiento de indicadores'],
-  ['pyme-herramientas', 'Elegir herramientas de gestión'],
+  ['pyme-procesos', 'Diseño de procesos'],
+  ['pyme-implementacion', 'Implementación acompañada'],
+  ['pyme-seguimiento', 'Seguimiento posterior'],
+  ['pyme-herramientas', 'Asesoría en herramientas digitales'],
   ['otro', 'Todavía no sé'],
 ]
 const PASOS = ['Vos', 'Contacto', 'Tu caso']
@@ -95,7 +95,7 @@ export default function Contact({ pyme = false }) {
           <LiveEngraving className="start-art" />
           <div className="start-head" data-reveal>
             <h1>Empecemos.</h1>
-            <p className="lead"><Words>Tres pasos, menos de un minuto. Te respondemos en menos de 24 h para coordinar una charla de 20 minutos, sin cargo.</Words></p>
+            <p className="lead"><Words>{pyme ? 'Tres pasos, menos de un minuto. Te respondemos en menos de 24 h para coordinar una primera reunión sin cargo.' : 'Tres pasos, menos de un minuto. Te respondemos en menos de 24 h para coordinar una charla de 20 minutos, sin cargo.'}</Words></p>
           </div>
 
           <div className="start-card" data-reveal style={{ '--d': '120ms' }}>
@@ -147,7 +147,7 @@ export default function Contact({ pyme = false }) {
                         </div>
                       </div>
                       <label className="field">Contanos un poco <i>(opcional)</i>
-                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder={pyme ? 'Ej.: somos 25 personas, tenemos planillas y sistema contable, pero no logramos explicar los gastos.' : 'Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla.'} />
+                        <textarea rows={4} value={d.msg} onChange={set('msg')} placeholder={pyme ? 'Ej.: somos una constructora de 25 personas con varias obras en curso, y los costos de cada obra los vemos recién al cierre.' : 'Ej.: los pedidos entran por WhatsApp y los cargamos a mano en una planilla.'} />
                       </label>
                     </>
                   )}
@@ -194,8 +194,8 @@ export default function Contact({ pyme = false }) {
         </div>
         <ol className="steps steps-3" data-reveal>
           <li><span className="mono">01</span><h4>Te respondemos</h4><p>En menos de 24 h, por el canal que elegiste.</p></li>
-          <li><span className="mono">02</span><h4>Charla de 20 minutos</h4><p>Nos contás cómo trabajan y dónde se traba.</p></li>
-          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>{pyme ? 'Qué área analizamos, qué entregamos, el precio cerrado y los plazos.' : 'Qué incluye, la puesta en marcha y el abono mensual.'}</p></li>
+          <li><span className="mono">02</span><h4>{pyme ? 'Primera reunión sin cargo' : 'Charla de 20 minutos'}</h4><p>Nos contás cómo trabajan y dónde se traba.</p></li>
+          <li><span className="mono">03</span><h4>Propuesta por escrito</h4><p>{pyme ? 'Qué incluye, qué queda fuera, el plazo y el precio cerrado.' : 'Qué incluye, la puesta en marcha y el abono mensual.'}</p></li>
         </ol>
       </section>
     </>

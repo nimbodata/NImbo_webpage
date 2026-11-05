@@ -1,6 +1,6 @@
-// /pyme · Nimbodata Consultoría: la unidad de Nimbodata que hace diagnóstico y mejora de procesos de gestión para pymes
-// de servicios y obras del AMBA. Es la cara al mercado del Plan de Negocio Express (Parte C del trabajo de la facultad):
-// todo lo que dice esta página tiene que coincidir con el plan (segmento, servicios, equipo, caso, modalidad).
+// /pyme · Nimbodata Consultoría: la unidad de Nimbodata que hace diagnóstico y mejora de la gestión interna para pymes
+// de obras y servicios técnicos del AMBA. Es la cara al mercado del Plan de Negocio Express (Parte C del trabajo de la
+// facultad): todo lo que dice esta página tiene que coincidir con el plan (segmento, servicios, equipo, caso, modalidad).
 // El primer cliente va sin nombre: el plan pide usar el caso respetando su confidencialidad.
 import Fig from './Fig'
 import { WA_PYME } from './data'
@@ -8,42 +8,46 @@ import { FIGS } from './scenes'
 import { Arrow, Final, Icon } from './ui'
 import { Words } from './motion'
 
+// los síntomas del cliente objetivo (plan, 1.2 y 1.4)
 const SINTOMAS = [
   ['M12 3a4 4 0 1 0 0 8a4 4 0 1 0 0-8 M4 21c0-4 3.6-7 8-7s8 3 8 7', 'Todo pasa por la dirección',
     'Los asuntos operativos terminan siempre en el dueño o en el socio gerente, y la empresa se frena cuando no están.'],
   ['M4 7h12 M4 12h16 M4 17h9 M18 15l2 2-2 2', 'Demoras y tareas duplicadas',
-    'Con el crecimiento, el mismo trabajo se hace dos veces y nadie tiene claro quién es responsable de cada paso.'],
+    'Con más obras en curso, el mismo trabajo se hace dos veces y nadie tiene claro quién es responsable de cada paso.'],
   ['M12 3v18 M16.5 7.5c0-1.7-2-3-4.5-3s-4.5 1.3-4.5 3 2 2.6 4.5 3 4.5 1.3 4.5 3-2 3-4.5 3-4.5-1.3-4.5-3', 'Gastos que no se explican',
-    'Hay planillas y sistema contable, pero no se logra anticipar ni explicar buena parte de lo que se gasta.'],
-  ['M5 19V11 M12 19V5 M19 19v-6', 'Información que llega tarde',
-    'Los datos existen, pero no se clasifican ni se revisan a tiempo para decidir mientras el proceso está en curso.'],
+    'Hay planillas y sistema contable, pero cuesta controlar los costos, los materiales y el personal de cada obra.'],
+  ['M5 19V11 M12 19V5 M19 19v-6', 'Desvíos que aparecen al cierre',
+    'La información no se clasifica ni se revisa mientras la obra está en curso, y los desvíos se ven cuando ya no se pueden corregir.'],
 ]
 
-// el servicio principal y los cuatro complementarios del plan (punto 5)
+// el servicio principal (plan, 4.2): las tres dimensiones de la gestión y el informe
 const DIAGNOSTICO = {
   icon: 'M11 4a7 7 0 1 0 0 14a7 7 0 1 0 0-14 M16 16l4.5 4.5',
   checks: [
-    'Acordamos antes qué área o proceso se analiza: gastos, facturación, tareas, operaciones',
-    'Entrevistas a varios roles, cruzadas con planillas, registros y comprobantes',
-    'Informe escrito: el proceso, los problemas, sus causas y las mejoras recomendadas',
-    'Mejoras por prioridad, con plazos, responsables y recursos estimados',
+    'Circulación de la información: cómo se genera, se registra y se comparte entre las obras y la administración',
+    'Delimitación de responsabilidades: quién ejecuta, aprueba y controla cada etapa del proceso',
+    'Seguimiento de las operaciones: cómo se controlan el avance, los plazos y los costos de cada obra en curso',
+    'Informe escrito con los problemas, sus causas y la evidencia, las alternativas comparadas por costo, plazo e impacto, y las acciones por prioridad',
   ],
 }
+// los cuatro servicios complementarios (plan, 4.3)
 const COMPLEMENTOS = [
-  ['M4 5h6v6H4z M14 13h6v6h-6z M7 11v4a2 2 0 0 0 2 2h5 M14 7h3a2 2 0 0 1 2 2v4', 'Diseño de procesos y roles',
-    'Para empresas que todavía no tienen una estructura administrativa armada, o que la tienen pero no funciona bien.'],
-  ['M4 19h16 M6 15l4-8 4 5 4-7', 'Implementación y capacitación',
-    'Definimos con tu equipo los cambios concretos y lo capacitamos para que pueda sostenerlos.'],
-  ['M4 12a8 8 0 1 0 16 0a8 8 0 1 0-16 0 M12 8v4l2.5 2.5', 'Seguimiento',
-    'Mensual o trimestral: medimos los indicadores del diagnóstico para que la mejora no se abandone.'],
-  ['M6 4h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z M3 8.5h18 M9 21h6', 'Asesoría en herramientas',
-    'Cuando el diagnóstico lo amerita, te ayudamos a elegir herramientas digitales de gestión.'],
+  ['M4 5h6v6H4z M14 13h6v6h-6z M7 11v4a2 2 0 0 0 2 2h5 M14 7h3a2 2 0 0 1 2 2v4', 'Diseño de procesos',
+    'Para empresas sin procesos formalizados, o con procesos que ya no responden a la operación: circuitos, responsables, registros y controles.'],
+  ['M4 19h16 M6 15l4-8 4 5 4-7', 'Implementación acompañada',
+    'Ponemos en práctica la alternativa que elegiste: primero en un área u obra piloto, con ajustes y capacitación al personal.'],
+  ['M4 12a8 8 0 1 0 16 0a8 8 0 1 0-16 0 M12 8v4l2.5 2.5', 'Seguimiento posterior',
+    'Mensual o trimestral: medimos los indicadores del diagnóstico para que la mejora se sostenga y corregir desvíos a tiempo.'],
+  ['M6 4h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z M3 8.5h18 M9 21h6', 'Asesoría en herramientas digitales',
+    'Cuando el diagnóstico lo justifica, te ayudamos a elegir la herramienta y, con Nimbodata, a sumar automatización e IA.'],
 ]
+// beneficios para el cliente (plan, 4.4)
 const BENEFICIOS = [
-  'Tareas y responsabilidades más claras, con menos confusiones y trabajo duplicado',
-  'Información ordenada y a tiempo para controlar gastos y operaciones',
-  'Mejoras priorizadas según su importancia, su costo y la posibilidad real de aplicarlas',
-  'Procedimientos y controles que ayudan a sostener las mejoras en el tiempo',
+  'Procesos ordenados y con responsables definidos, con menos demoras, tareas duplicadas y dependencia de la dirección',
+  'Información confiable y a tiempo, registrada mientras la obra está en curso y no recién al cierre',
+  'Más control y planificación, con indicadores que permiten anticipar problemas y corregirlos',
+  'Mejoras que se sostienen: el personal queda capacitado y los resultados se verifican en el seguimiento',
+  'Una inversión acotada: se prioriza por importancia y costo, y se aprovecha primero lo que la empresa ya tiene',
 ]
 
 const CASO = [
@@ -53,51 +57,53 @@ const CASO = [
 ]
 
 const SITUACIONES = [
-  ['M4 6h16 M4 12h10 M4 18h13', 'Todavía no ordenaron sus procesos',
-    'No hay procesos, registros ni responsabilidades formalizados. Cada uno resuelve a su manera.'],
+  ['M4 6h16 M4 12h10 M4 18h13', 'Todavía no formalizaron sus procesos',
+    'No hay procesos, registros ni responsabilidades definidos. Cada obra y cada persona resuelve a su manera.'],
   ['M5 19V11 M12 19V5 M19 19v-6', 'Tienen información, pero no la usan a tiempo',
     'Hay sistemas y datos administrativos, pero cuesta integrarlos, analizarlos o usarlos para decidir.'],
 ]
 
+// proceso de venta y de trabajo (plan, 6.3, 6.4 y 7.2)
 const PASOS = [
-  ['Primera reunión', 'Sin cargo, para entender qué necesita tu empresa y si podemos ayudarte.'],
-  ['Propuesta y contrato', 'Qué área analizamos, qué entregamos, el precio cerrado y los plazos. Con un acuerdo de confidencialidad.'],
-  ['Diagnóstico e implementación', 'Relevamos en tu empresa y analizamos a distancia. Unas 8 semanas entre las dos etapas.'],
-  ['Seguimiento', 'Indicadores cada mes o cada trimestre, y una revisión sin cargo a los 90 días de terminar.'],
+  ['Primera reunión', 'Sin cargo, para conocer el problema de tu empresa y ver si podemos ayudarte.'],
+  ['Propuesta y contrato', 'Por escrito: qué incluye, qué queda fuera, el plazo y el precio cerrado. El contrato tiene cláusula de confidencialidad.'],
+  ['Diagnóstico e implementación', 'Unas 8 semanas. Relevamos en tu empresa y en las obras, analizamos a distancia y acompañamos los cambios con una prueba piloto.'],
+  ['Seguimiento', 'Indicadores cada mes o cada trimestre, y una revisión sin cargo a los 90 días de las tres prioridades del diagnóstico.'],
 ]
 
-// propuesta de valor del plan (Canvas)
+// diferenciación (plan, 4.5)
 const PORQUE = [
-  ['Diagnóstico con evidencia', 'Cruzamos lo que dicen las entrevistas con lo que muestran las planillas y los comprobantes. No trabajamos con impresiones.'],
-  ['Primero, lo que ya tenés', 'Ordenamos lo que la empresa ya tiene. Comprar algo nuevo es el último recurso.'],
-  ['El mismo equipo de punta a punta', 'No hay un socio que vende y un junior que ejecuta: la misma dupla hace el diagnóstico, la implementación y el seguimiento.'],
-  ['Miradas distintas', 'Un equipo con formación en administración, marketing y comercio exterior mira el mismo problema desde varios ángulos.'],
-  ['IA para analizar', 'Procesamos en horas volúmenes de información que a mano llevarían días.'],
-  ['Un caso real', 'Nuestro método ya se aplicó en una pyme real. Te lo mostramos en la primera reunión.'],
+  ['La gestión interna, en el centro', 'Otros miran la obra desde lo técnico o los números desde la contabilidad. Nosotros trabajamos sobre cómo circula la información, quién se ocupa de qué y cómo se controla cada operación.'],
+  ['A la medida de tu pyme', 'Cambios concretos, de bajo costo y en plazos cortos, en vez de programas largos pensados para empresas más grandes.'],
+  ['Primero, los procesos', 'Ordenamos y aprovechamos lo que la empresa ya tiene. Recomendamos un sistema nuevo solo si el diagnóstico lo justifica.'],
+  ['IA para analizar tus datos', 'Con las herramientas de Nimbodata procesamos en horas comprobantes, planillas y registros que a mano llevarían días.'],
+  ['Hasta ver los resultados', 'No terminamos con el informe: acompañamos la implementación, capacitamos al personal y medimos los indicadores.'],
+  ['Un caso real del rubro', 'Nuestro método ya se aplicó en una pyme de obras. Te lo mostramos en la primera reunión.'],
 ]
 
-// las seis áreas del plan (punto 7.5); la asignación de cada integrante es provisoria
+// las seis áreas del plan (punto 6.5)
 const EQUIPO = [
   { initials: 'VE', name: 'Valentín Elizari', role: 'Dirección y comercial', pos: '70% 40%',
-    bio: 'Relación con los clientes, propuestas, contratos y coordinación general.' },
+    bio: 'Relación con los clientes, reuniones iniciales, propuestas, contratos y coordinación general.' },
   { photo: '/equipo-ariana.jpg', name: 'Ariana Sosa', role: 'Metodología y diagnóstico', pos: '80% 70%',
-    bio: 'Guías de entrevista, matriz de alternativas y calidad de cada informe.' },
+    bio: 'Guías de relevamiento y entrevista, matriz de comparación de alternativas y calidad de cada informe.' },
   { initials: 'CA', name: 'Cameron Avelino Melia', role: 'Administración y finanzas', pos: '10% 60%',
-    bio: 'Cotizaciones, cobranzas, presupuesto y vínculo con el contador y el abogado.' },
+    bio: 'Cotizaciones, facturación, cobranzas y presupuesto de la consultora.' },
   { initials: 'AM', name: 'Agustín Marcos', role: 'Marketing y marca', pos: '30% 80%',
-    bio: 'Sitio web, LinkedIn, contenidos, eventos y cámaras pyme.' },
+    bio: 'Sitio web, LinkedIn, contenidos y participación en cámaras y eventos del sector.' },
   { photo: '/seba.jpg', name: 'Sebastián Deina', role: 'Datos e IA', pos: '20% 30%',
-    bio: 'Procesa la información de cada cliente, arma los tableros y hace de puente con Nimbodata.' },
+    bio: 'Análisis de la información de cada cliente con IA, tableros de indicadores y vínculo con Nimbodata.' },
   { photo: '/equipo-katerina.jpg', name: 'Katerina Prada', role: 'Seguimiento y calidad', pos: '50% 20%',
-    bio: 'Mide los indicadores después de cada proyecto, la satisfacción y la retención de clientes.' },
+    bio: 'Indicadores después de cada proyecto, encuestas de satisfacción, revisión a los 90 días y retención de clientes.' },
 ]
 
 const FAQ = [
-  ['¿La primera reunión tiene costo?', 'No. Es para entender qué necesita tu empresa. Si avanzamos, te mandamos una propuesta por escrito con precio cerrado antes de empezar.'],
+  ['¿La primera reunión tiene costo?', 'No. Es para conocer el problema de tu empresa. Si avanzamos, te mandamos una propuesta por escrito con el alcance, el plazo y el precio cerrado antes de empezar.'],
+  ['¿Cómo se paga?', 'Con precio cerrado: 50 % al iniciar el proyecto y 50 % al terminar la implementación. El seguimiento es un abono mensual.'],
   ['¿Cuánto dura un proyecto?', 'El diagnóstico y la implementación llevan unas 8 semanas en total. Después, el seguimiento puede ser mensual o trimestral.'],
-  ['¿Trabajan en mi empresa o a distancia?', 'Las dos cosas: el relevamiento, las entrevistas y las capacitaciones son presenciales; el análisis, el informe y el seguimiento, remotos.'],
+  ['¿Trabajan en mi empresa o a distancia?', 'Las dos cosas: las entrevistas, el relevamiento y las capacitaciones son presenciales, en tu empresa y en las obras; el análisis, los informes y parte del seguimiento, remotos.'],
   ['¿Voy a tener que comprar un sistema nuevo?', 'Casi nunca. Primero ordenamos lo que ya usás. Si hace falta una herramienta, te asesoramos para elegirla.'],
-  ['¿Qué pasa con la información de mi empresa?', 'Firmamos un acuerdo de confidencialidad al arrancar, junto con el contrato que fija qué entregamos y qué necesitamos de tu equipo.'],
+  ['¿Qué pasa con la información de mi empresa?', 'El contrato incluye una cláusula de confidencialidad, y la documentación se guarda en cuentas institucionales, no personales.'],
 ]
 
 export default function Pyme() {
@@ -113,7 +119,7 @@ export default function Pyme() {
             <h1>Ordenamos la gestión de tu pyme con lo que ya tiene.</h1>
           </div>
           <div data-reveal style={{ '--d': '120ms' }}>
-            <p className="lead"><Words>Diagnóstico y mejora de procesos para pymes de servicios y obras del AMBA. Encontramos qué falla, por qué falla, y te acompañamos a resolverlo.</Words></p>
+            <p className="lead"><Words>Diagnóstico y mejora de la gestión interna para pymes de obras y servicios técnicos del AMBA. Encontramos qué falla, por qué falla, y te acompañamos a resolverlo.</Words></p>
             <div className="btns">
               <a className="btn btn-acc" href="/pyme/contacto" data-cta="pyme-hero">Pedí una primera reunión <Arrow /></a>
               <a className="btn" href="#servicios">Ver servicios <Arrow /></a>
@@ -127,8 +133,8 @@ export default function Pyme() {
           <div className="py-about" data-reveal>
             <h2>Quiénes somos.</h2>
             <div>
-              <p className="lead">Nimbodata Consultoría ayuda a pequeñas y medianas empresas a organizar y mejorar sus procesos administrativos, operativos y de gestión. Somos un equipo de Buenos Aires con formación en administración de empresas, marketing y comercio exterior.</p>
-              <p className="lead">Somos parte de Nimbodata, que hace automatizaciones e inteligencia artificial para empresas. Acá nos dedicamos a otra cosa: diagnosticar y ordenar la gestión. La IA la usamos como herramienta de trabajo y, si tu empresa la necesita, te la ofrecemos.</p>
+              <p className="lead">Nimbodata Consultoría es una consultora de gestión creada en 2026 por un equipo de seis integrantes con formación en administración de empresas, marketing y comercio exterior. Ayudamos a pymes de obras y servicios técnicos a organizar y mejorar sus procesos administrativos, operativos y de gestión.</p>
+              <p className="lead">Somos una extensión de Nimbodata, que hace automatizaciones e inteligencia artificial para empresas. Acá nos dedicamos a otra cosa: diagnosticar y ordenar la gestión. La IA la usamos para analizar la información de cada cliente y, si tu empresa la necesita, te la ofrecemos.</p>
             </div>
           </div>
         </section>
@@ -137,7 +143,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>Cuando la empresa crece más rápido que su gestión.</h2>
-              <p className="lead">Es lo que más vemos en pymes en crecimiento. Si alguna te suena, por ahí empieza el diagnóstico.</p>
+              <p className="lead">Cada obra tiene sus propios costos, materiales y personal. Si alguna de estas situaciones te suena, por ahí empieza el diagnóstico.</p>
             </div>
           </div>
           <div className="ev-grid ev-grid-4">
@@ -155,7 +161,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>Qué hacemos.</h2>
-              <p className="lead">Un servicio principal y cuatro complementarios. Cada empresa contrata las etapas que necesita.</p>
+              <p className="lead">Un servicio principal y cuatro complementarios. Cada empresa contrata las etapas que necesita, según el problema que quiera resolver.</p>
             </div>
           </div>
           <article className="row">
@@ -168,7 +174,7 @@ export default function Pyme() {
                 <span className="chip"><Icon d={DIAGNOSTICO.icon} /></span>
                 <h3>Diagnóstico de gestión y procesos</h3>
               </div>
-              <p>Revisamos cómo se trabaja en un área o proceso de tu empresa para detectar qué está funcionando mal, por qué ocurre y qué se puede mejorar.</p>
+              <p>Identificamos qué funciona mal en un área o proceso de tu empresa, por qué ocurre y qué alternativas de mejora son viables. Antes de empezar acordamos qué área se estudia y qué queda fuera. Analizamos tres dimensiones:</p>
               <ul className="checks">{DIAGNOSTICO.checks.map((c) => <li key={c}>{c}</li>)}</ul>
             </div>
           </article>
@@ -199,7 +205,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>A quién ayudamos.</h2>
-              <p className="lead">Pymes de servicios, obras y proyectos del AMBA, de 10 a 50 personas, que crecieron más rápido que sus procedimientos de gestión.</p>
+              <p className="lead">Pymes de construcción, obras civiles, instalaciones eléctricas, energía y telecomunicaciones del AMBA, de 10 a 50 personas y con varias obras en curso, que crecieron más rápido que sus procedimientos de gestión.</p>
             </div>
           </div>
           <div className="ev-grid">
@@ -211,7 +217,7 @@ export default function Pyme() {
               </div>
             ))}
           </div>
-          <p className="rubros-more" data-reveal>Trabajamos con el dueño, el socio gerente o el responsable de administración. Pedimos tres cosas: un problema que se pueda identificar, acceso a la información y alguien de la dirección que se haga cargo de aplicar los cambios. <a href="/pyme/contacto">Contanos tu caso →</a></p>
+          <p className="rubros-more" data-reveal>Trabajamos en CABA y los 24 partidos del Gran Buenos Aires. Pedimos tres cosas: una necesidad de mejora que se pueda identificar, disposición a compartir la información y el compromiso de la dirección para aplicar los cambios. <a href="/pyme/contacto">Contanos tu caso →</a></p>
         </section>
 
         <section id="caso" className="sec wrap">
@@ -232,7 +238,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>Cómo trabajamos.</h2>
-              <p className="lead">Planteamos hipótesis, entrevistamos a varios roles y separamos el síntoma del problema, su causa y su consecuencia.</p>
+              <p className="lead">Entrevistamos a varios roles, contrastamos lo que dicen con lo que muestran los datos y separamos el síntoma del problema, su causa y la evidencia que lo respalda.</p>
             </div>
           </div>
           <ol className="steps" data-reveal>
@@ -246,7 +252,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>Por qué Nimbodata.</h2>
-              <p className="lead">Atención directa para empresas que, por su tamaño, no son prioridad para las consultoras grandes. Cambios concretos y de bajo costo en vez de proyectos largos y caros.</p>
+              <p className="lead">Una consultoría directa y a la medida de empresas que, por su tamaño, no son prioridad para las consultoras grandes. El mismo equipo hace el diagnóstico y acompaña la implementación.</p>
             </div>
           </div>
           <div className="ev-grid ev-grid-3">
@@ -264,7 +270,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>El equipo.</h2>
-              <p className="lead">Seis socios, cada uno a cargo de un área. Cada proyecto lo lleva una dupla, y todos participan de las entrevistas y los relevamientos.</p>
+              <p className="lead">Seis integrantes, cada uno a cargo de un área. Cada proyecto lo lleva una dupla, que te acompaña desde el diagnóstico hasta el seguimiento.</p>
             </div>
           </div>
           <div className="team team-3">
