@@ -57,7 +57,7 @@ export default function Wsp() {
     <>
       <section className="sv-hero wrap">
         <span className="mono crumb" data-reveal>Agente de WhatsApp · Distribuidoras y mayoristas</span>
-        <h1 data-reveal>Tu distribuidora toma pedidos por WhatsApp, aunque sea de madrugada.</h1>
+        <h1 data-reveal>Los pedidos de WhatsApp, cargados solos. Aunque nadie mire el celular.</h1>
         <p className="lead words" data-reveal style={{ '--d': '80ms' }}>
           <Words>Un agente responde precios y stock, arma el pedido y lo deja cargado para preparar. Listo en 7 días hábiles.</Words>
         </p>
