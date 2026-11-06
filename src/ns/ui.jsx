@@ -95,6 +95,12 @@ export function Footer() {
       <div><h5>Explorar</h5><a href="/casos">Casos</a><a href="/blog">Blog</a><a href="/beta">BETA</a><a href="/#proceso">Cómo trabajamos</a><a href="/#equipo">Equipo</a></div>
       <div><h5>Nimbo</h5><a href="/contacto">Contacto</a><a href={WA}>WhatsApp</a><a href="https://instagram.com/nimbodata">Instagram</a><a href="https://linkedin.com/company/nimboconsulting">LinkedIn</a></div>
       <p className="foot-trust">Partner oficial de Tiendanube · Certificaciones HubSpot y Make · En la Guía de Buenos Aires</p>
+      {/* insignia del directorio: el enlace al perfil es lo que AdWorld verifica */}
+      <a className="foot-badge" href="https://www.adworldlatam.com/agencias/nimbo-consulting" target="_blank" rel="noopener"
+        title="Nimbo Consulting en AdWorld Latam">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l2.6 2.1 3.3-.3.9 3.2 2.9 1.6-1.2 3.1 1.2 3.1-2.9 1.6-.9 3.2-3.3-.3L12 22l-2.6-2.1-3.3.3-.9-3.2-2.9-1.6 1.2-3.1-1.2-3.1 2.9-1.6.9-3.2 3.3.3z" /><path d="M8.5 12.2l2.4 2.3 4.6-4.8" /></svg>
+        <span><small>AdWorld Latam</small>Partner</span>
+      </a>
       <p className="foot-bottom">© 2026 Nimbo. Hecho en Argentina.</p>
     </footer>
   )
