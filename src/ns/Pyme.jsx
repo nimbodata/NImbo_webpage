@@ -5,7 +5,7 @@
 import Fig from './Fig'
 import { WA_PYME } from './data'
 import { FIGS } from './scenes'
-import { Arrow, Final, Icon } from './ui'
+import { Arrow, Final } from './ui'
 import { Words } from './motion'
 
 // los síntomas del cliente objetivo (plan, 1.2 y 1.4)
@@ -147,9 +147,9 @@ export default function Pyme() {
             </div>
           </div>
           <div className="ev-grid ev-grid-4">
-            {SINTOMAS.map(([icon, t, d], i) => (
+            {SINTOMAS.map(([, t, d], i) => (
               <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 70}ms` }}>
-                <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
+                <span className="mono py-num">{String(i + 1).padStart(2, '0')}</span>
                 <h4>{t}</h4>
                 <p>{d}</p>
               </div>
@@ -171,7 +171,6 @@ export default function Pyme() {
             <div className="row-copy" data-reveal style={{ '--d': '100ms' }}>
               <span className="mono py-num">Servicio principal</span>
               <div className="row-title">
-                <span className="chip"><Icon d={DIAGNOSTICO.icon} /></span>
                 <h3>Diagnóstico de gestión y procesos</h3>
               </div>
               <p>Identificamos qué funciona mal en un área o proceso de tu empresa, por qué ocurre y qué alternativas de mejora son viables. Antes de empezar acordamos qué área se estudia y qué queda fuera. Analizamos tres dimensiones:</p>
@@ -186,9 +185,9 @@ export default function Pyme() {
             </div>
           </div>
           <div className="ev-grid ev-grid-4">
-            {COMPLEMENTOS.map(([icon, t, d], i) => (
+            {COMPLEMENTOS.map(([, t, d], i) => (
               <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 70}ms` }}>
-                <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
+                <span className="mono py-num">{String(i + 1).padStart(2, '0')}</span>
                 <h4>{t}</h4>
                 <p>{d}</p>
               </div>
@@ -209,9 +208,9 @@ export default function Pyme() {
             </div>
           </div>
           <div className="ev-grid">
-            {SITUACIONES.map(([icon, t, d], i) => (
+            {SITUACIONES.map(([, t, d], i) => (
               <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 80}ms` }}>
-                <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
+                <span className="mono py-num">{String(i + 1).padStart(2, '0')}</span>
                 <h4>{t}</h4>
                 <p>{d}</p>
               </div>
@@ -293,7 +292,6 @@ export default function Pyme() {
             <div data-reveal>
               <h2 className="faq-title">Antes de escribirnos.</h2>
               <div className="ask">
-                <span className="chip chip-sq"><Icon d="M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" /></span>
                 <div><b>¿Preferís WhatsApp?</b><span>Escribinos y te responde alguien del equipo.</span></div>
                 <a className="btn btn-wide" href={WA_PYME} data-cta="pyme-wa">WhatsApp <Arrow /></a>
               </div>

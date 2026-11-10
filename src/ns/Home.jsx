@@ -6,7 +6,7 @@ import { FIGS } from './scenes'
 import Showcase from './Showcase'
 import Testimonials from './Testimonials'
 import Trust, { Tecnologias } from './Trust'
-import { Arrow, Final, Icon } from './ui'
+import { Arrow, Final } from './ui'
 import { Words } from './motion'
 
 export default function Home() {
@@ -45,7 +45,6 @@ export default function Home() {
               </a>
               <div className="row-copy" data-reveal style={{ '--d': '100ms' }}>
                 <div className="row-title">
-                  <span className="chip"><Icon d={a.icon} /></span>
                   <h3>{a.t}</h3>
                 </div>
                 <p>{a.d}</p>
@@ -67,7 +66,6 @@ export default function Home() {
             {RUBROS.map((r, i) => (
               <a key={r.slug} className="rubro" href={`/contacto?r=${r.slug}`} data-reveal style={{ '--d': `${i * 100}ms` }}>
                 <div className="row-title">
-                  <span className="chip"><Icon d={r.icon} /></span>
                   <h3>{r.t}</h3>
                 </div>
                 <p>{r.d}</p>
@@ -88,7 +86,7 @@ export default function Home() {
         <section id="equipo" className="sec wrap">
           <div className="sec-head" data-reveal>
             <div>
-              <h2>¿Quiénes somos?</h2>
+              <h2>Quién va a armar tu sistema.</h2>
               <p className="lead">Un equipo chico de Buenos Aires. Hablás directo con quien construye tu sistema.</p>
             </div>
           </div>
@@ -134,11 +132,9 @@ export default function Home() {
         <section id="faq" className="sec wrap" data-buddy="¿Otra duda? Preguntame a mí.">
           <div className="faq-grid">
             <div data-reveal>
-              <span className="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .8-1 1.5V14M12 17h.01" /></svg>Preguntas frecuentes</span>
               <h2 className="faq-title">Lo que nos preguntan antes de escribir.</h2>
               <div className="ask">
-                <span className="chip chip-sq"><Icon d="M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" /></span>
-                <div><b>¿Te quedó alguna duda?</b><span>Escribinos y te responde alguien del equipo.</span></div>
+                <div><b>¿Tu pregunta no está?</b><span>Escribinos y te responde alguien del equipo.</span></div>
                 <a className="btn btn-wide" href="/contacto">Hablemos <Arrow /></a>
               </div>
             </div>

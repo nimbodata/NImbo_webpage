@@ -109,6 +109,10 @@ export default function App() {
   const isSite = !isLanding && !isReport
   const isNew = !IS_ROBOTS_HOST && !IS_AUTO_HOST && NS_PATH.test(pathname)
   useNdPage(isSite)
+  // las páginas viejas usan Poppins, Inter y Garamond: se cargan recién al entrar a una (ver index.html)
+  useEffect(() => {
+    if (!isNew) window.__legacyFonts?.()
+  }, [isNew])
   // si el splash índigo de index.html quedó (p. ej. /robots redirigido a la home), en el sitio blanco no va
   useEffect(() => {
     if (isSite) document.getElementById('splash')?.remove()

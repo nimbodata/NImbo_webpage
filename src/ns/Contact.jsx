@@ -177,17 +177,14 @@ export default function Contact({ pyme = false }) {
         </div>
         <div className={`others${pyme ? ' others-2' : ''}`}>
           <a className="other" href={waLink} data-reveal>
-            <span className="chip chip-sm"><Icon d="M7 4h10a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3h-6l-4 3.5V17a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" /></span>
             <h4>WhatsApp</h4><p>+54 9 11 2403-6836 · respondemos el mismo día.</p>
             <span className="other-go">Escribir <Arrow /></span>
           </a>
           <a className="other" href={`mailto:${MAIL}`} data-reveal style={{ '--d': '80ms' }}>
-            <span className="chip chip-sm"><Icon d="M6 5h12a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z M4 8l8 5.5L20 8" /></span>
             <h4>Mail</h4><p>{MAIL}</p>
             <span className="other-go">Escribir <Arrow /></span>
           </a>
           {!pyme && <a className="other" href={AGENDAR} data-reveal style={{ '--d': '160ms' }}>
-            <span className="chip chip-sm"><Icon d="M7 5h10a3 3 0 0 1 3 3v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3z M4 10h16 M8 3v4 M16 3v4" /></span>
             <h4>Videollamada</h4><p>Elegí un horario de 20 minutos en el calendario.</p>
             <span className="other-go">Agendar <Arrow /></span>
           </a>}

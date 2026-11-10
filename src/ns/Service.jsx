@@ -6,7 +6,7 @@ import Fig from './Fig'
 import { AREAS, PASOS_SERVICIO, PROYECTOS_URL } from './data'
 import { FIGS } from './scenes'
 import Showcase from './Showcase'
-import { Arrow, Final, Icon } from './ui'
+import { Arrow, Final } from './ui'
 import { Words } from './motion'
 
 export default function Service({ area }) {
@@ -63,7 +63,7 @@ export default function Service({ area }) {
         </section>
 
         <section className="sec wrap">
-          <Negocios list={p.negocios} icon={area.icon} />
+          <Negocios list={p.negocios} />
         </section>
 
         <section className="sec wrap sv-split">
@@ -86,7 +86,6 @@ export default function Service({ area }) {
           <div className="others">
             {otros.map((a, i) => (
               <a key={a.slug} href={a.path} className="other" data-reveal style={{ '--d': `${i * 80}ms` }}>
-                <span className="chip chip-sm"><Icon d={a.icon} /></span>
                 <h4>{a.t}</h4>
                 <p>{a.d}</p>
                 <span className="other-go">Ver más <Arrow /></span>
@@ -138,7 +137,7 @@ function Ejemplos({ list }) {
   )
 }
 
-function Negocios({ list, icon }) {
+function Negocios({ list }) {
   const [k, setK] = useState(0)
   return (
     <div className="neg" data-reveal>
@@ -149,7 +148,6 @@ function Negocios({ list, icon }) {
         ))}
       </div>
       <div key={k} className="neg-card">
-        <span className="chip chip-sq"><Icon d={icon} /></span>
         <div>
           <h3>{list[k][0]}</h3>
           <p>{list[k][1]}</p>

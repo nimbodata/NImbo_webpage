@@ -3,7 +3,7 @@
 // Desde acá se sigue a somosbeta.net.
 import Fig from './Fig'
 import { FIGS } from './scenes'
-import { Arrow, Icon } from './ui'
+import { Arrow } from './ui'
 import { Words } from './motion'
 
 const SITE = 'https://somosbeta.net'
@@ -63,7 +63,6 @@ export default function Beta() {
               const card = (
                 <>
                   <div className="ev-top">
-                    <span className="ev-icon"><Icon d={e.icon} /></span>
                     <span className={`ev-tag${e.open ? ' open' : ''}`}>{e.open ? 'Inscripciones abiertas' : 'Próximamente'}</span>
                   </div>
                   <h4>{e.t}</h4>
@@ -107,9 +106,9 @@ export default function Beta() {
             </div>
           </div>
           <div className="ev-grid ev-grid-4">
-            {PARTNERS.map(([icon, t, d], i) => (
+            {PARTNERS.map(([, t, d], i) => (
               <div key={t} className="ev-card" data-reveal style={{ '--d': `${i * 70}ms` }}>
-                <div className="ev-top"><span className="ev-icon"><Icon d={icon} /></span></div>
+                <span className="mono py-num">{String(i + 1).padStart(2, '0')}</span>
                 <h4>{t}</h4>
                 <p>{d}</p>
               </div>

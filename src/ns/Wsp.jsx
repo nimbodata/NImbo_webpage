@@ -145,7 +145,7 @@ export default function Wsp() {
         <section className="sec wrap">
           <div className="faq-grid">
             <div data-reveal>
-              <h2 className="faq-title">Preguntas frecuentes.</h2>
+              <h2 className="faq-title">Lo que preguntan las distribuidoras.</h2>
               <a className="btn btn-wide" href={WA_WSP} data-cta="wsp-faq">Preguntanos por WhatsApp <Arrow /></a>
             </div>
             <div className="faq" data-reveal style={{ '--d': '100ms' }}>
