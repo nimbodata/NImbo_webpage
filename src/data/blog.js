@@ -1,5 +1,164 @@
 export const posts = [
   {
+    slug: 'cuanto-cuesta-una-pagina-web-en-argentina-2026',
+    title: 'Cuánto cuesta una página web en Argentina en 2026 (guía para pymes)',
+    description:
+      '¿Cuánto cuesta una página web en Argentina en 2026? Rangos que publican estudios, qué se paga todos los meses y qué pedir en el presupuesto, sin letra chica.',
+    date: '2026-11-10',
+    category: 'Diseño Web',
+    readTime: '12 min',
+    content: `
+## Tres presupuestos y una sola pregunta
+
+Pediste tres cotizaciones para la web de tu pyme y te llegaron tres números que no se parecen en nada. Uno parece el precio de una landing. Otro viene con un abono que no termina de explicar. El tercero es varias veces más alto y habla de tienda, turnos e integraciones. La pregunta es la misma: ¿cuánto cuesta una página web en Argentina en 2026?
+
+No hay un precio único. Depende de si necesitás una landing, una web institucional, una tienda online o un desarrollo a medida, y de qué incluye cada propuesta. En las tarifas públicas que consultamos el 10 de noviembre de 2026, una landing aparece, según el sitio, desde $80.000–$150.000 ([Faro Studio](https://www.farostudio.com.ar/blog/cuanto-cuesta-pagina-web-argentina-2026/), página modificada el 7 de octubre de 2026) o $149.000 ([Mendoza Web Lab](https://mendozaweblab.com/es), precios finales vigentes hasta el 30 de noviembre de 2026). GesArg, en su guía del 20 de septiembre de 2026, presenta rangos que describe como de trabajo a medida y profesional: entre $200.000 y $1.500.000+ según lo que tenga que hacer el sitio, más $15.000 a $40.000 mensuales de hosting, dominio y soporte. Eso es lo que esos sitios publican en esas fechas, no un índice oficial de mercado. En Nimbo no publicamos un tarifario de páginas web: el costo se define en la propuesta, después de un [diagnóstico](/diagnostico).
+
+## De qué depende el precio (y por qué hay presupuestos que no se pueden comparar)
+
+Si una cotización es de una landing y la otra es de una tienda con pagos, stock y envíos, no estás comparando el mismo trabajo. El número solo no te dice nada si no está claro el alcance. Y si hoy dependés solo de Instagram, el problema no es solo el presupuesto: es que no tenés un lugar propio donde te encuentren. Eso lo desarrollamos en **[por qué tu negocio necesita una página web profesional en 2026](/blog/por-que-tu-negocio-necesita-una-pagina-web)**; acá nos concentramos en cuánto sale y qué se está cotizando.
+
+### Landing, web institucional, tienda online o sistema a medida
+
+Una landing suele ser una sola página, para explicar una oferta y generar una consulta. Una web institucional o corporativa tiene varias secciones y sirve para presentar la empresa. Una tienda online agrega catálogo, pagos, envíos y stock. Un sistema o portal a medida es otra categoría: software para organizar turnos, datos, usuarios o procesos internos.
+
+En Nimbo esa frontera está explícita. Una [página web para pymes](/desarrollo-web-pymes) sirve para presentar la empresa, funcionar bien en el celular y facilitar el contacto. Si además hay que organizar tareas, datos o un proceso interno, el trabajo se parece más a un [sistema a medida](/software-a-medida). Mezclar las dos cosas en un mismo presupuesto, sin decirlo, es una de las razones por las que los números se disparan.
+
+### Diseño, contenidos, integraciones y quién mantiene después
+
+El precio también cambia según el diseño (plantilla o trabajo a medida), quién escribe los textos y saca las fotos, y si hay que conectar la web con WhatsApp, un CRM, un sistema de gestión o un medio de pago. Cada integración suma alcance. Si dominio, hosting y quién hace los cambios no están por escrito, el número de abajo es incompleto.
+
+
+## Qué publican estudios y agencias argentinas en 2026
+
+Los montos de esta tabla son precios de lista de cada proveedor, no un promedio ni un «precio de mercado» armado por nosotros. Los relevamos el 10 de noviembre de 2026. Si al día de leerlos un sitio los cambió, vale lo que figure en la fuente.
+
+Fuentes: [Salvador Castro](https://www.salvacastro.com.ar/servicios), [Mendoza Web Lab](https://mendozaweblab.com/es), [GesArg](https://gesarg.com/guias/cuanto-cuesta-una-pagina-web-en-argentina), [Faro Studio](https://www.farostudio.com.ar/blog/cuanto-cuesta-pagina-web-argentina-2026/), [Ideas Web](https://ideasweb.com.ar/noticia/cuanto-cuesta-pagina-web-empresa-argentina) y [Tu Página Ya](https://tupaginaya.net.ar/cuanto-cuesta-una-pagina-web).
+
+| Quién lo publica y fecha | Landing | Institucional / varias secciones | Tienda online | A medida, turnos u otros |
+| --- | --- | --- | --- | --- |
+| Salvador Castro, actualizados a octubre 2026 | desde $150.000 | desde $375.000 (hasta 5 secciones) | desde $450.000 | desde $500.000 (turnos o sistema a medida) |
+| Mendoza Web Lab, precios finales válidos hasta el 30/11/2026 | Plan Presencia (una página) $149.000 | Plan Negocio (hasta 5 secciones) $299.000 | — | desde $690.000 (tienda, turnos, paneles) |
+| GesArg, precios propios publicados en gesarg.com al 20/09/2026 | $250.000 + $20.000/mes | Web dinámica $400.000 + $30.000/mes | $500.000 + $30.000/mes | — |
+| Faro Studio, página modificada el 7 oct 2026 | $80.000 – $150.000 ARS | $180.000 – $350.000 ARS, pago único (5–7 páginas) | $350.000 – $700.000 ARS | Portal inmobiliario $400.000 – $800.000 ARS |
+| Ideas Web, página modificada el 4 nov 2026 | desde $150.000 ARS | Sitio corporativo / institucional desde $200.000 ARS | desde $200.000 ARS | — |
+| Tu Página Ya, actualizado el 6 nov 2026 | Plan Presencia $299.000 (promo hasta el 30/11/2026, antes $330.000) | Plan Captación $430.000 y plan Crecimiento $690.000 | — | desde $950.000 (turnos, reservas, señas) |
+
+En los planes de Tu Página Ya, el pago es único y el primer año de dominio y hosting va incluido; Presencia, Captación y Crecimiento son los nombres de sus paquetes, no una clasificación nuestra. Por eso hay presupuestos de $80.000 y otros de más de un millón: están cotizando productos distintos, con alcances y condiciones distintas. En algunos casos es un pago único; en otros, un abono que sigue después.
+
+### Lo que se cobra una sola vez
+
+Varios de esos precios se presentan como un pago de desarrollo (o un «desde»). No siempre incluyen lo mismo: la cantidad de secciones, si el diseño es a medida, si hay que cargar contenidos, o si el primer año de dominio y hosting va incluido —como declara Tu Página Ya en sus planes, el 6 de noviembre de 2026—. Mendoza Web Lab y GesArg, en las páginas citadas, mencionan una forma de pago de 50% al empezar y 50% al aprobar o publicar. Es lo que ellos dicen de su trabajo, no una condición de Nimbo: en [desarrollo web para pymes](/desarrollo-web-pymes) no publicamos forma de pago.
+
+### Tiendas, turnos y desarrollos a medida (otra categoría de precio)
+
+Cuando el pedido incluye venta online, turnos o un panel, el precio deja de parecerse al de una web institucional. Eso ya se ve en la tabla de lista: es otra categoría, no un «plus» menor.
+
+Separado de sus precios de lista, GesArg (20/09/2026) publica estos rangos que presenta como «para trabajo a medida y profesional», con plazos típicos: landing, $200.000 a $400.000 (1 a 3 semanas); web institucional de varias páginas, $350.000 a $800.000 (3 a 6 semanas); web dinámica administrable, $400.000 a $900.000 (3 a 6 semanas); tienda online, $450.000 a $1.500.000+ (4 a 8 semanas); sistema o portal a medida, desde $500.000, según alcance, por etapas. Tu Página Ya, el 6 de noviembre de 2026, habla de un rango orientativo de $300.000 a $800.000 para una web de varias páginas hecha por agencia o profesional. Son cifras de esos sitios, no nuestras.
+
+Nimbo no publica plazos de entrega de páginas web; los que declaran otros estudios están en la pregunta frecuente de más abajo.
+
+Si estás armando una web para una pyme, el trabajo no termina en «que se vea prolija». En **[desarrollo web para pymes](/desarrollo-web-pymes)** diseñamos sitios, tiendas, portales y sistemas pensados para el celular, para que se entienda qué ofrecés y para que te puedan escribir. Trabajamos desde Buenos Aires de forma remota con pymes de toda Argentina. El precio, cuando hay un proyecto, va en la propuesta, no en una lista cerrada.
+
+## Los costos que siguen después de publicar la web
+
+El desarrollo es la parte que se ve en el presupuesto. Tener la página publicada implica, además, dominio, hosting y —si querés que no se quede quieta— mantenimiento. El SEO mensual es opcional y es otro servicio.
+
+| Concepto | Cifra publicada | Fuente y fecha |
+| --- | --- | --- |
+| Dominio .com.ar | $8.500 el alta y $8.500 la renovación anual, en NIC Argentina | Tu Página Ya, consulta a nic.ar del 22/10/2026; Faro Studio, «Actualizado Octubre 2026», $8.500 ARS/año (NIC Argentina); Ideas Web, ≈ $8.500 ARS por año (página al 4/11/2026) |
+| Hosting | $9.500 – $13.000 ARS/mes | Faro Studio, actualizado octubre 2026 |
+| Hosting | $20.000 por mes según el sitio, o desde $5.000 mensuales (las dos frases están en la misma página; no las unificamos) | Ideas Web, 4/11/2026 |
+| SSL | $0 – $5.000 ARS/año (Faro dice que a veces viene con el hosting) | Faro Studio, octubre 2026 |
+| Mantenimiento web | $15.000 – $40.000 ARS/mes | Faro Studio, octubre 2026; GesArg usa el mismo rango mensual para hosting, dominio y soporte (20/09/2026) |
+| Mantenimiento | desde $15.000/mes, opcional, sin permanencia | Mendoza Web Lab, vigente hasta el 30/11/2026 |
+| SEO mensual (opcional) | $25.000 – $60.000 ARS/mes | Faro Studio, octubre 2026 |
+
+Las URLs son las mismas de la sección anterior. El hosting no es un renglón menor: una web lenta te cuesta visitas antes de que vean lo que ofrecés, sobre todo en el celular. Cómo medirlo lo explicamos en **[velocidad de carga web: por qué importa](/blog/velocidad-de-carga-web-por-que-importa)**. Si lo que buscás es aparecer cuando te buscan cerca, hay una guía aparte de **[SEO local en Argentina](/blog/seo-local-argentina-como-aparecer-en-google)**.
+
+## Qué tiene que figurar en el presupuesto
+
+Antes de firmar, el alcance tiene que estar escrito. Si no está, no hay forma de saber si el precio es bajo o si falta la mitad del trabajo:
+
+- Qué tipo de sitio es y cuántas secciones incluye.
+- Si el diseño es a medida o parte de una plantilla.
+- Qué contenidos están incluidos y qué tenés que entregar vos (textos, fotos, logo).
+- Versión pensada para celular, no solo «después lo adaptamos».
+- Un camino claro de contacto, en la práctica casi siempre WhatsApp.
+- Una base de SEO y un criterio de [velocidad de carga](/blog/velocidad-de-carga-web-por-que-importa).
+- Dominio a tu nombre, no al del proveedor.
+- Hosting, SSL y por cuánto tiempo están incluidos.
+- Quién hace los cambios después, qué entra en el mantenimiento y qué se cobra aparte.
+- Qué pasa el año dos, cuando vencen dominio y hosting.
+- Si te podés llevar la web (archivos, CMS, accesos) si cortás el vínculo o dejás de pagar un abono.
+- Plazos y qué tiene que estar entregado de tu lado para que el reloj empiece a correr.
+
+Sin eso, un presupuesto de $80.000 y uno de $800.000 pueden parecer comparables cuando no lo son.
+
+## Señales de alerta (el precio barato y el precio que no aclara nada)
+
+El precio barato casi siempre se paga después. No porque un trabajo sencillo no pueda costar menos, sino porque a veces lo que se está comprando no es lo que parece.
+
+Cuidado con una plantilla vendida como «a medida»: estás pagando un sitio genérico con tu logo. Cuidado si el dominio queda a nombre del proveedor: el día que te quieras ir, el nombre de tu empresa puede no ser tuyo. Otra señal es el «desarrollo sin costo» a cambio de un abono del que no te podés salir, o un hosting atado de forma que te deja sin web si dejás de pagar. Un presupuesto sin alcance escrito no es un buen precio: es un número que se puede reabrir con extras. El contrato y el alcance importan tanto como la cifra.
+
+## Cómo pedir un presupuesto que sirva (y cómo trabajamos en Nimbo)
+
+Para que una cotización sirva, conviene decir el objetivo de la web, las secciones que necesitás, quién va a editar los contenidos, si hay venta online o turnos, y para cuándo lo necesitás. Sin eso, cualquier «desde» es un tiro al aire.
+
+En Nimbo no publicamos un precio de lista de páginas web. El proceso, como está en [desarrollo web para pymes](/desarrollo-web-pymes), es este:
+
+:::flow
+{ "title": "Del diagnóstico a la web en marcha", "steps": [
+  { "title": "1. Diagnóstico", "text": "Una reunión sin cargo de 20 minutos por videollamada para entender el objetivo, los usuarios y el proceso que la web o el sistema tiene que mejorar." },
+  { "title": "2. Propuesta", "text": "Si hay caso, armamos una propuesta en pesos con alcance, prioridades, tiempos, costos y resultados esperados, antes de construir." },
+  { "title": "3. Diseño y desarrollo", "text": "Diseñamos la experiencia, desarrollamos la solución y la probamos con casos reales." },
+  { "title": "4. Evolución", "text": "Después de publicar, el trabajo sigue en mantenimiento, medición y ajustes cuando cambia la empresa." }
+] }
+:::
+
+El [diagnóstico](/diagnostico) es una videollamada de 20 minutos, sin cargo. Si hay solución, te decimos cómo la resolveríamos y cuánto costaría; si hay caso, la propuesta en pesos se manda en 48 horas. En la landing de desarrollo web aclaramos que respondemos en menos de 24 horas, sin compromiso. No hay en el sitio un pack «en 7 días», una promo ni un «desde $X» de Nimbo. Si querés que veamos tu caso, **[agendá un diagnóstico](/diagnostico)** o escribinos por [contacto](/contacto).
+
+## Preguntas frecuentes
+
+### ¿Cuánto cuesta una página web en Argentina en 2026?
+
+No hay un precio único. En tarifas públicas consultadas el 10 de noviembre de 2026, una landing aparece desde $80.000–$150.000 en Faro Studio (7 de octubre de 2026) o $149.000 en Mendoza Web Lab (hasta el 30/11/2026). GesArg (20/09/2026) presenta rangos de $200.000 a $1.500.000+, más $15.000 a $40.000 mensuales. Son cifras de esos sitios, no un tarifario de Nimbo.
+
+### ¿Cuánto sale una landing, una web institucional y una tienda online?
+
+Está en la tabla de precios de lista, cada uno con su fuente y fecha. El rango más bajo de landing en esa tabla es el de Faro Studio, $80.000–$150.000 (7 de octubre de 2026); una tienda, en el mismo sitio, se publica entre $350.000 y $700.000. Lo que cambia el número es el alcance, no un «precio único del mercado».
+
+### ¿Cuánto cuesta tener y mantener una página web después de publicarla?
+
+Hay que sumar dominio, hosting, SSL y, si lo contratás, mantenimiento. El dominio .com.ar aparece en $8.500 el alta y $8.500 la renovación anual (Tu Página Ya, consulta a nic.ar del 22/10/2026; Faro Studio, octubre 2026). Faro Studio publica hosting de $9.500 a $13.000 por mes y mantenimiento de $15.000 a $40.000 por mes (octubre 2026; GesArg usa ese rango para hosting, dominio y soporte).
+
+### ¿Por qué hay presupuestos de $80.000 y otros de más de un millón?
+
+Porque no cotizan lo mismo. Una landing no es una tienda ni un sistema. GesArg (20/09/2026) presenta la tienda, como trabajo a medida y profesional, entre $450.000 y $1.500.000+. También cambia si el precio es un pago único o suma un abono mensual.
+
+### ¿Cuánto tarda en estar lista?
+
+Nimbo no publica plazos. Salvador Castro (octubre 2026) declara de 1–2 semanas para una landing a 4–8 para turnos o a medida; Mendoza Web Lab, 7 o 10–14 días hábiles según el plan, desde que entregás textos, fotos y logo; GesArg, de 1 a 8 semanas según el tipo de sitio (20/09/2026).
+
+### ¿El dominio queda a mi nombre? ¿Qué pasa con la web si dejo de pagar un abono?
+
+El dominio tiene que quedar a tu nombre. Si queda a nombre del proveedor, podés perder el control del nombre de tu empresa. Pedí por escrito si te podés llevar la web (archivos, CMS y accesos) si dejás de pagar un abono.
+
+### ¿Nimbo publica un precio de lista? ¿Cómo se cotiza y cómo se empieza?
+
+No. Se empieza con un [diagnóstico](/diagnostico) sin cargo, de 20 minutos por videollamada. Si hay caso, después va una propuesta con alcance, tiempos y costos. El detalle está en [desarrollo web para pymes](/desarrollo-web-pymes).
+
+
+## En resumen
+
+Cuánto cuesta una página web en Argentina en 2026 depende del tipo de sitio, del alcance y de lo que sigue después de publicarla: dominio, hosting y mantenimiento. Los números de esta guía son los que publican estudios y agencias en las fechas citadas, no un precio oficial de mercado ni una lista de Nimbo.
+
+Antes de elegir el presupuesto más bajo o el más alto, fijate qué incluye, a nombre de quién queda el dominio y qué pasa si te vas. En Nimbo cotizamos después de entender el caso, no con un pack cerrado.
+
+Si querés que veamos qué tipo de web o sistema te conviene y qué implicaría en alcance y costos, **[agendá un diagnóstico sin cargo](/diagnostico)**. También podés **[escribirnos por WhatsApp](https://wa.me/5491124036836?text=Hola,%20quiero%20un%20diagnostico%20para%20la%20web%20de%20mi%20pyme)** o usar [contacto](/contacto): lo charlamos sin compromiso.
+    `.trim(),
+  },
+  {
     slug: 'agentes-de-ia-para-pymes-como-implementarlos',
     title: 'Agentes de IA para pymes: qué hacen y cómo implementarlos',
     description:

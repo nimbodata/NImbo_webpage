@@ -396,6 +396,7 @@ const BY_SLUG = {
   'automatizar-pyme-ia-chatbot-whatsapp': Whatsapp,
   'como-escribir-prompts-chatgpt': Prompt,
   'por-que-tu-negocio-necesita-una-pagina-web': Web,
+  'cuanto-cuesta-una-pagina-web-en-argentina-2026': Web,
   'ia-para-pymes-argentinas-guia-2026': Guide,
   'seo-local-argentina-como-aparecer-en-google': Seo,
 }
