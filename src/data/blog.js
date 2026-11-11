@@ -657,6 +657,8 @@ Esa escena se repite todos los días en miles de negocios argentinos. Cada consu
 
 La buena noticia es que hoy la tecnología puede atender esas consultas por vos, al instante, a cualquier hora. La menos conocida es que no todo lo que "responde solo" es lo mismo. Hay una diferencia grande entre un **chatbot** y un **agente de IA**, y entenderla te puede cambiar la forma de atender.
 
+**Respuesta corta:** un chatbot responde con guiones y menús fijos; un agente de IA entiende lo que la persona escribe en lenguaje natural, tiene en cuenta el contexto y ejecuta acciones, como agendar un turno, filtrar consultas o derivar a una persona cuando hace falta.
+
 ---
 
 ## ¿Qué es un chatbot?
@@ -679,6 +681,8 @@ Entiende un mensaje como "che, ¿tenés lugar el jueves a la tarde para dos?" y 
 
 La diferencia en una frase: **el chatbot informa; el agente de IA resuelve.**
 
+Si querés ver qué tareas conviene delegarle a un agente y cómo se implementa paso a paso, leé la guía de [agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos).
+
 ---
 
 ## Chatbot vs. Agente de IA: la comparación
@@ -700,6 +704,8 @@ Así se ve un agente de IA trabajando, según lo que necesite tu negocio:
 ### Atención al cliente
 
 Responde las consultas frecuentes al instante y a cualquier hora. Cuando la pregunta se complica, deriva a una persona con todo el contexto ya cargado. Tu cliente nunca queda esperando y vos no vivís pegado al teléfono.
+
+Si la mayoría de tus consultas entran por WhatsApp, en [cómo automatizar tu pyme con IA y un chatbot de WhatsApp](/blog/automatizar-pyme-ia-chatbot-whatsapp) te contamos cómo se arma.
 
 ### Ventas
 
@@ -738,9 +744,11 @@ En vez de contártelo, mejor que lo veas. Escribile al asistente de acá abajo c
 
 Un agente de IA bien implementado atiende, filtra y agenda por vos —durante el partido, de madrugada y el domingo— y te pasa a las personas solo cuando de verdad hace falta.
 
-En Nimbo implementamos **agentes de IA a medida** para negocios argentinos: los conectamos a tu WhatsApp, los entrenamos con tu información y tu forma de atender, y los dejamos trabajando 24/7.
+En Nimbo implementamos **agentes de IA a medida** para negocios argentinos: los conectamos a tu WhatsApp, los entrenamos con tu información y tu forma de atender, y los dejamos trabajando 24/7. Podés ver cómo trabajamos en **[automatizaciones y agentes de IA para pymes](/automatizaciones)**.
 
 **[Agendá una llamada gratuita de diagnóstico](https://wa.me/5491124036836?text=Hola,%20quiero%20la%20llamada%20de%20diagnostico%20sobre%20agentes%20de%20IA)** y te mostramos cómo sería un agente de IA funcionando en tu negocio.
+
+Si preferís, también podés **[pedir un diagnóstico desde la web](/diagnostico)**.
     `.trim(),
   },
   {
