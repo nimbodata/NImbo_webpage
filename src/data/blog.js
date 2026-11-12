@@ -987,7 +987,7 @@ En esta guía te explicamos qué se puede automatizar de verdad, cómo funciona,
 
 Un chatbot es un asistente automático que responde los mensajes de tus clientes. Los básicos siguen un menú de opciones fijas. Los que usan inteligencia artificial entienden lo que la persona escribe en lenguaje natural y responden de forma conversacional, como lo harías vos.
 
-La diferencia es enorme: un menú rígido frustra ("no era ninguna de esas opciones"), mientras que un chatbot con IA entiende "hola, quería saber si el martes a la tarde tenés lugar" y responde con lo que corresponde.
+La diferencia es enorme: un menú rígido frustra ("no era ninguna de esas opciones"), mientras que un chatbot con IA entiende "hola, quería saber si el martes a la tarde tenés lugar" y responde con lo que corresponde. Si querés ver la diferencia en detalle, leé nuestra guía de [agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots).
 
 Se conecta a WhatsApp Business —la misma app que ya usás— a través de su API oficial. Para el cliente es transparente: le escribe a tu número de siempre y recibe respuesta al instante.
 
@@ -1041,6 +1041,8 @@ El chatbot es la punta del iceberg. Con las mismas herramientas de automatizaci�
 - **Avisos automáticos**: que te llegue una alerta cuando pasa algo importante (un pago, un stock bajo, una reseña nueva)
 - **Reportes**: un resumen automático de cómo vino la semana, sin que armes la planilla
 
+Si querés ir un paso más allá, los [agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos) no solo responden: ejecutan tareas de punta a punta. Y para saber si vale la pena, te dejamos cómo [medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion). Mirá también qué hacemos en [automatizaciones con IA](/automatizaciones).
+
 ---
 
 ## Cómo empezar
@@ -1065,7 +1067,7 @@ Automatizar la atención de tu pyme no es reemplazarte con un robot: es sacarte 
 
 Lo importante es empezar por lo que más se repite, mantener siempre la opción de hablar con una persona, e ir mejorando con el uso.
 
-En Nimbo armamos automatizaciones y chatbots de WhatsApp a medida para pymes argentinas. Si querés ver qué se podría automatizar en tu caso, **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo analizamos juntos.
+En Nimbo armamos automatizaciones y chatbots de WhatsApp a medida para pymes argentinas. Si tenés una distribuidora, mirá cómo funciona nuestro [agente de WhatsApp para distribuidoras](/wsp). Y si querés ver qué se podría automatizar en tu caso, **[pedí tu diagnóstico](/diagnostico)** o **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo analizamos juntos.
     `.trim(),
   },
   {
