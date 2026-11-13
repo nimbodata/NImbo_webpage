@@ -768,6 +768,8 @@ Te acordás del cliente que te escribió el lunes, pero no del que consultó hac
 
 Un CRM es, básicamente, la herramienta que evita que eso vuelva a pasar. Y no, no es solo para empresas grandes.
 
+**En corto:** un CRM es un sistema donde centralizás a tus clientes, sus consultas y el próximo paso de cada venta, para que ningún seguimiento dependa de tu memoria. Le sirve a cualquier pyme que hoy pierde consultas entre el WhatsApp, el mail y las planillas.
+
 ---
 
 ## Qué es un CRM, sin vueltas
@@ -804,7 +806,7 @@ Más allá de "ordenar", un CRM te da cosas concretas:
 - **Ves tu embudo completo.** Cuántas oportunidades tenés abiertas, en qué etapa está cada una y cuáles están por enfriarse. Dejás de manejar a ciegas.
 - **El seguimiento deja de ser un esfuerzo.** Recordatorios automáticos para volver a contactar, mensajes de post-venta, avisos cuando algo lleva mucho sin moverse.
 - **El conocimiento queda en el negocio, no en vos.** Si sumás a alguien, o te tomás una semana, la información sigue estando. El negocio no se para.
-- **Decidís con datos.** De dónde vienen tus mejores clientes, qué se te cae en la etapa de presupuesto, cuánto tardás en cerrar. Números reales en lugar de sensaciones.
+- **Decidís con datos.** De dónde vienen tus mejores clientes, qué se te cae en la etapa de presupuesto, cuánto tardás en cerrar. Números reales en lugar de sensaciones. Y si querés ver esos números en un tablero que se actualice solo, eso es lo que armamos en [datos y tableros](/datos-y-tableros).
 
 ---
 
@@ -840,6 +842,8 @@ El error más común es elegir un CRM enorme, lleno de funciones que nunca vas a
 
 No necesitás la herramienta más cara ni la más completa. Necesitás una que uses de verdad. Hay opciones gratuitas o de bajo costo que alcanzan y sobran para la mayoría de las pymes que están empezando.
 
+Cuando llegue el momento de automatizar, conectar el CRM con WhatsApp, el mail o tu sistema de gestión es justo el tipo de [automatización e integración](/automatizacion-e-integracion) que hacemos en Nimbo. Si querés ver cómo se ve un seguimiento automático por WhatsApp, te contamos [cómo automatizar tu pyme con un chatbot de WhatsApp](/blog/automatizar-pyme-ia-chatbot-whatsapp), y para saber si te conviene, [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion).
+
 ---
 
 ## Tres mitos que te frenan
@@ -852,13 +856,15 @@ No necesitás la herramienta más cara ni la más completa. Necesitás una que u
 
 ---
 
-## Conclusión
+## En resumen
 
 Un CRM no es un software más ni un lujo de empresa grande. Es la diferencia entre un negocio que depende de que vos te acuerdes de todo y uno que funciona ordenado, donde ninguna consulta se cae y cada cliente recibe seguimiento.
 
 No se trata de la herramienta más sofisticada. Se trata de dejar de perder ventas por desorden. Empezá simple, usalo todos los días, y automatizá cuando el hábito ya esté instalado.
 
-En Nimbo ayudamos a pymes argentinas a ordenar sus clientes y automatizar el seguimiento para que no se les escape ninguna venta. Si querés que veamos cuál es el CRM que mejor te sirve y cómo dejarlo andando, **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo charlamos sin compromiso.
+Si estás ordenando el negocio de punta a punta, mirá también nuestra guía de [transformación digital para pymes en Argentina](/blog/transformacion-digital-pymes-argentina).
+
+En Nimbo ayudamos a pymes argentinas a ordenar sus clientes y automatizar el seguimiento para que no se les escape ninguna venta. Si querés que veamos qué CRM te sirve y cómo dejarlo andando, **[agendá un diagnóstico sin cargo](/diagnostico)** o **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo charlamos sin compromiso.
     `.trim(),
   },
   {
