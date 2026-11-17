@@ -1,5 +1,323 @@
 export const posts = [
   {
+    slug: 'conectar-xubio-colppy-contabilium-alegra-con-whatsapp-e-ia',
+    title: 'Xubio, Colppy, Contabilium o Alegra + WhatsApp: cómo conectar tu sistema de gestión con un agente de IA',
+    description:
+      'Qué permite por API Xubio, Colppy, Contabilium y Alegra, en qué plan está y qué puede hacer un agente de IA en WhatsApp sin que cambies de sistema.',
+    date: '2026-11-17',
+    category: 'Automatización & IA',
+    readTime: '9 min',
+    content: `
+## Respuesta corta
+
+¿Se puede conectar Xubio, Colppy, Contabilium o Alegra con WhatsApp y un agente de IA? Sí, aunque ninguno trae WhatsApp de fábrica. Los cuatro sistemas de gestión en la nube tienen una API oficial, y con ella un agente de IA que atiende por la API oficial de WhatsApp puede consultar stock, precios, saldos o facturas y, con permisos, cargar clientes, pedidos o presupuestos. El acceso depende del plan: en Contabilium, plan Full o superior; en Alegra Argentina, plan PLUS; en Xubio, cuentas Emprendedor y Empresa (según su documentación, noviembre de 2026).
+
+¿Querés saber qué se puede conectar en tu sistema? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## «¿Me pasás el saldo?»: el WhatsApp que termina en el sistema
+
+Un cliente escribe por WhatsApp: «¿Me pasás el saldo?» o «¿Me reenviás la factura de octubre?». Alguien del equipo deja lo que estaba haciendo, entra al sistema, busca al cliente, descarga el PDF y lo reenvía. Cinco minutos. Después llega otro: «¿Tenés 10 cajas de agua de 2 litros?». Y de nuevo al sistema.
+
+El dato ya está ahí. Tu sistema de gestión sabe el stock, los precios, quién debe cuánto y qué facturas se emitieron. Lo que falta es el puente entre ese sistema y el WhatsApp donde te preguntan.
+
+La buena noticia: **no hace falta cambiar de sistema para tener un agente de IA en WhatsApp**. La no tan buena: no todos los sistemas dan lo mismo, no todos lo incluyen en cualquier plan y ninguno lo trae armado.
+
+## Cómo se conecta un sistema de gestión con WhatsApp (sin tecnicismos)
+
+Primero, una palabra que va a aparecer bastante: **API**. Es la puerta que el sistema deja abierta para que otro programa lea o cargue datos, con una llave (credenciales) que generás vos.
+
+Una conexión de este tipo tiene tres piezas:
+
+:::flow
+{ "title": "Las tres piezas de la conexión", "steps": [
+  { "title": "1. WhatsApp", "text": "Tu número atiende por la API oficial de WhatsApp (de Meta). La mensajería se cobra aparte, según la tabla de Meta." },
+  { "title": "2. El agente o el flujo", "text": "En el medio, un agente de IA que entiende el mensaje y decide qué consultar, o un flujo armado con herramientas como n8n, Make o Zapier." },
+  { "title": "3. Tu sistema de gestión", "text": "Xubio, Colppy, Contabilium o Alegra responden por su API, con credenciales que genera el dueño de la cuenta." }
+] }
+:::
+
+El cliente pregunta, el agente consulta tu sistema y contesta con el dato de hoy. Si no encuentra la respuesta o el pedido es raro, deriva a una persona. Si querés entender qué cambia entre un agente y un bot de respuestas fijas, mirá [agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots).
+
+## Qué permite cada sistema por API (verificado en su documentación)
+
+Lo que sigue sale de la documentación oficial de cada sistema, consultada el 17 de noviembre de 2026. Puede cambiar: confirmalo con tu proveedor. No recomendamos uno sobre otro; la idea es que sepas qué te da el que ya usás.
+
+### Xubio
+
+API REST con autenticación OAuth2 (un client ID y un secret que se generan en Configuración > Integraciones). Según su ayuda, la API es exclusiva de las cuentas Emprendedor y Empresa, y los recursos disponibles dependen del plan. Expone clientes, productos, stock, listas de precios, presupuestos, remitos, comprobantes de venta, cobranzas, solicitud de CAE e impresión de PDF. El token dura una hora y admite hasta 50 llamados simultáneos. La propia ayuda recomienda consultar con un programador, y advierte que los cambios por API impactan en la empresa real. No encontramos webhooks en la documentación.
+
+### Colppy
+
+Tiene API propia con un portal para desarrolladores en api.colppy.com (hay que registrarse para ver la documentación). Según su ayuda, permite emitir comprobantes, sincronizar clientes y proveedores, registrar asientos y operar el inventario. La lista completa de operaciones está detrás del registro y no la pudimos revisar. En qué planes está, los límites de uso y las habilitaciones se consultan con Colppy.
+
+### Contabilium
+
+API REST en JSON, disponible desde el plan Full. Expone clientes (incluso datos de AFIP por documento), productos, stock por depósito y por SKU, listas de precios, órdenes de venta y comprobantes: crear, emitir factura electrónica, cobrar, anular y descargar el PDF. Documenta callbacks (webhooks) para avisar cambios de stock y precios en integraciones de ecommerce. Dos avisos importantes: **no tiene ambiente de pruebas**, así que todo lo que se haga pega en tu cuenta real, y sus límites de uso son estrictos: si se superan, bloquea la IP por un tiempo.
+
+### Alegra
+
+API REST con autenticación por correo y token, con un límite de 150 llamados por minuto por usuario. Tiene **webhooks**: avisa cuando se crea o cambia una factura, un cliente o un ítem, sin que nadie tenga que consultar cada tanto. También publica un servidor MCP para agentes de IA y un catálogo de datos para Argentina (CUIT, DNI, condición frente al IVA). En Argentina, la «Integración API» figura en el plan PLUS.
+
+### Los cuatro, lado a lado
+
+| | Xubio | Colppy | Contabilium | Alegra |
+| --- | --- | --- | --- | --- |
+| ¿API oficial? | Sí, REST | Sí (portal api.colppy.com) | Sí, REST/JSON | Sí, REST |
+| Plan | Cuentas Emprendedor y Empresa; recursos según plan | No confirmado (consultar a Colppy) | Plan Full o superior | Argentina: plan PLUS |
+| Clientes | Sí | Sí (sincronizar clientes y proveedores) | Sí, incluso datos de AFIP por documento | Sí (contactos) |
+| Productos, stock y precios | Productos, stock, listas de precios | Inventario (según su ayuda) | Stock por depósito y SKU, listas de precios | Ítems, bodegas, listas de precios |
+| Pedidos / presupuestos | Presupuestos, remitos | No confirmado | Órdenes de venta | Remisiones, cotizaciones (según su índice) |
+| Facturar | Comprobantes, CAE, PDF | Emitir comprobantes (según su ayuda) | Emitir factura electrónica, cobrar, anular, PDF | Facturas de venta; no confirmado el circuito con ARCA por API |
+| Avisos automáticos (webhooks) | No encontrados | No confirmado | Sí, al menos para stock y precios (ecommerce) | Sí |
+| Límites publicados | 50 llamados simultáneos por token | No confirmado | Estrictos, con bloqueo de IP; sin ambiente de pruebas | 150 llamados por minuto por usuario |
+
+Fuente: documentación oficial de cada sistema, 17/11/2026. «No confirmado» quiere decir que no lo encontramos publicado, no que no exista.
+
+## Qué se puede automatizar sin cambiar de sistema
+
+La regla es simple: **primero consultas, después cargas y recién al final lo que toca plata o ARCA**.
+
+| Tarea | Ejemplo | Riesgo | Cómo arrancar |
+| --- | --- | --- | --- |
+| Consultar stock y precio | Distribuidora: «¿tenés 10 cajas de agua 2 L?» | Bajo (solo lectura) | El agente consulta y responde; si no encuentra el producto, deriva |
+| Consultar saldo o facturas pendientes | «¿Cuánto te debo?» | Medio (datos de un cliente) | Responder solo al número registrado de ese cliente |
+| Mandar el PDF de una factura ya emitida | «¿Me reenviás la factura de octubre?» | Bajo-medio | Solo facturas del cliente que pregunta |
+| Cargar un cliente nuevo | Inmobiliaria o servicios: alta de un interesado | Medio | Carga, y una persona revisa los datos fiscales |
+| Cargar un pedido o presupuesto | Distribuidora: pedido por WhatsApp a las 23 h | Medio | Queda como presupuesto u orden pendiente; alguien lo confirma a la mañana |
+| Emitir la factura | Después de confirmar el pedido | Alto (ARCA, plata; anular cuesta) | El agente prepara el borrador; emite una persona |
+| Registrar un cobro o cambiar precios | Cobranza, actualización de lista | Alto | Siempre con aprobación |
+
+Con las consultas ya sacás de encima buena parte de los mensajes repetidos, sin riesgo de que el agente cargue algo mal. Y con los mismos datos del sistema también se puede armar un [tablero para ver ventas y cobranzas](/datos-y-tableros).
+
+En Nimbo conectamos WhatsApp, planillas, CRM y facturación para que cada dato se cargue una sola vez ([automatización e integración](/automatizacion-e-integracion)), y armamos [agentes de IA](/agentes-de-ia) que derivan a una persona cuando no saben. En el [agente para distribuidoras](/wsp), por ejemplo, el pedido queda en una planilla de Google, y la conexión con el sistema de gestión se cotiza aparte, según el sistema y el plan que tengas.
+
+## Lo que conviene que siga aprobando una persona
+
+Pensalo como un semáforo:
+
+- **Verde: consultar.** Stock, precios, saldo, estado de una factura. El agente lo hace solo.
+- **Amarillo: cargar algo que alguien revisa.** Un pedido, un presupuesto, un cliente nuevo. El agente lo deja cargado como pendiente.
+- **Rojo: plata y ARCA.** Emitir o anular facturas, registrar cobros, cambiar precios o datos fiscales de un cliente. El agente prepara; aprueba una persona.
+
+Esto importa más de lo que parece: en Xubio y en Contabilium los cambios hechos por API impactan en la cuenta real (Xubio lo advierte en su documentación y Contabilium no tiene ambiente de pruebas). Para ver cómo se diseñan esos controles, leé [cómo implementar agentes de IA en tu pyme](/blog/agentes-de-ia-para-pymes-como-implementarlos).
+
+## Antes de arrancar: lo que le tenés que pedir a tu proveedor de sistema
+
+Antes de conectar nada, hacé estas preguntas:
+
+- ¿Mi plan incluye la API? Si no, ¿cuál sí?
+- ¿Quién genera las credenciales? Que las genere el dueño de la cuenta, no un proveedor externo.
+- ¿Hay ambiente de pruebas? Si no, ¿cómo pruebo sin tocar datos reales?
+- ¿Qué límites de uso tiene la API?
+- ¿Avisa cuando pasa algo (webhooks) o hay que consultar cada tanto?
+- ¿Qué usuario o permiso usa la integración y cómo lo revoco?
+- ¿Queda registro de lo que se creó o modificó por API?
+
+Con esas respuestas sabés si la conexión es directa o si hay que resolver algo antes. Y si tu sistema no tiene API, hay otros caminos con [software a medida](/software-a-medida).
+
+## ¿Y si uso Tango, Bejerman o DUX?
+
+Son otro mundo: en muchos casos se usan instalados o tienen otras formas de conexión. Lo vemos en otra nota. Este artículo es solo para sistemas de gestión en la nube.
+
+## Preguntas frecuentes
+
+### ¿Se puede conectar Xubio con WhatsApp?
+
+Sí, pero no viene de fábrica. Xubio tiene una API oficial, exclusiva de las cuentas Emprendedor y Empresa, y un agente o un flujo que atiende por la API oficial de WhatsApp puede consultar y cargar datos a través de ella. Xubio recomienda hacerlo con un programador o un proveedor.
+
+### ¿Qué se puede automatizar sin cambiar de sistema de gestión?
+
+Sin cambiar de sistema, una pyme puede automatizar por WhatsApp las consultas (stock, precios, saldo, estado o PDF de una factura), la carga de clientes nuevos y la carga de pedidos o presupuestos que después revisa una persona. Lo recomendable es empezar por consultas de solo lectura, seguir con cargas que alguien confirma y dejar para el final, con aprobación humana, las acciones que tocan plata o ARCA.
+
+### ¿Mi plan incluye la API?
+
+Depende del sistema. En Contabilium, desde el plan Full; en Alegra Argentina, en el plan PLUS; en Xubio, en las cuentas Emprendedor y Empresa, con recursos según el plan. En Colppy no encontramos publicado en qué planes está: hay que consultarlo con ellos.
+
+### ¿Un agente de IA puede emitir facturas solo en Xubio o Contabilium?
+
+Técnicamente, las APIs de Xubio y Contabilium permiten emitir comprobantes electrónicos. Que el agente lo haga sin revisión es una decisión de negocio, no técnica: en los dos sistemas los cambios hechos por API impactan en la cuenta real, y Contabilium no tiene ambiente de pruebas. Lo prudente es que el agente prepare el borrador o el pedido y que una persona emita la factura, por lo menos hasta que el proceso esté probado.
+
+### ¿Necesito un programador?
+
+Sí, o un proveedor que lo haga por vos. Hay que generar credenciales, armar la lógica del agente, probar sin romper datos reales y dejar controles. Xubio, por ejemplo, lo recomienda explícitamente en su ayuda.
+
+### ¿Qué datos de mis clientes ve el agente?
+
+Los que le permitan las credenciales y la lógica que se arme. Por eso conviene que las credenciales las genere el dueño de la cuenta, que el agente responda datos de un cliente solo a su número registrado y que se pueda revocar el acceso en cualquier momento.
+
+## En resumen
+
+Tu sistema de gestión ya tiene los datos: lo que falta es el puente con WhatsApp. Fijate si tu plan incluye la API, empezá por las consultas y dejá lo que toca plata o ARCA con aprobación de una persona. No hace falta migrar de sistema para que un agente de IA atienda con el stock y los saldos de hoy.
+
+Si querés saber qué se puede conectar en tu caso, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con tu sistema, tu plan y los mensajes que más te llegan.
+
+    `.trim(),
+  },
+  {
+    slug: 'agente-de-ia-de-meta-whatsapp-vs-agente-integrado',
+    title: 'Agente de IA de Meta en WhatsApp o uno conectado a tu sistema: qué le conviene a tu pyme',
+    description:
+      'Cuánto cobra Meta por su agente de IA en WhatsApp en Argentina, qué no hace y cuándo conviene uno conectado a tu stock, precios y pedidos.',
+    date: '2026-11-17',
+    category: 'Inteligencia Artificial',
+    readTime: '9 min',
+    content: `
+## Son las 23 h y te piden 10 cajas por WhatsApp
+
+¿Te conviene el agente de IA de Meta para WhatsApp o uno conectado a tu sistema? Depende de lo que tenga que hacer. Si solo responde preguntas con información fija (horarios, catálogo, zonas, medios de pago), el agente de Meta (Meta Business Agent) puede alcanzar y se configura rápido. Si tiene que consultar stock real, precios por cliente o cuentas corrientes, cargar pedidos o agendar visitas, hay que conectarlo a los sistemas de la empresa. Esa integración hace falta con el agente de Meta por API o con uno propio; lo que cambia es quién la construye, dónde vive la lógica y cómo se cobra.
+
+¿No sabés si te alcanza el de Meta? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+Pensá en una distribuidora. Son las once de la noche y un cliente escribe por WhatsApp: «¿Tenés 10 cajas del aceite de 900? ¿A cuánto me lo dejás?». Nadie del equipo está mirando el celular.
+
+Un agente que solo «sabe» lo que le cargaste contesta con la lista de la semana pasada y el stock de cuando la subiste. Un agente conectado a tu sistema mira el stock de hoy, aplica la lista de precios de ese cliente y deja el pedido cargado para que lo preparen a la mañana.
+
+Las dos opciones responden. La diferencia es **con qué datos** responden y **qué pueden hacer** después. Si todavía no tenés clara la diferencia entre un agente y un bot de respuestas fijas, arrancá por [agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots).
+
+## Qué es el agente de IA de Meta (y sus dos versiones)
+
+Meta presentó Meta Business Agent el 3 de junio de 2026. Es el agente de IA de Meta que responde a tus clientes en WhatsApp (y también en Messenger e Instagram) con la información que le cargás: catálogo, horarios, preguntas frecuentes, tu web. Puede derivar la conversación a una persona.
+
+Lo que casi nadie aclara es que **hay dos versiones**, y no son lo mismo.
+
+### En la app de WhatsApp Business
+
+Se activa desde la app, en Herramientas > Agente de IA. Aprende de tu catálogo, la descripción del negocio, los horarios y los chats anteriores. El cliente ve un aviso de que el negocio usa IA de Meta para generar mensajes.
+
+Según la ayuda de WhatsApp, empezar es gratis con un límite de uso, y para usarlo más hay suscripciones pagas (Meta One) donde estén disponibles. Al 17 de noviembre de 2026, Meta no publica un precio oficial de esas suscripciones para Argentina.
+
+¿Está disponible en Argentina? Meta no publica una lista de países: dice que se habilita de forma gradual, en países limitados y para empresas seleccionadas. Lo más simple es fijarte en la app, en Herramientas, si te aparece Agente de IA.
+
+### Por la plataforma (API) para empresas
+
+Es la versión para empresas que usan la API oficial de WhatsApp. Pide un número en la plataforma, verificación del negocio y un medio de pago. Le cargás conocimiento (información, preguntas frecuentes, archivos, tu web), instrucciones y, si querés, **connectors**: conexiones a las APIs de tus sistemas para consultar clientes, stock, pedidos o agendas.
+
+Por API también hay un chequeo de elegibilidad: algunos rubros no están habilitados (finanzas, gobierno, salud, alcohol, juego, medicamentos de venta libre y servicios matrimoniales, entre otros).
+
+Si alguien te dice que el agente de Meta no se puede conectar a nada, no es así. Por API, se puede. Lo que pasa es que **alguien tiene que construir y mantener esa conexión** con tu sistema.
+
+## Cuánto cobra Meta en Argentina (tabla oficial, noviembre 2026)
+
+Desde el 1 de agosto de 2026, Meta cobra su agente por API por token. Y desde el 1 de octubre de 2026 volvió a cobrar los mensajes de servicio, que son las respuestas que das dentro de las 24 horas desde el último mensaje del cliente.
+
+Esta es la tabla oficial para mensajes a usuarios de Argentina (código +54):
+
+| Tipo de mensaje | Para qué | USD por mensaje (Argentina) | ARS por mensaje (cuentas facturadas en pesos) |
+| --- | --- | --- | --- |
+| Marketing (plantilla) | Promos, recordatorios de carrito | 0,0618 | 89,562 |
+| Utilidad (plantilla) | Confirmación de pedido, aviso de envío | 0,026 | 37,6798 |
+| Autenticación (plantilla) | Códigos de verificación | 0,026 | 37,6798 |
+| Servicio (respuesta de una persona o de una IA de terceros, dentro de 24 h) | Responder consultas | 0,026 (los primeros 1.000 por número y por mes, gratis) | 37,6798 |
+| Agente de Meta (respuesta de Meta Business Agent) | Responder con el agente de Meta | USD 2 por millón de tokens; Meta estima 20.000 a 25.000 tokens por mensaje, unos USD 0,04 a 0,05 | Tarifa global en USD |
+
+*Fuente: [tarifas de la plataforma de WhatsApp Business](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing) y sus tarifarios oficiales en USD y ARS, vigentes desde el 1/10/2026. Consultado el 17/11/2026.*
+
+En criollo:
+
+- **Si responde una persona o un agente propio**, Meta te cobra un mensaje de servicio. Los primeros 1.000 de cada mes, por número, son gratis y no se acumulan.
+- **Si responde el agente de Meta**, se cobra por tokens, con la entrega incluida. No tiene mensajes gratis, y se cobra **incluso** dentro de la ventana gratis que abren los anuncios de clic a WhatsApp.
+- La columna en pesos aplica solo si tu cuenta se factura en pesos. La moneda se elige al crearla.
+- Lo que cobre un proveedor de WhatsApp (BSP) va aparte. El agente de Meta lo factura Meta directo.
+
+Meta puede cambiar tarifas hasta cuatro veces por año, así que revisá la tabla al presupuestar.
+
+## La cuenta para tu volumen
+
+Con las tarifas de arriba se puede hacer una cuenta rápida. Supuestos: todas las respuestas son dentro de la ventana de 24 h, un solo número, clientes en Argentina y sin anuncios de clic a WhatsApp. **Es un orden de magnitud, no una cotización**: el consumo real de tokens del agente de Meta varía con lo complejo de cada conversación.
+
+| Respuestas por mes | Con el agente de Meta (USD 0,04 a 0,05 c/u) | Con un agente propio: solo la entrega de Meta (USD 0,026 desde el mensaje 1.001) | Lo que falta sumar al agente propio |
+| --- | --- | --- | --- |
+| 1.000 | USD 40 a 50 | USD 0 | Consumo de IA del modelo + puesta en marcha + abono de quien lo arma |
+| 3.000 | USD 120 a 150 | USD 52 | Ídem |
+| 10.000 | USD 400 a 500 | USD 234 | Ídem |
+
+*Cuenta ilustrativa con las tarifas oficiales de Meta para Argentina vigentes desde el 1/10/2026. Solo incluye lo que cobra Meta.*
+
+El mensaje de fondo: con el agente de Meta pagás todo junto por token. Con un agente propio pagás la entrega a Meta **más** el consumo de IA del proveedor del modelo **más** la puesta en marcha y el abono de quien lo arma y lo mantiene. Por eso comparar solo «centavos por mensaje» engaña.
+
+Ojo con las comparaciones que circulan: Meta publica su propio ejemplo con tarifas de Brasil, donde el mensaje de servicio cuesta USD 0,0068. En Argentina cuesta USD 0,026, casi cuatro veces más, así que la cuenta cambia. Si querés hacer la cuenta completa, con lo que te ahorra cada opción, te lo explicamos en [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion).
+
+## Lo que el agente de Meta no hace (o no hace solo)
+
+Según la documentación de Meta (consultada el 17 de noviembre de 2026), estos son los límites que más pesan en una pyme argentina:
+
+- **No lee documentos que manda el cliente**: ni PDF, ni planillas, ni Word, ni videos. Las imágenes sí. En una distribuidora donde el cliente manda el pedido en una planilla, esto pesa.
+- **Notas de voz, solo si Meta las habilita para tu número.** Un archivo de audio que no sea una nota de voz, no lo lee. En Argentina mucha gente pide por audio: probalo antes de decidir.
+- **No conoce tu stock ni tus precios por cliente** salvo que alguien construya el connector a tu sistema. Además, tu sistema tiene que tener una dirección pública con HTTPS y responder en menos de 30 segundos.
+- **Un número, un agente.** Si ya tenés otro agente de IA activo en ese número, el de Meta queda bloqueado.
+- **Derivación con reglas de Meta.** Pasa la conversación a una persona ante baja confianza, un problema de integridad o cuando el cliente lo pide, pero esos disparadores no se configuran. Vos sí podés tomar la conversación y devolverla.
+- **Gasto sin tope si no lo configurás.** Por API se pueden poner presupuestos por tokens o por turnos, en ventanas de 1, 7, 14 o 30 días. Al llegar al tope, deriva a una persona.
+
+Ninguno de estos puntos es un motivo para descartarlo. Son cosas que tenés que saber antes de elegir.
+
+## Cuándo te alcanza el de Meta y cuándo conviene uno conectado a tu sistema
+
+| Situación | Suele alcanzar | Por qué |
+| --- | --- | --- |
+| Comercio chico en la app, preguntas repetidas (horario, dirección, medios de pago) | Agente de Meta en la app | La información es fija y se carga una vez |
+| Distribuidora: el cliente pregunta stock y precio de su lista, arma el pedido y hay que cargarlo | Agente conectado al sistema (el de Meta por API con connectors, o uno propio) | Hay que leer stock y precios del día y escribir el pedido en tu sistema o planilla |
+| Distribuidora: pedidos que llegan en planilla o PDF | Agente propio, o resolver ese paso aparte | El de Meta no lee documentos que manda el cliente |
+| Inmobiliaria: consultas de portales y WhatsApp, filtrar interesados y agendar visitas en la agenda de cada asesor | Agente conectado (agenda + CRM) | Necesita disponibilidad real y registrar el interesado |
+| Inmobiliaria: el interesado manda recibos de sueldo o DNI en PDF | Agente propio o que una persona reciba esos archivos | El de Meta no lee documentos, y además son datos sensibles |
+| Mucho volumen y querés gasto previsible | Comparar con la cuenta de arriba; en cualquier caso, ponerle tope | Por API se pueden fijar presupuestos; sin tope configurado no tiene límite |
+| Ya tenés otro agente de IA en ese número | Elegir uno | Meta bloquea su agente si hay otro agente de IA activo |
+
+Si tu caso es el de la primera fila, probá el de Meta antes de pagarle a nadie, incluidos nosotros.
+
+Si tu caso se parece a las otras filas, el trabajo de verdad es la integración: conectar el agente con la planilla, el CRM o el sistema de gestión que ya usás. Eso es lo que hacemos en Nimbo. Armamos [agentes de IA](/agentes-de-ia) conectados a lo que tu pyme ya usa, que si les preguntan algo que no saben avisan a tu equipo en vez de inventar, y dejan todo registrado. El consumo de IA y los cargos de Meta van aparte y te los mostramos antes de arrancar. Para distribuidoras tenemos un [agente de WhatsApp](/wsp) sobre la API oficial de Meta que toma pedidos y los deja cargados para preparar. Y si el desafío es conectar tus sistemas entre sí, mirá [automatización e integración](/automatizacion-e-integracion).
+
+## Qué preguntarle a quien te venda un agente (sea cual sea)
+
+Antes de contratar, sea el de Meta configurado por alguien o uno a medida, hacé estas preguntas:
+
+- [ ] **¿Con qué datos responde** y de dónde los saca (planilla, sistema, web)? ¿Cada cuánto se actualizan?
+- [ ] **¿La cuenta de WhatsApp y el medio de pago de Meta están a nombre de mi empresa?**
+- [ ] **¿Cuánto me va a cobrar Meta por mes** con mi volumen, según la tabla oficial vigente?
+- [ ] **¿Qué hace con audios, fotos y archivos** que mandan los clientes?
+- [ ] **¿Cuándo y cómo deriva a una persona**, y queda registro de lo que hizo?
+- [ ] **¿Tiene tope de gasto** y qué pasa cuando se alcanza?
+
+Una aclaración más: si automatizás respuestas en WhatsApp, la [política de mensajería de WhatsApp Business](https://business.whatsapp.com/policy) exige que ofrezcas una vía clara para hablar con una persona. Vale para cualquier opción. Los controles mínimos para implementar un agente los contamos en [agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos).
+
+## Preguntas frecuentes
+
+### ¿Qué es el agente de IA de Meta para WhatsApp?
+
+Es Meta Business Agent, el agente de IA de Meta que responde a tus clientes en WhatsApp (y también en Messenger e Instagram) con la información que le cargás: catálogo, horarios, preguntas frecuentes, tu web. Puede derivar a una persona. Hay una versión en la app de WhatsApp Business y otra para empresas por la API.
+
+### ¿Cuánto cobra Meta por el agente de IA en WhatsApp en Argentina?
+
+Por la API, Meta cobra su agente a USD 2 por millón de tokens desde el 1 de agosto de 2026, lo que según Meta equivale a unos 4 a 5 centavos de dólar por mensaje, con la entrega incluida y sin mensajes gratis. Si la respuesta la da una persona o una IA de terceros, Meta cobra un mensaje de servicio: USD 0,026 por mensaje a usuarios de Argentina desde el 1 de octubre de 2026, con los primeros 1.000 por número y por mes gratis. A eso se suma el costo de la IA de terceros. En la app, empezar es gratis con un límite.
+
+### ¿Me conviene el agente de Meta o uno conectado a mi sistema?
+
+Si solo tiene que responder con información fija, el de Meta puede alcanzar. Si tiene que mirar stock real, precios por cliente o cuentas corrientes, cargar pedidos o agendar visitas, hay que conectarlo a tus sistemas, y ese trabajo existe con cualquiera de las dos opciones.
+
+### ¿Qué no puede hacer el agente de IA de Meta en WhatsApp?
+
+Según la documentación de Meta (consultada el 17 de noviembre de 2026), no lee documentos que manda el cliente (PDF, planillas, Word) ni videos, y las notas de voz solo si Meta las habilita para ese número. No conoce el stock ni los precios de tu sistema salvo que alguien le construya una conexión a tus APIs. No puede convivir con otro agente de IA en el mismo número, y por API no están habilitados algunos rubros como finanzas, salud, gobierno, alcohol y juego.
+
+### ¿Qué cambió con el cobro de mensajes de WhatsApp en octubre de 2026?
+
+Desde el 1 de octubre de 2026, Meta cobra los mensajes de servicio, las respuestas dentro de las 24 horas, aunque los primeros 1.000 por número y por mes siguen siendo gratis. Para usuarios de Argentina, cada mensaje de servicio adicional cuesta USD 0,026.
+
+### ¿Puedo ponerle un tope de gasto al agente de Meta?
+
+Por API, sí. Se pueden configurar presupuestos por tokens o por turnos, en ventanas de 1, 7, 14 o 30 días. Cuando se alcanza el tope, el agente deriva a una persona. Si no configurás nada, el uso no tiene límite.
+
+### ¿Puedo usar el agente de Meta y otro agente en el mismo número?
+
+No. Meta bloquea su agente si ya hay otro agente de IA activo en ese número. Tenés que elegir uno.
+
+## En resumen
+
+Decidí por lo que el agente tiene que hacer, no por el precio del mensaje. Si solo responde con información fija, probá el de Meta. Si tiene que operar con tu stock, tus precios o tu agenda, la integración es el trabajo de verdad, con cualquiera de las dos opciones. Y hacé la cuenta con la tabla oficial de Meta para Argentina, no con ejemplos de otros países.
+
+Si querés saber qué le conviene a tu pyme, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con tu volumen y tus sistemas.
+
+    `.trim(),
+  },
+  {
     slug: 'cuanto-cuesta-una-pagina-web-en-argentina-2026',
     title: 'Cuánto cuesta una página web en Argentina en 2026 (guía para pymes)',
     description:
