@@ -1,5 +1,209 @@
 export const posts = [
   {
+    slug: 'conciliacion-bancaria-automatica-ia-pyme',
+    title: 'Conciliación bancaria automática con IA para pymes argentinas: qué se cruza solo y qué revisa una persona',
+    description:
+      'Cómo cruzar todos los días los extractos del banco y de Mercado Pago con tu sistema, marcar solo las diferencias y dejar registro. Qué ofrecen Tango, Xubio y Colppy.',
+    date: '2026-11-23',
+    category: 'Automatización & IA',
+    readTime: '14 min',
+    content: `
+## Respuesta corta
+
+Sí, en parte. Se pueden traer los movimientos del banco y los reportes de Mercado Pago, cruzarlos con lo cargado en el sistema de gestión y dejar que una persona revise solo las diferencias, con un registro de cada match y de cada excepción. Sistemas como Tango, Xubio y Colppy ya ofrecen conciliación bancaria en su documentación oficial; Mercado Pago publica reportes (panel o API) pensados para conciliar con el sistema de gestión. La IA no reemplaza esa revisión cuando el importe no cierra, hay un contracargo o hay que crear un asiento.
+
+**Puntos clave**
+
+- Lo que coincide en fecha, importe y referencia se puede marcar conciliado, con registro. Va a revisión lo que no mata, una comisión no cargada, un contracargo o una transferencia entre cuentas.
+- Mercado Pago no es un banco, pero sus reportes oficiales sirven para conciliar. El neto, las comisiones y los retiros no son lo mismo que el total de las ventas.
+- Tango, Xubio y Colppy ya tienen conciliación bancaria, según sus páginas oficiales. El hueco suele estar en Mercado Pago, en las cuentas que no entran solas y en qué se aprueba.
+- Nadie deja que la herramienta cree o borre asientos sensibles sin que alguien lo vea.
+
+¿Querés ver cómo está hoy tu conciliación y qué parte se puede cruzar con controles? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## Qué es conciliar en una pyme que cobra por banco y por Mercado Pago
+
+El problema no es tener un extracto: es no enterarte de las diferencias a tiempo. En una pyme argentina la plata casi nunca está en un solo lugar. Hay una o varias cuentas bancarias y, casi siempre, Mercado Pago. En el sistema de gestión están las cobranzas, los pagos y las comisiones que se cargaron y las que no. Conciliar es cruzar esas fuentes, marcar lo que cierra y dejar que una persona mire solo lo que no cierra, con un registro. Hoy eso suele hacerse a mano, cerca del cierre, y las diferencias aparecen tarde.
+
+El 20 de noviembre de 2026, [TIVIT Latam](https://latam.tivit.com/prensa/de-la-consulta-al-trabajo-las-tareas-que-las-pymes-ya-se-animan-a-hacer-con-ia-para-ser-m%C3%A1s-productivas) publicó una nota, a cargo de Marjorie Guerra, Gerente Digital Studios, sobre las tareas en las que las pymes ya se animan a usar IA. Una de las cinco que lista es **comparar información de distintas fuentes para encontrar diferencias o inconsistencias**. Como ejemplo, describe la conciliación: la IA puede hacerse cargo de *parte* de esa tarea, cruzar movimientos bancarios con registros contables, detectar diferencias y señalar cuáles requieren revisión. La persona interviene sobre esos casos. Ese listado es el recorte de TIVIT, no de la encuesta que cita.
+
+El dato de adopción viene de [nadIA](https://nadia.ar/investigacion/encuesta-pymes.html): el **41,6%** de las empresas encuestadas (170 sobre 402) declara usar al menos una tecnología de IA. El universo son pymes **industriales y de software**, de **10 a 249 ocupados**, relevadas en **noviembre y diciembre de 2025**, con apoyo del BID y de la Fundación Observatorio PyME. Si se excluye software/IT, el mismo informe da **36,4%**. No es «las pymes argentinas» en general, ni significa que el 41,6% ya concilie con IA. Más contexto, en [IA para pymes argentinas](/blog/ia-para-pymes-argentinas-guia-2026). El mismo informe señala que el **72,5%** opera sin ninguna pauta ni política sobre el uso de IA: por eso importa que quede registro y que alguien apruebe lo que no cierra.
+
+| Dato | Qué dice, con precisión | Fuente |
+| --- | --- | --- |
+| Adopción de IA | El **41,6%** de las empresas encuestadas (170 sobre 402) declara usar al menos una tecnología de IA. Universo: pymes industriales y de software, de 10 a 249 ocupados, relevadas en noviembre y diciembre de 2025. Sin software/IT: **36,4%** | [Encuesta nadIA](https://nadia.ar/extras/nadia_encuesta_pymesARG2026.pdf) (abril 2026), con apoyo del BID y de la Fundación Observatorio PyME |
+| Tareas con IA | TIVIT lista cinco tareas en las que las pymes ya usan IA; una es comparar información de distintas fuentes. Como ejemplo, describe la conciliación: cruzar movimientos bancarios con registros contables, detectar diferencias y señalar las que requieren revisión | [Nota de TIVIT Latam, 20 de noviembre de 2026](https://latam.tivit.com/prensa/de-la-consulta-al-trabajo-las-tareas-que-las-pymes-ya-se-animan-a-hacer-con-ia-para-ser-m%C3%A1s-productivas) |
+
+*Fuentes consultadas el 23 de noviembre de 2026. El 41,6% no significa que el 41,6% de las pymes ya concilie con IA.*
+
+Esta es una guía de proceso, no un tutorial de un software ni un reemplazo del contador.
+
+## El circuito de punta a punta
+
+La herramienta propone pares y marca lo que cierra; una persona resuelve lo que no cierra. Es un circuito de control, no un cierre impositivo: los asientos y el tratamiento de comisiones o impuestos los define tu administración o tu contador.
+
+| Paso | Qué pasa | Quién interviene |
+| --- | --- | --- |
+| 1. Traer movimientos | Entra el extracto del banco (archivo, Interbanking u otra conexión que el sistema ya tenga) y el reporte de Mercado Pago (panel o API) | Automático o una importación periódica; una persona controla que el archivo sea el del período correcto |
+| 2. Cruzar con el sistema | Se comparan fecha, importe, referencia o comprobante con cobranzas, pagos y otros movimientos ya cargados | La herramienta propone pares; no «cierra» en silencio lo dudoso |
+| 3. Lo que cierra | Coincidencia clara: se marca conciliado y queda el registro (qué con qué, cuándo, con qué regla) | Puede entrar solo o con un clic, según el criterio que defina la empresa |
+| 4. Lo que no cierra | Diferencia de importe, movimiento de un lado y no del otro, comisión, contracargo, rechazo, transferencia entre cuentas | Bandeja de revisión de administración (o del estudio) |
+| 5. Decisión y registro | Se carga lo que faltaba, se consulta al banco o a Mercado Pago, o se deja pendiente. Cada decisión queda anotada | Una persona aprueba; la herramienta no borra historial |
+
+:::flow
+{ "title": "Del extracto y de Mercado Pago al registro", "steps": [
+  { "title": "1. Traer movimientos", "text": "Entra el extracto del banco (archivo, Interbanking u otra conexión del sistema) y el reporte de Mercado Pago (panel o API)." },
+  { "title": "2. Cruzar con el sistema", "text": "Se comparan fecha, importe, referencia o comprobante con lo ya cargado. La herramienta propone pares." },
+  { "title": "3. Lo que cierra", "text": "Si la coincidencia es clara, se marca conciliado y queda el registro: qué con qué, cuándo y con qué regla." },
+  { "title": "4. Lo que no cierra", "text": "Una diferencia de importe, una comisión, un contracargo o un movimiento de un solo lado van a la bandeja de revisión." },
+  { "title": "5. Decisión y registro", "text": "Una persona carga lo que faltaba, consulta o deja pendiente. Cada decisión queda anotada y se puede deshacer un emparejamiento." }
+] }
+:::
+
+### 1. Traer los movimientos
+
+Del banco, el extracto puede entrar por un archivo (Excel o PDF), por Interbanking —una plataforma que algunas empresas usan para conectar sus cuentas con el sistema, sin cargar un archivo— o por otra conexión que el sistema ya tenga. De Mercado Pago, el reporte se descarga desde el panel o se pide por API (una interfaz para que un sistema lo genere solo). Si un día no llega el extracto, o el reporte queda «en preparación», el circuito no inventa movimientos: avisa y espera. Una persona controla que el archivo sea el del período correcto.
+
+### 2. Cruzar con el sistema
+
+Se comparan fecha, importe y, cuando está, una referencia o un comprobante con lo ya cargado. La herramienta propone pares. No da por cerrado, en silencio, lo que no mata con claridad.
+
+### 3. Lo que cierra
+
+Si el importe, la fecha (o una tolerancia que ustedes definieron) y la referencia coinciden con una cobranza o un pago ya cargado, se marca conciliado y queda asentado qué se emparejó con qué, cuándo y con qué regla. Puede entrar solo o con un clic.
+
+### 4. Lo que no cierra
+
+Va a una bandeja: una diferencia de importe, un movimiento de un solo lado, una comisión no cargada, un contracargo, un rechazo o una transferencia entre cuentas. Lo mira alguien de administración o del estudio.
+
+### 5. Decisión y registro
+
+Se carga lo que faltaba, se consulta o se deja pendiente. Cada decisión queda anotada: qué se hizo, cuándo, con qué datos y quién aprobó. Si el emparejamiento estaba mal, se puede deshacer. La herramienta no borra el historial.
+
+## Qué se automatiza y qué aprueba una persona
+
+No todo tiene que esperar un clic, ni conviene que se cierre todo solo. Un semáforo simple alcanza. Es la misma lógica que en un [agente de IA](/blog/agentes-de-ia-para-pymes-como-implementarlos): lo rutinario se marca solo y lo dudoso lo aprueba alguien de administración.
+
+| Color | Ejemplos | Qué pasa |
+| --- | --- | --- |
+| Verde | Mismo importe, misma fecha (o con una tolerancia que ustedes definieron) y una referencia que mata con la cobranza o el pago ya cargado | Se marca conciliado; queda registro |
+| Amarillo | Importe parecido pero no igual; fecha corrida; comisión o impuesto bancario no cargado; retiro de Mercado Pago a la cuenta; un movimiento que podría ser de dos comprobantes | Va a la bandeja; alguien confirma o corrige |
+| Rojo | Contracargo o disputa, rechazo de cheque o de transferencia, cliente o proveedor que no está, diferencia grande o inexplicable, pedido de borrar o reprocesar un período ya cerrado | No se cierra solo; lo ve una persona. Si hace falta un asiento, lo firma quien corresponda |
+
+Las tolerancias de fecha o de importe —Xubio, por ejemplo, deja configurarlas en su [ayuda de autoconciliación](https://ayuda.xubio.com/es-ar/autoconciliacion-de-movimientos-bancarios/)— no son un permiso para redondear a ciegas. Si hay diferencia de monto, la persona la ve. Y si la herramienta puede crear un asiento, un pago o una cobranza, eso también lo aprueba alguien.
+
+## Qué dicen Tango, Xubio y Colppy en su documentación
+
+Antes de armar un circuito paralelo, mirá lo que ya trae tu sistema. Tango, Xubio y Colppy, según sus páginas oficiales, ya ofrecen conciliación bancaria. La IA no viene a reemplazar eso: se apoya en lo que el sistema ya hace y cubre los huecos (Mercado Pago, un banco que no entra solo, comisiones, excepciones y el registro de lo que se aprobó).
+
+| Sistema | Qué dice la fuente oficial (consultada el 23/11/2026) | Qué no afirmar |
+| --- | --- | --- |
+| **Tango** (Axoft) | En la [página de Tesorería](https://www.axoft.com/tango/software-de-gestion/soluciones/tesoreria.php): «Generar la conciliación bancaria en forma automática». En el listado de funciones: «Conciliación bancaria» y «Conciliación bancaria automática con extracto electrónico». También menciona integración con Interbanking y Banco Galicia (Tango Banking). Los [PDF de asistencia](https://www.axoft.com/img/asistencia/tesoreria/Tesoreria_Conciliacion-Bancaria_Parametrizacion.pdf) describen importar el extracto electrónico, definir el formato del archivo y cruzarlo con los movimientos de la cuenta | No decimos que Tango se conecta solo a todos los bancos ni listamos entidades |
+| **Xubio** | El centro de ayuda (es-AR) documenta **Finanzas > Conciliación Bancaria Automática**. Se pueden traer movimientos por [Interbanking](https://ayuda.xubio.com/es-ar/como-importo-mis-movimientos-bancarios-a-xubio-mediante-interbanking/) (si la cuenta está vinculada, entran al aplicar los filtros, sin archivo), por Excel o por [PDF](https://ayuda.xubio.com/es-ar/importar-movimientos-bancarios-pdf/). En el PDF, Xubio lee el extracto o el resumen de tarjeta con inteligencia artificial, muestra los movimientos para revisarlos y recién después se confirman. La [autoconciliación](https://ayuda.xubio.com/es-ar/autoconciliacion-de-movimientos-bancarios/) sugiere pares por fecha y monto (exactos o con tolerancias); las coincidencias exactas van aparte de las que entraron por tolerancia; si el importe no calza, avisa que genera un asiento y pide confirmación. Se puede [desconciliar](https://ayuda.xubio.com/es-ar/como-desconcilio-mis-movimientos-conciliados/) | No afirmamos que cubre todos los bancos. La lectura del PDF no es infalible: la propia ayuda pide revisar antes de confirmar. La [integración con Mercado Pago](https://ayuda.xubio.com/es-ar/como-facturo-mis-cobros-de-mercadopago/) sirve para importar cobros y facturarlos; no está documentada ahí como una conciliación del saldo contra el mayor |
+| **Colppy** | En «[Conciliación bancaria automática para contadores](https://colppy.com/conciliacion-bancaria-autom%C3%A1tica-para-contadores)»: «Conectá tu banco», el extracto online se actualiza, se puede preconciliar por reglas y resolver partidas abiertas, con trazabilidad a la contabilidad. La FAQ dice que se pueden conectar cuentas empresa en pesos de las entidades listadas al iniciar la conexión; que se empieza desde Tesorería, eligiendo la cuenta y «Conectar»; y que se puede deshacer un emparejamiento. El texto comercial dice que el extracto online se actualiza todos los días | No inventamos el listado de bancos (Colppy dice que se ven al conectar). «Se actualiza todos los días» es lo que dice la página de Colppy, no una promesa nuestra |
+
+*Fuentes: páginas oficiales de Axoft, Xubio y Colppy, consultadas el 23 de noviembre de 2026. Las funciones dependen del plan, de la versión y de la configuración. Verificá en tu sistema o con tu implementador qué está habilitado en tu cuenta.*
+
+## Cómo sacar los movimientos de Mercado Pago
+
+Mercado Pago no es un banco, pero su [documentación de reportes](https://www.mercadopago.com.ar/developers/es/docs/reports/introduction) dice que esos reportes facilitan la conciliación de las ventas y otras operaciones con los sistemas de gestión internos. Se pueden descargar desde el panel (Informes y facturación) o generar por API, en CSV o Excel.
+
+| Tipo de reporte (docs AR) | Para qué lo presenta Mercado Pago | Cómo se genera |
+| --- | --- | --- |
+| **[Liquidaciones](https://www.mercadopago.com.ar/developers/es/docs/reports/released-money/introduction)** | Composición del saldo disponible en un período; historial del dinero liberado (transferencias, disputas, reembolsos, cuotas liquidadas frente a las pendientes). El propio texto lo presenta como herramienta de conciliación | Panel: Informes y facturación > Reportes de ventas y extractos de cuenta > Liquidaciones > Crear reporte. También por API. Hasta que esté listo, puede figurar «en preparación» |
+| **[Todas las transacciones](https://www.mercadopago.com.ar/developers/es/docs/reports/account-money/introduction)** (en la intro general aparece como «Dinero en cuenta») | Operaciones que afectaron el balance: pagos, ingresos, contracargos, devoluciones; bruto y neto. Incluye dinero disponible, a liquidar y retenido. La documentación lo usa para conciliar movimientos de dinero **aprobados** (los pendientes o rechazados no entran) | Panel: misma ruta > Todas las transacciones > Crear reporte. También por API. Se puede [programar](https://www.mercadopago.com.ar/developers/es/docs/reports/account-money/generate) diario, semanal o mensual. Descarga CSV o XLSX. **Período máximo: 60 días**. Las columnas de fecha están en GMT-4, según la documentación |
+
+La intro también lista Actividades, Facturación (Marketplace de Mercado Libre) y ventas con split de pagos; no hace falta desarrollarlos acá.
+
+- El total de las ventas **no tiene por qué coincidir** con lo liberado o con el saldo. La documentación de Liquidaciones lo dice: plazos, tasas, reclamaciones y contracargos afectan la liberación.
+- El error habitual es conciliar el **bruto de las ventas** contra lo que entró al banco. Hay que cruzar el reporte correcto con lo registrado, y tratar comisiones, retenciones, contracargos y retiros (payout) como movimientos propios.
+- «Extracto de cuenta» es el nombre que usa Mercado Pago en el menú; no es el extracto del banco donde después aterriza el retiro.
+
+Los menús pueden cambiar. Si las rutas del panel no coinciden, confirmalo en la documentación oficial de Mercado Pago Argentina. Información verificada el 23 de noviembre de 2026.
+
+## Cómo arrancar con un banco y un sistema
+
+No hace falta conciliar todas las cuentas el primer día. Arrancá por una, compará contra un período que ya hayas cerrado a mano y, recién después, sumá la segunda.
+
+1. **Elegí una sola cuenta** (un banco o la cuenta de Mercado Pago) y un período corto que ya hayas conciliado a mano, para comparar.
+2. **Anotá cómo lo hacés hoy:** de dónde sacás el extracto, qué tildás, cuánto tarda y cuáles son las diferencias que más aparecen. Si más adelante querés medir el cambio, partí de ese tiempo actual, como en [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion).
+3. **Mirá primero lo que ya trae tu sistema.** Si Tango, Xubio o Colppy ya importan el extracto o ya tienen el banco conectado, partí de ahí. No armes un circuito paralelo que duplique la conciliación nativa.
+4. **Sumá Mercado Pago como una fuente más**, con su reporte, no como si fuera la misma cuenta bancaria.
+5. **Definí el semáforo** con quien lleva la administración: qué se puede marcar solo, qué va a revisión, quién aprueba y dónde queda el registro.
+6. **Recién después** sumá la segunda cuenta. Si el primer circuito no deja un registro claro, no lo ensanches.
+
+Cruzar todos los días, o con una frecuencia fija, es una práctica recomendada para enterarte antes de las diferencias. No es una obligación legal que citemos acá: la frecuencia la define cada empresa con su administración o su contador.
+
+Cuando los números ya entran con regularidad, un [tablero](/datos-y-tableros) ayuda a ver saldos y cobranzas en un solo lugar. Eso es un complemento: no reemplaza el cruce del extracto con lo registrado.
+
+## Qué controles pedirle a quien te arme la conciliación
+
+Antes de automatizar, estas son las preguntas que vale la pena hacerle a quien te arme el circuito.
+
+**Sobre las fuentes**
+
+- [ ] ¿De qué cuentas sale la información (bancos y Mercado Pago) y qué reporte o extracto se usa en cada una?
+- [ ] ¿Cómo entra: conexión del sistema, Interbanking, archivo, panel o API?
+- [ ] ¿Qué pasa si un día no llega el extracto o el reporte queda «en preparación»?
+
+**Sobre el cruce**
+
+- [ ] ¿Con qué reglas se propone un match (fecha, importe, referencia, comprobante)?
+- [ ] ¿Qué tolerancias hay y quién las cambia?
+- [ ] ¿Qué se marca solo y qué va a revisión? ¿Lo puedo cambiar yo?
+
+**Sobre la aprobación y el registro**
+
+- [ ] ¿Quién aprueba las diferencias y queda asentado (qué, cuándo, con qué datos, quién)?
+- [ ] ¿Se puede deshacer un emparejamiento si nos equivocamos?
+- [ ] ¿La herramienta puede crear asientos, pagos o cobranzas? Si sí, ¿con qué aprobación?
+
+**Sobre los permisos y los datos**
+
+- [ ] ¿Qué permisos tiene en el sistema y en Mercado Pago? ¿Alcanza con lectura donde no hace falta escribir?
+- [ ] ¿Dónde quedan los extractos, los reportes y el historial, y quién accede?
+- [ ] ¿Cómo lo freno si algo sale mal?
+
+Nimbo arma [automatizaciones e integraciones](/automatizacion-e-integracion) entre los extractos, los reportes y el sistema de gestión, con aprobación humana donde hace falta ([automatizaciones](/automatizaciones)). Si además querés ver saldos y cobranzas juntos, hay [tableros](/datos-y-tableros) que juntan esos números. En [Automatizá tu negocio con IA](/blog/automatiza-tu-negocio-con-ia) ampliamos cómo encarar este tipo de procesos en una pyme.
+
+## En resumen
+
+Sí se puede automatizar una parte de la conciliación bancaria: traer los movimientos del banco y de Mercado Pago, cruzarlos con lo cargado en el sistema y marcar lo que cierra, con registro. Tango, Xubio y Colppy, según su documentación oficial, ya tienen conciliación bancaria; la IA rinde cuando se apoya en eso y cubre los huecos, no cuando pretende reemplazar al sistema. Mercado Pago se concilia con el reporte correcto, no como si fuera un extracto bancario, y una persona revisa las diferencias, las comisiones, los contracargos y cualquier asiento nuevo. Arrancá por una cuenta, definí el semáforo y no ensanches el circuito hasta que quede un historial claro.
+
+Si querés ver cómo está hoy tu conciliación y qué parte se puede cruzar con controles, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que tengas hoy.
+
+## Preguntas frecuentes
+
+### ¿Se puede hacer la conciliación bancaria automática con IA en una pyme argentina?
+
+Sí, en parte. Se pueden traer los movimientos del banco y los reportes de Mercado Pago, cruzarlos con lo cargado en el sistema de gestión y dejar que una persona revise solo las diferencias, con un registro de cada match y de cada excepción. Sistemas como Tango, Xubio y Colppy ya ofrecen conciliación bancaria en su documentación oficial; Mercado Pago publica reportes (panel o API) pensados para conciliar con el sistema de gestión. La IA no reemplaza esa revisión cuando el importe no cierra, hay un contracargo o hay que crear un asiento.
+
+### ¿Cómo se concilia Mercado Pago con el sistema de gestión?
+
+Mercado Pago no es un banco, pero sus reportes oficiales sirven para conciliar. Desde Informes y facturación se descarga el reporte de Liquidaciones o el de Todas las transacciones; también se puede generar por API, en CSV o Excel, con un tope de 60 días en ese último reporte. El neto, las comisiones, los contracargos y los retiros a la cuenta bancaria no son lo mismo que el total de las ventas: hay que cruzar el reporte correcto con lo registrado y revisar lo que no mata.
+
+### ¿Qué tiene que aprobar una persona en una conciliación automática?
+
+Lo que coincide en fecha, importe y referencia se puede marcar conciliado, con registro. Una persona tiene que ver las diferencias de importe, las comisiones no cargadas, los retiros, los contracargos, los rechazos y cualquier movimiento que la herramienta quiera convertir en un asiento, un pago o una cobranza nueva. También tiene que poder deshacer un emparejamiento y cortar el proceso si algo sale mal.
+
+### ¿Tango, Xubio o Colppy ya tienen conciliación bancaria?
+
+Sí, según sus páginas oficiales consultadas el 23 de noviembre de 2026. Tango publica conciliación bancaria automática con extracto electrónico; Xubio, un módulo de conciliación bancaria automática (Interbanking, Excel o PDF, con autoconciliación por fecha y monto); Colppy, «Conectá tu banco», preconciliación por reglas y la posibilidad de deshacer un emparejamiento. Las funciones dependen del plan, de la versión y de la configuración. La integración de Xubio con Mercado Pago, en la ayuda oficial, es para importar cobros y facturarlos, no para conciliar el saldo como un extracto bancario.
+
+### ¿Por dónde empiezo si hoy lo hago a mano?
+
+Por una sola cuenta (un banco o Mercado Pago) y un período corto que ya hayas conciliado a mano. Anotá cómo lo hacés hoy, usá primero lo que ya trae tu sistema, definí qué se marca solo y qué va a revisión, y recién después sumá la segunda cuenta.
+
+### ¿La IA puede dar por cerrado un movimiento que no cierra?
+
+No. Si el importe no mata, hay un contracargo, un rechazo o hay que crear un asiento, una persona lo tiene que ver. La herramienta propone pares y deja registro; no «cierra» la caja por su cuenta.
+
+### ¿Con qué frecuencia conviene conciliar?
+
+Con una frecuencia fija, todos los días si se puede, para enterarte antes de las diferencias. No es una obligación legal que citemos acá: la frecuencia la define cada empresa con su administración o su contador.
+`,
+  },
+  {
     slug: 'conectar-xubio-colppy-contabilium-alegra-con-whatsapp-e-ia',
     title: 'Xubio, Colppy, Contabilium o Alegra + WhatsApp: cómo conectar tu sistema de gestión con un agente de IA',
     description:
