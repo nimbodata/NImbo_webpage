@@ -1,5 +1,1108 @@
 export const posts = [
   {
+    slug: 'crm-whatsapp-kommo-bitrix24-o-agente-ia',
+    title: 'Kommo, Bitrix24, Clientify o un agente de IA conectado a tu sistema: cuándo a tu pyme le alcanza un CRM de WhatsApp y cuándo no',
+    description:
+      '¿Te alcanza un CRM de WhatsApp (Kommo, Bitrix24, Clientify) o hace falta conectarlo a tu sistema? Precios al 25/11/2026 y cuándo conviene un agente de IA.',
+    date: '2026-11-25',
+    category: 'Automatización & IA',
+    readTime: '14 min',
+    content: `
+## Respuesta corta
+
+Un CRM de WhatsApp te alcanza cuando el problema es ordenar las conversaciones y al equipo de ventas. Si el cliente pregunta por stock, por el precio de su lista, por el estado del pedido o por la cuenta corriente, o si el cierre tiene que terminar en tu sistema de gestión, el CRM solo no alcanza: hace falta integrarlo o un agente de IA conectado a ese sistema. Kommo, Bitrix24, Clientify y Pipedrive publican precios de lista en dólares (Clientify también en euros); los mensajes de WhatsApp los cobra Meta aparte; y al 25 de noviembre de 2026 no encontramos una conexión nativa de esos CRM con Tango, Xubio o Colppy.
+
+**Puntos clave**
+
+- Un CRM de WhatsApp ordena chats, vendedores y el seguimiento. No es el sistema donde está tu stock ni tu facturación.
+- Tres escenarios: te alcanza el CRM; CRM más integración con el sistema de gestión; o un agente conectado al sistema. La elección depende de qué tiene que *hacer* el chat, no del logo.
+- Precios de lista oficiales al 25/11/2026, en USD (y EUR en Clientify). No hay tarifa oficial en pesos. Pipedrive varía según el país de facturación: lo que pague alguien facturado en Argentina puede ser distinto de la escala de la web oficial. Kommo puede mostrar otro valor en Base y Advanced para usuarios nuevos.
+- Los mensajes de la API oficial de WhatsApp se pagan a Meta, aparte de la suscripción.
+- Al 25/11/2026 no encontramos integraciones nativas de esos cuatro CRM con Tango, Xubio o Colppy en sus catálogos públicos.
+- Entre el 23 y el 24/11 Signos Agency publicó fichas de esos CRM y, en las alternativas, incluye a Ventry, el CRM que ellos implementan, junto con otras herramientas. Este post no elige un CRM por vos: te ayuda a ver si el CRM es la pieza que te falta.
+- Nadie «paga solo» ni factura solo: si hay una excepción, una persona decide.
+
+¿No estás seguro de en cuál de los tres escenarios estás? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## Cuándo te alcanza un CRM de WhatsApp (y cuándo no)
+
+Si lo que necesitás es entender qué es un CRM, eso ya está en [Qué es un CRM y por qué tu pyme lo necesita](/blog/que-es-un-crm-y-por-que-tu-pyme-lo-necesita). Acá la pregunta es cuándo un CRM de WhatsApp te alcanza y cuándo no.
+
+Te alcanza cuando el trabajo es atender, no perder consultas y hacer seguimiento: bandeja compartida, historial, asignación, embudo y recordatorios. Deja de alcanzar cuando la respuesta correcta está en **otro sistema** (stock, lista de precios por cliente, estado del pedido, cuenta corriente o factura). El riesgo no es el logo del CRM: es que el chat y el sistema de gestión no se hablen.
+
+Xubio documenta WhatsApp Web para *enviar* comprobantes, pagos, cobranzas, presupuestos y listas de precios ([integraciones de Xubio](https://xubio.com/ar/integraciones), 25/11/2026). Eso no es una bandeja de equipo ni reemplaza a un CRM. No afirmamos lo mismo de Tango o de Colppy: no lo verificamos como función equivalente.
+
+Entre el 23 y el 24 de noviembre de 2026, [Signos Agency publicó fichas](https://signos.agency/post/kommo-crm) de precio y alternativas de Kommo, Pipedrive, Bitrix24 y Clientify. En las alternativas aparece Ventry, el CRM que ellos implementan, junto con otras herramientas. Esas notas comparan un CRM con otro. Este artículo cubre la pregunta que queda afuera: cuándo te alcanza esa herramienta, cuándo hay que conectarla al sistema y cuándo conviene un agente de IA sobre tus datos.
+
+## Tres escenarios: CRM, CRM más integración, o un agente conectado al sistema
+
+| Escenario | Para quién | Qué resuelve | Qué no resuelve | Qué se paga (estructura, sin montos de implementación) |
+| --- | --- | --- | --- | --- |
+| **1. Te alcanza un CRM de WhatsApp** | El equipo pierde chats, no hay historial compartido y el vendedor cierra sin consultar el sistema (o lo consulta poco y a mano) | Ordenar conversaciones, asignar vendedores, seguimiento y embudo | Stock en vivo, precio por cliente, cuenta corriente, cargar el pedido o emitir el comprobante en el sistema de gestión | Suscripción del CRM (tabla de más abajo) + lo que cobre Meta por WhatsApp si usan la API oficial + el tiempo de configurar etapas y al equipo. Sin plazos ni honorarios inventados |
+| **2. CRM más integración con el sistema de gestión** | Ya hay (o va a haber) un CRM, y el vendedor entra todo el día a Tango, Xubio o Colppy para responder o cargar lo cerrado | El chat y el sistema hablan: consultar un dato o pasar un pedido o un cliente sin tipear dos veces | No convierte al CRM en tu sistema de gestión. La calidad depende de qué exponga tu sistema y de quién mantenga la conexión. Al 25/11/2026 esa conexión **no aparece como nativa** en los cuatro CRM relevados | Lo del escenario 1 + el trabajo de armar y mantener la integración (a cotizar; sin cifras). Puede haber costos de API o de una herramienta de integración; no ponemos esos precios |
+| **3. Un agente de IA conectado al sistema** | Las preguntas repetidas se resuelven leyendo el sistema (stock, precios, estado de pedido, saldo) y, con reglas, se puede preparar o cargar un pedido, con una persona que toma lo que se sale de la regla | Atender y *operar* sobre tus datos, también fuera de horario, sin que cada respuesta dependa de que un vendedor busque en otra pantalla | No reemplaza al equipo en excepciones, negociaciones ni reclamos finos. No factura ni mueve plata solo. No es un CRM por sí mismo (aunque puede convivir con uno) | Puesta en marcha + abono + consumo de IA + lo que cobre Meta. Sin precios de Nimbo ni rangos inventados. Más contexto en [Agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos) y en [Agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots) |
+
+Estos tres caminos se pueden combinar (por ejemplo, un CRM para el equipo y un agente para el horario en que no hay nadie). La pregunta útil no es cuál es «el mejor CRM», sino qué tiene que poder hacer el chat con tus datos.
+
+:::flow
+{ "title": "Qué te falta, de verdad", "steps": [
+  { "title": "1. ¿El chat solo ordena conversaciones?", "text": "Si el vendedor cierra sin ir al sistema, un CRM de WhatsApp suele alcanzar." },
+  { "title": "2. ¿Hay que consultar o cargar en el sistema?", "text": "Si el vendedor entra todo el día a Tango, Xubio o Colppy, hace falta un puente: CRM más integración." },
+  { "title": "3. ¿El chat tiene que operar sobre tus datos?", "text": "Stock, precios, pedido o saldo, con reglas y una persona que supervise: un agente conectado al sistema." },
+  { "title": "4. Una persona decide las excepciones", "text": "Nadie factura solo ni compromete un precio fuera de regla." }
+] }
+:::
+
+### Escenario 1: te alcanza el CRM
+
+Ejemplos típicos, sin casos de clientes: un equipo de tres que atiende consultas generales y agenda; un comercio que cierra en el mostrador y usa WhatsApp para el seguimiento. Al elegir, mirá bandeja compartida, cuántos números de WhatsApp vas a conectar, si el plan trae bots, moneda, período mínimo y prueba gratis. Los precios de lista están en la tabla de más abajo.
+
+### Escenario 2: CRM más integración
+
+El CRM no «trae» el stock de Tango: hace falta un puente. Al 25/11/2026 no vimos ese puente listo para Tango, Xubio o Colppy en los marketplaces públicos de Kommo, Bitrix24, Clientify o Pipedrive. Si hace falta, se arma a medida (API, webhooks o una herramienta de integración) y hay que verificarlo al contratar. Sí hay caminos oficiales *desde el sistema de gestión* hacia otras cosas:
+
+- **Xubio:** [API oficial](https://xubio.com/API/documentation/index.html) y [ayuda para usarla](https://ayuda.xubio.com/es-ar/como-uso-api/). Su [página de integraciones](https://xubio.com/ar/integraciones) (25/11/2026) publica Mercado Pago, Mercado Libre, Tiendanube, WooCommerce, WhatsApp Web, API y e-Ventanilla. La FAQ de esa página, más estrecha, nombra hoy Mercado Pago, Mercado Libre y Tiendanube. **No lista Kommo, Bitrix24, Clientify ni Pipedrive.**
+- **Colppy:** documenta [integraciones de e-commerce](https://colppy.com/solucion-para-tienda-online-ecommerce) (Mercado Libre, Tiendanube, Shopify, WooCommerce, VTEX). Al 25/11/2026 no encontramos una ficha pública actual de API comparable a la de Xubio, ni una conexión nativa con esos CRM. Verificalo con Colppy o con el implementador. No afirmamos ni negamos una API privada.
+- **Tango (Axoft):** publica Tango Ecommerce / Tango Tiendas y APIs oficiales ([ApiTiendas](https://github.com/TangoSoftware/ApiTiendas), [ApiClientes](https://github.com/TangoSoftware/ApiClientes)). No encontramos una ficha nativa con esos cuatro CRM. No describimos endpoints ni garantizamos que «cualquier dato se pueda leer».
+
+Clientify, en su [página de integraciones](https://clientify.com/integraciones) (25/11/2026), lista entre otras Alegra, Holded, Sage 50, Factusol y Facturama, más Zapier, n8n y webhooks: sobre todo herramientas de España o México, no el stack argentino de este post. Kommo documenta una [integración oficial con Mercado Pago](https://support.kommo.com/docs/es/connect-mercado-pago-to-kommo) (disponible en Argentina, entre otros países): es para cobros, no para el sistema de gestión.
+
+### Escenario 3: un agente conectado al sistema
+
+Un agente no es un chatbot de menú ni un CRM con respuestas automáticas. Consulta datos del negocio y puede ejecutar tareas dentro de límites, con derivación a una persona. Lo desarrollamos en [Agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos) y en [Agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots); el servicio está en [Automatización e integración](/automatizacion-e-integracion) y en [Agentes de IA](/agentes-de-ia). El semáforo es simple: no inventa un precio, no emite un comprobante de ARCA sin regla y revisión, y no cierra una excepción comercial solo.
+
+## Qué cuesta cada CRM (precios de lista, 25/11/2026) y qué queda afuera
+
+Los valores son de lista, en la moneda en que los publica cada sitio, consultados el 25/11/2026. No incluyen impuestos argentinos ni el tipo de cambio. Pueden cambiar. Pipedrive cobra distinto según el país de facturación, así que lo que pague alguien facturado en Argentina puede no coincidir con los US$ 14 / 39 / 59 / 79 que mostró la web oficial en nuestra consulta; no tomes esa escala como precio local confirmado. En Kommo, Base y Advanced pueden mostrar otro número para usuarios nuevos, según el país de facturación. **Verificá la página oficial al contratar.**
+
+| Herramienta | Cómo se cobra | Precios de lista consultados el 25/11/2026 | Período y prueba | Fuente oficial |
+| --- | --- | --- | --- | --- |
+| **Kommo** | Por usuario, solo en USD. Todos los usuarios van en el mismo plan. No hay pago mes a mes: el mínimo son 6 meses (también hay 9, 12 y 24) | [kommo.com/pricing](https://www.kommo.com/pricing), 25/11/2026: Base **US$ 25**, Advanced **US$ 35**, Pro **US$ 45** por usuario por mes (en 6 meses: US$ 150 / 210 / 270 por usuario). Enterprise, a medida. Créditos de IA: 750 / 1.250 / 2.250 por usuario por mes; no se acumulan. Canales: Base, 1 WhatsApp y 1 Instagram (+1 por usuario extra); Advanced, 3 y 3 (+1 por extra); Pro, ilimitados | Prueba 14 días, todas las funciones, 10 GB, sin tarjeta. La [ayuda oficial](https://support.kommo.com/docs/kommo-subscription-plans-overview) (act. 23/11/2026) aclara precios regionales de Base y Advanced para *nuevos* usuarios desde el 1/9/2026. No confirmamos una lista distinta para Argentina | [Precios](https://www.kommo.com/pricing); [planes](https://support.kommo.com/docs/kommo-subscription-plans-overview) |
+| **Bitrix24** | Por organización, no por puesto. Cada plan tiene un tope de usuarios | [bitrix24.com/prices](https://www.bitrix24.com/prices/), 25/11/2026, en USD: Free (usuarios ilimitados, 5 GB, con límites de funciones). Basic: **US$ 69** mes a mes o **US$ 49** anual, 5 usuarios. Standard: **US$ 144** / **US$ 99**, 50 usuarios. Professional: **US$ 289** / **US$ 199**, 100 usuarios. Enterprise: desde **US$ 579** / **US$ 399**, 250 usuarios. WhatsApp aparece en los planes pagos; en la línea Vibe+ la integración figura desde Basic (confirmalo en el plan concreto). La [oferta Vibe+](https://www.bitrix24.com/promo/sales/vibe-plus-sale-2026/) vale del **1/9 al 10/12/2026** para suscripciones de 12 meses; las renovaciones van al precio regular. Anual de lista en la promo: Basic Vibe+ US$ 59, Standard Vibe+ US$ 120, Professional Vibe+ US$ 240, Enterprise Vibe+ desde US$ 480 (organización / mes, facturado al año) | El plan Free existe, con límites. El sitio documenta una prueba de 15 días de planes superiores, sin tarjeta | [Precios](https://www.bitrix24.com/prices/); [oferta Vibe+](https://www.bitrix24.com/promo/sales/vibe-plus-sale-2026/) |
+| **Clientify** | Un solo plan, «Todo en uno», por *asiento* (persona con acceso a ventas y comunicación); los «usuarios» son ilimitados. La página muestra la misma cifra en **dólares y en euros** | [clientify.com/precios](https://clientify.com/precios/), 25/11/2026: primer asiento **39 € / US$ 39** por mes con pago anual (468 al año) o **65** mes a mes. Cada asiento extra: **15** anual o **25** mes a mes. Cada 1.000 contactos de marketing extra: **3** anual o **5** mes a mes (incluye 1.000). Ejemplos de la propia página: 3 asientos y 1.000 contactos = 69 / mes anual (828 al año) o 115 mes a mes; 5 asientos y 5.000 contactos = 111 / 185. La facturación electrónica incluida es **solo para España**. Créditos de IA (Monedero) desde **30 € / US$ 30** por mes, aparte | Prueba gratis, sin tarjeta; la página de precios no publica la duración, así que no la inventamos | [Precios](https://clientify.com/precios/) |
+| **Pipedrive** | Por puesto, en USD. La página aclara que los precios no incluyen IVA (explica el caso de la UE; no el argentino) | Consulta del 25/11/2026 a [pipedrive.com/en/pricing](https://www.pipedrive.com/en/pricing), pago anual: Lite **US$ 14** (US$ 168/año), Growth **US$ 39** (US$ 468), Premium **US$ 59** (US$ 708), Ultimate **US$ 79** (US$ 948) por puesto por mes. **Pipedrive varía el precio según el país de facturación: estos valores no son un precio local confirmado, y lo que pague alguien facturado en Argentina puede ser distinto.** Signos, el 22/11, publicó Growth 24, Premium 49 y Ultimate 69, una escala que Pipedrive usa en algunos países. **No afirmamos cuál de las dos ve el lector en Argentina.** Complementos (LeadBooster, Projects, Campaigns, Visitantes web, Smart Docs) aparte; en la página consultada, «desde» US$ 32,50 / 16 / 13,33 / 41 / 32,50 | Prueba 14 días, sin tarjeta. Se puede pagar mes a mes, más caro (el sitio dice que el anual ahorra «hasta 42%» en la vista que consultamos) | [Precios](https://www.pipedrive.com/en/pricing). El lector tiene que abrirla desde su país |
+
+Fuentes: páginas oficiales de Kommo, Bitrix24, Clientify y Pipedrive, consultadas el 25/11/2026, America/Buenos_Aires. Los precios cambian y pueden depender del país de facturación. No son un presupuesto en pesos ni incluyen lo que cobra Meta por WhatsApp, ni la implementación, ni (en Clientify) los créditos de IA.
+
+Qué queda afuera: los mensajes de la API de WhatsApp los cobra Meta, por categoría y país del destinatario, aparte (el encuadre está en [Cómo automatizar tu pyme con IA y un chatbot de WhatsApp](/blog/automatizar-pyme-ia-chatbot-whatsapp)); el tipo de cambio y los impuestos argentinos no están en la lista (confirmalos al pagar y, si hace falta, con tu contador; este post no es asesoramiento impositivo y no convierte a pesos); implementación, migración y capacitación no vienen en el plan (sin cifras); créditos de IA extra (Kommo, Clientify) y complementos (Pipedrive). En Kommo el desembolso inicial es de al menos seis meses. Una cuenta aritmética sobre el precio de lista, en dólares, no un presupuesto en pesos: 4 usuarios en Advanced, a US$ 35 por usuario por mes, por 6 meses, suman US$ 840, según [kommo.com/pricing](https://www.kommo.com/pricing) el 25/11/2026; para un usuario nuevo, Base y Advanced pueden mostrar otro número según el país de facturación.
+
+## Qué no resuelve cada camino
+
+- **CRM solo:** no es tu stock, tu cuenta corriente ni tu facturación de ARCA. No evita que el vendedor copie mal un precio si ese precio vive en otro sistema.
+- **CRM + integración:** no es automático por contratarlo. Si el sistema no expone el dato, o si nadie mantiene el puente, el chat se desactualiza. No encontramos el puente nativo con Tango, Xubio o Colppy al 25/11/2026.
+- **Agente conectado:** no reemplaza a quien negocia una excepción, no debe facturar ni comprometer un precio fuera de regla, y no es un atajo para no tener los datos en orden.
+- **Ninguno de los cuatro CRM, por contratarlo, te convierte en un caso de una agencia.** La herramienta es una cosa; quién la configura y la conecta es otra.
+
+## Cómo decidir: qué mirar antes de contratar un CRM de WhatsApp o un agente
+
+1. ¿Las consultas se resuelven con lo que el vendedor ya sabe, o hay que ir al sistema a cada rato (stock, precios, saldo, pedido)?
+2. ¿Hoy los chats viven en el celular de cada uno, o ya hay una bandeja compartida?
+3. ¿Cuántos números de WhatsApp y cuántas personas tienen que atender? Eso cambia el plan (sobre todo en Kommo y en Clientify).
+4. ¿En qué moneda y con qué período podés pagar? Kommo cobra en USD y pide al menos 6 meses. Clientify permite mes a mes (más caro) o año, en USD o EUR. Bitrix24 cobra por empresa, no por puesto. Pipedrive, por puesto, y el precio puede cambiar según el país: lo que pague alguien facturado en Argentina puede diferir de la escala de la web oficial.
+5. ¿Tu sistema de gestión tiene API o una integración documentada para lo que necesitás? Comprobalo en la documentación oficial (Xubio sí publica API; Tango publica APIs de tiendas y de clientes; en Colppy, consultá al proveedor).
+6. ¿El CRM que estás mirando muestra una conexión nativa con *tu* sistema? Al 25/11/2026, con Tango, Xubio o Colppy, no la encontramos en Kommo, Bitrix24, Clientify ni Pipedrive.
+7. ¿Los mensajes de WhatsApp van por la API oficial? Sumá lo que cobra Meta, aparte del plan.
+8. ¿Quién configura etapas, permisos y, si hay integración o agente, las reglas? ¿Quién aprueba una excepción?
+9. Pedí una prueba con *tus* conversaciones reales, no con la demo genérica.
+10. Dejá por escrito qué pasa con tus datos y con el número de WhatsApp si te vas.
+
+Nimbo ayuda a ver en cuál de los tres escenarios estás y, si hace falta, a conectar WhatsApp o un agente con el sistema que ya usás. Eso entra en [automatización e integración](/automatizacion-e-integracion) y en [agentes de IA](/agentes-de-ia). No hay un CRM «ganador» en este post: hay un criterio para no pagar dos herramientas que no se hablan, ni un agente si lo único que necesitás es una bandeja compartida. Si querés mirarlo con lo que ya tenés, el [diagnóstico es de 20 minutos, sin cargo](/diagnostico).
+
+## En resumen
+
+Un CRM de WhatsApp ordena conversaciones y al equipo; alcanza cuando el vendedor no necesita el sistema de gestión para cerrar. Si hay que consultar stock, precios, pedidos o saldos, o cargar lo cerrado, hace falta integrar el CRM o un agente conectado a tus datos, con una persona que tome las excepciones. Los precios de lista al 25/11/2026 están en dólares (Clientify también en euros), no incluyen lo que cobra Meta ni un presupuesto en pesos, y en Pipedrive pueden cambiar según el país de facturación: la escala de la web oficial no es un precio argentino confirmado. Al 25/11/2026 no encontramos una conexión nativa de esos CRM con Tango, Xubio o Colppy.
+
+Si querés ubicar tu pyme en uno de esos tres caminos y ver qué se puede conectar con lo que ya tenés, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## Preguntas frecuentes
+
+### ¿Cuándo le alcanza a una pyme un CRM de WhatsApp?
+
+Cuando el trabajo es ordenar chats, no perder consultas y hacer seguimiento comercial. Si el vendedor no necesita mirar stock, lista de precios por cliente, cuenta corriente ni cargar el pedido en el sistema para cerrar, un CRM de bandeja suele alcanzar.
+
+### ¿Kommo, Bitrix24, Clientify o Pipedrive se integran con Tango, Xubio o Colppy?
+
+Al 25/11/2026 no encontramos una integración nativa de Kommo, Bitrix24, Clientify o Pipedrive con Tango, Xubio o Colppy en sus catálogos públicos. Si hace falta esa conexión, se arma a medida (API, webhooks o una herramienta de integración). Hay que verificarlo al contratar.
+
+### ¿Necesito un CRM o un agente de IA?
+
+No son lo mismo. El CRM ordena conversaciones y al equipo. El agente consulta o ejecuta sobre tus datos (stock, precios, pedidos, saldos) con reglas y una persona que supervisa. Muchas pymes empiezan por el CRM; el agente aparece cuando el chat tiene que *operar*, no solo conversar. Se pueden combinar.
+
+### ¿Cuánto cuesta un CRM con WhatsApp en Argentina?
+
+Precios de lista en USD (Clientify también en euros), consultados el 25/11/2026: Kommo, US$ 25 / 35 / 45 por usuario por mes, mínimo 6 meses; Bitrix24, desde un plan Free hasta planes pagos por organización (Basic US$ 69 mes a mes o US$ 49 anual); Clientify, desde 39 € / US$ 39 por el primer asiento con pago anual; Pipedrive, en la web oficial, US$ 14 / 39 / 59 / 79 anuales por puesto. Ninguno publica tarifa en pesos. **Pipedrive varía el precio según el país de facturación: la escala de la web oficial no es un precio local confirmado, y lo que pague alguien facturado en Argentina puede ser distinto.** En Kommo, Base y Advanced pueden variar para usuarios nuevos según el país. Chequeá la web oficial al contratar. Los mensajes de WhatsApp y la implementación van aparte.
+
+### ¿El plan del CRM incluye los mensajes de WhatsApp?
+
+No. La suscripción no incluye lo que Meta cobra por los mensajes de la API oficial (según categoría y país del destinatario). En Clientify, los créditos de IA del Monedero también van aparte.
+
+### ¿El WhatsApp de Xubio reemplaza a un CRM?
+
+No. Xubio documenta WhatsApp Web para enviar comprobantes, pagos, cobranzas, presupuestos y listas de precios. Eso no es una bandeja de equipo para vender y hacer seguimiento.
+
+### ¿Por qué las comparativas de CRM no alcanzan para decidir?
+
+Porque comparan un CRM con otro. Las fichas de Signos del 23 y el 24/11/2026 (Kommo, Pipedrive, Bitrix24 y Clientify) son un ejemplo, y en las alternativas incluyen a Ventry, el CRM que ellos implementan, junto con otras herramientas. La decisión también depende de si el chat tiene que hablar con el sistema de gestión, o de si hace falta un agente sobre esos datos. Esta es la pregunta de este post; no un ranking de marcas.
+
+### ¿Por dónde empiezo si todavía no tengo ni CRM ni agente?
+
+Anotá de dónde salen las preguntas que hoy el vendedor va a buscar a otro lado (stock, precios, saldos, pedidos). Si casi no hay, probá un CRM. Si las hay todos los días, pensá en integración o en un agente, no solo en cambiar de CRM. El [diagnóstico](/diagnostico) es de 20 minutos, sin cargo.
+    `.trim(),
+  },
+  {
+    slug: 'ia-estudios-contables-comprobantes-whatsapp',
+    title: 'IA para estudios contables en Argentina: pedí los comprobantes por WhatsApp y dejálos listos para cargar, sin cambiar de software',
+    description:
+      'El cuello de botella de un estudio suele ser perseguir comprobantes, no el software. Qué ya está en ARCA, qué piden ONVIO, Holistor, Aconpy, ConciliaBot y Kontari, y cuándo conviene un agente sobre tu WhatsApp, con revisión humana.',
+    date: '2026-11-25',
+    category: 'Automatización & IA',
+    readTime: '14 min',
+    content: `
+## Respuesta corta
+
+Sí, en parte. Un agente puede pedir lo que falta, enviar recordatorios, recibir lo que el cliente manda por WhatsApp, clasificarlo (factura, extracto, ticket u otro) y dejarlo en la carpeta o en el formato de importación del sistema que el estudio ya usa, por ejemplo ONVIO u Holistor. La importación a los libros y cualquier presentación las revisa y firma una persona del estudio. No hace falta migrar de software para dar este paso.
+
+**Puntos clave**
+
+- Un agente puede pedir, recordar, recibir y clasificar (factura, extracto, ticket) y dejarlo listo en la carpeta o en el formato de importación del sistema que el estudio ya usa. La carga formal y la presentación las revisa y firma una persona.
+- Las facturas electrónicas con CAE suelen estar en los servicios de ARCA (Mis Comprobantes, Portal IVA). Siguen quedando afuera tickets, fotos, extractos y cualquier papel que el cliente no mandó.
+- ONVIO, Holistor, Aconpy, ConciliaBot y Kontari ya cubren partes del trabajo. Ninguno, en lo verificado el 25/11/2026, reemplaza por sí solo un agente sobre el WhatsApp del estudio que clasifica lo recibido y lo deposita en el sistema que ya está en uso, con revisión humana.
+- Un SaaS alcanza cuando el estudio y sus clientes van a usar ese portal o esas importaciones. Una capa a medida tiene sentido si hay que seguir usando ONVIO, Holistor u otro, y los clientes ya mandan todo por WhatsApp.
+- Lo dudoso no entra solo a los libros: se clasifica, se marca y lo mira una persona.
+- Un estudio trata datos de sus clientes. La [Ley 25.326](https://www.argentina.gob.ar/normativa/nacional/norma-64790/actualizacion) exige medidas de seguridad y confidencialidad. Las claves fiscales no van por el chat. El cumplimiento puntual lo ve un especialista; este post no lo resuelve.
+
+¿Querés ver cómo está hoy el pedido de comprobantes de tu estudio y qué parte se puede armar sobre el WhatsApp y el sistema que ya usás, con revisión humana? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## El cuello de botella no es el sistema: es perseguir los comprobantes
+
+El cuello de botella de un estudio no suele ser el software contable: es perseguir a los clientes para que manden comprobantes, extractos y tickets a tiempo. Muchas facturas electrónicas ya se pueden consultar o bajar desde los servicios oficiales de ARCA; lo que come horas es lo que no está ahí y llega (o no llega) por WhatsApp, mail o un sobre. El momento típico es el cierre mensual, cuando el equipo pide lo que falta y todavía no está todo para cargar. Las fechas de cada obligación las publica ARCA: este post no es un calendario ni un asesoramiento impositivo.
+
+El tema ya está en la conversación del rubro. El 22 de noviembre de 2026, [Signos Agency publicó una guía de CRM para contadores](https://signos.agency/post/crm-para-estudios-contables) sobre clientes, vencimientos y documentación pendiente; no es una guía de un agente que pide, clasifica y deja comprobantes listos para el sistema contable. Al día siguiente publicaron [inteligencia artificial para abogados](https://signos.agency/post/inteligencia-artificial-para-abogados), una nota por rubro que no cubre este proceso. Y [D2V](https://d2v.com.ar/ia-estudios-contables/) ya tiene una guía de IA en estudios contables, con una capa encima del sistema que ya se usa, incluida la carga y lo que el cliente manda por WhatsApp. Esta nota recorta un circuito más estrecho —pedir, recordar, recibir, clasificar y dejar listo en el sistema actual— y compara lo que ya documentan ONVIO, Holistor, Aconpy, ConciliaBot y Kontari.
+
+| Suele alcanzarse desde ARCA | Sigue haciendo falta pedirlo |
+| --- | --- |
+| Facturas electrónicas emitidas o recibidas con CAE (el Código de Autorización Electrónico que asigna ARCA), consultables o descargables en Mis Comprobantes y en el Portal IVA. ONVIO y Aconpy documentan importar o descargar comprobantes desde esos servicios. | Tickets o comprobantes que no están en esos servicios, fotos sacadas con el celular, extractos bancarios o de billeteras, rendiciones de gastos, remitos y cualquier papel que el cliente todavía no mandó. |
+
+Fuente de contexto: el micrositio de [factura electrónica de ARCA](https://www.arca.gob.ar/fe/). Nombramos Mis Comprobantes y Portal IVA como servicios oficiales; no enlazamos una ruta profunda que no hayamos comprobado.
+
+## El circuito: pedir, recordar, recibir, clasificar y dejar listo para cargar
+
+El sistema de registro sigue siendo el del estudio: ONVIO, Holistor u otro. Un «formato de importación» es el archivo que ese sistema ya acepta para cargar comprobantes en lote. El agente se monta, en lo posible, sobre el WhatsApp que el estudio ya usa.
+
+| Paso | Qué hace el agente | Qué no hace |
+| --- | --- | --- |
+| 1. Pedir | Avisa a cada cliente qué falta (por ejemplo, facturas de compra, un extracto o tickets del mes), por el WhatsApp del estudio. | No improvisa obligaciones ni fechas de vencimiento: usa la lista que armó el estudio. |
+| 2. Recordar | Reenvía el pedido si no llegó nada, con un tope de recordatorios que define el estudio. | No hostiga. Si el estudio usa la API de WhatsApp, un mensaje de recordatorio puede tener costo. |
+| 3. Recibir | Toma PDFs, fotos y archivos que el cliente ya manda por ese chat (o por un mail, si el estudio lo suma). | No obliga al cliente a bajarse otra app, salvo que el estudio elija un portal (Kontari, ConciliaBot, ONVIO). |
+| 4. Clasificar | Separa, con una etiqueta provisoria: factura, extracto, ticket u otro (remito, constancia, archivo ilegible). | No da por válida una clasificación dudosa. |
+| 5. Dejar listo | Guarda en la carpeta del cliente o exporta al formato de importación del sistema que el estudio ya usa. | No «carga y presenta» en ARCA ni imputa el asiento final. |
+| 6. Revisar | Deja una cola de lo claro y lo dudoso, con el archivo original. | Una persona del estudio confirma, corrige o descarta antes de que entre a los libros. |
+
+:::flow
+{ "title": "Del pedido al archivo listo para revisar", "steps": [
+  { "title": "1. Pedir", "text": "Avisa qué falta, según la lista del estudio, por el WhatsApp que ya usa." },
+  { "title": "2. Recordar", "text": "Reenvía el pedido si no llegó nada, con un tope. No hostiga." },
+  { "title": "3. Recibir", "text": "Toma PDFs, fotos y archivos de ese chat. No obliga a otra app, salvo que el estudio elija un portal." },
+  { "title": "4. Clasificar", "text": "Etiqueta en forma provisoria: factura, extracto, ticket u otro. Lo dudoso no se da por válido." },
+  { "title": "5. Dejar listo", "text": "Guarda en la carpeta del cliente o exporta al formato de importación del sistema actual." },
+  { "title": "6. Revisar", "text": "Una persona confirma, corrige o descarta antes de que entre a los libros o a una presentación." }
+] }
+:::
+
+### 1. Pedir
+
+El agente avisa qué falta, con el texto del estudio. No inventa obligaciones ni fechas: parte de la lista que armó el equipo.
+
+### 2. Recordar
+
+Si no llegó nada, reenvía el pedido hasta el tope acordado. Si el estudio usa la API de WhatsApp, ese mensaje puede tener costo.
+
+### 3. Recibir
+
+Toma lo que el cliente ya manda por ese chat. No hace falta pedirle otra aplicación, salvo que el estudio elija un portal como el de ONVIO, Kontari o ConciliaBot.
+
+### 4. Clasificar
+
+Separa con una etiqueta provisoria: factura, extracto, ticket u otro. Si duda, lo marca para una persona.
+
+### 5. Dejar listo
+
+Guarda el archivo en la carpeta del cliente o lo deja en el formato de importación del sistema que el estudio ya usa. No carga, no presenta en ARCA y no imputa el asiento final.
+
+### 6. Revisar
+
+Queda una cola de lo claro y lo dudoso, con el archivo original. Una persona confirma, corrige o descarta antes de que eso entre a los libros o a una presentación.
+
+## Qué ya ofrecen ONVIO, Holistor, Aconpy, ConciliaBot y Kontari
+
+Estos productos existen y ya cubren partes del trabajo. La tabla resume lo que cada uno publica en su sitio oficial, consultado el 25 de noviembre de 2026. No es un ranking ni una comparativa completa de planes. Donde hay precios públicos, son los publicados al 25/11/2026 y pueden cambiar: los de ConciliaBot son más IVA y Kontari indica que los actualiza trimestralmente según el IPC (confirmá en su sitio si incluyen IVA). No listamos precios de ONVIO, Holistor ni Aconpy: se cotizan o se consultan al proveedor. Tampoco tomamos como hecho las métricas que publican (tiempo ahorrado o cantidad de estudios).
+
+| Producto | Qué es | Qué documenta sobre comprobantes, clientes y WhatsApp | Qué no afirmar | Fuente |
+| --- | --- | --- | --- | --- |
+| **ONVIO** (Thomson Reuters) | Sistema contable online para estudios y contadores, con impuestos, sueldos, vencimientos e integración con ARCA. | Portal del Cliente para intercambiar archivos. **Onvio Messenger** sirve para *responder* por WhatsApp en una sola línea de contacto (en el plan Experto, según la página de producto). Importa y descarga comprobantes del Portal IVA. Tiene un módulo de carga de comprobantes con IA (FEX). En la conciliación, la IA pasa el extracto PDF a un archivo procesable; la conciliación en sí es manual. La mesa de ayuda por WhatsApp es soporte al usuario del software, no el pedido a los clientes. | No se encontró un agente que pida y recuerde comprobantes a los clientes por WhatsApp de forma automática. No decir que ONVIO «ya persigue los comprobantes». | [Página de producto ONVIO](https://www.thomsonreuters.com.ar/es/productos/sistema-contable-onvio.html) y [comunicado del 12/2/2026](https://www.thomsonreuters.com.ar/es/sala-de-prensa/tr-automatiza-gesti-n-multiempresa-para-estudios-contables-con-nuevo-m-dulo-en-onvio.html) (consulta 25/11/2026). |
+| **Holistor** (Holistor SA) | Software para estudios contables: laboral, IVA, contabilidad, impuestos y planificación del estudio. | IVA Registración: importación y carga manual de compras y ventas, y exportación a aplicativos. Planificación de Estudios: agenda de vencimientos y **comunicaciones por mail** con los clientes. ConciliaBot cita a Holistor entre los formatos de importación que soporta (es un dato de ConciliaBot, no de Holistor). | En el sitio oficial, las comunicaciones con clientes están documentadas por mail. | [Holistor Estudios Contables](https://www.holistor.com.ar/Products/EC) (consulta 25/11/2026). |
+| **Aconpy** | Sistema contable y administrativo argentino, con «bots» de automatización pensados para estudios. | El BOT de importación masiva descarga, clasifica y organiza comprobantes **desde ARCA** (Mis Comprobantes para monotributistas; Portal IVA para responsables inscriptos). Otros bots: ingreso a ARCA, presentación del Libro IVA y del F2051 (con confirmación del contador), VEPs, deudas, alertas fiscales y paso de extracto PDF a Excel. | Automatiza sobre todo la bajada oficial. En esta consulta no se describe un pedido de comprobantes a los clientes por WhatsApp. | [Bots de Aconpy](https://aconpy.com/bots-contador) y [página para contadores](https://aconpy.com/contadores) (consulta 25/11/2026). |
+| **ConciliaBot** (ContaTech) | Plataforma de IA para estudios. El equipo opera sobre todo por Telegram; WhatsApp aparece en ciertas comunicaciones con clientes. | Convierte extractos, facturas, tickets y otros documentos a Excel. Exporta comprobantes al formato de importación de 15 sistemas, entre ellos Xubio, Tango, **Holistor, Onvio** y Colppy, y el Libro IVA Digital en TXT. **Vencimientos por WhatsApp y por mail** (en el plan base, hasta 50 contactos). En el **portal de gestión** (Plus + Flow): portal para cada cliente, **pedidos de documentación** y mensajes de dos vías. Precios publicados el 25/11/2026: plan base **ARS 45.000 + IVA / mes**; Plus + Flow **ARS 65.000 + IVA / mes**. | No afirmar que el plan base ya persigue comprobantes por WhatsApp: los pedidos de documentación están documentados en el portal (Plus + Flow). | [ConciliaBot](https://contatech.org/conciliabot/) (consulta 25/11/2026). |
+| **Kontari** | Software de gestión para estudios (cartera, vencimientos, IVA, documentación, honorarios), con un asistente de IA optativo. | Repositorio de documentos por cliente. La IA **lee** lo que se sube y **redacta** recordatorios, pedidos de documentación o respuestas, siempre con confirmación de una persona. **Campañas por email y WhatsApp** con plantillas. En el plan **Portal**, el cliente tiene una app para ver vencimientos, **subir documentación** y chatear con el estudio. Precios publicados el 25/11/2026: Solo **$20.000 ARS/mes**, Estudio **$36.000 ARS/mes**, Portal **$58.000 ARS/mes** (también hay opción anual con −17%); se actualizan trimestralmente según el IPC; 14 días de prueba, sin permanencia. | No se encontró que exporte al formato de ONVIO o Holistor, ni que reemplace esos sistemas. El propio sitio dice que, si ya usás otro sistema, se puede cargar desde Mis Comprobantes. No afirmar un agente que le escribe solo al cliente por WhatsApp: la IA redacta y una persona confirma. | [Kontari](https://kontari.com.ar/) (consulta 25/11/2026). |
+
+*Información verificada el 25 de noviembre de 2026.*
+
+## Cuándo te alcanza un SaaS y cuándo conviene una capa a medida
+
+Un SaaS alcanza cuando el estudio y sus clientes van a usar ese portal o esas importaciones. Una capa a medida, encima del sistema actual, tiene sentido si hay que seguir usando ONVIO, Holistor u otro, y los clientes ya mandan todo por WhatsApp. Ni una ni la otra es mejor en todos los casos.
+
+| Situación | Suele alcanzar con lo que ya hay | Puede convenir una capa a medida (encima del sistema actual) |
+| --- | --- | --- |
+| Las compras de los clientes son casi todas facturas electrónicas con CAE | Importar desde Mis Comprobantes o Portal IVA con ONVIO, Aconpy u otra función equivalente. | Si además llegan tickets, fotos y extractos por WhatsApp y hay que ordenarlos para el mismo sistema. |
+| El estudio está dispuesto a que el cliente use un portal (ONVIO, Kontari Portal, ConciliaBot Plus) | Pedidos de documentación, carga del cliente y recordatorios del propio SaaS. | Si los clientes no entran al portal y ya mandan (o solo contestan) por WhatsApp. |
+| El estudio quiere recordatorios de vencimientos por WhatsApp | ConciliaBot lo documenta en el plan base (hasta 50 contactos). Kontari documenta campañas y plantillas. | Si el recordatorio tiene que ir atado a qué comprobante falta, clasificar lo que llega y dejarlo en ONVIO, Holistor u otra carpeta o importación ya en uso. |
+| El estudio no quiere cambiar de software | Holistor y ONVIO siguen siendo el sistema de registro; un SaaS complementario puede exportar a su formato (ConciliaBot lo documenta para ambos). | Si ese complemento no cubre el pedido, la clasificación y el depósito en *su* flujo, o el estudio tiene reglas propias (qué se pide a cada tipo de cliente, quién revisa, dónde se guarda). |
+
+Esa capa se puede pensar como [automatización e integración](/automatizacion-e-integracion) o como un [agente de IA](/agentes-de-ia) encima del sistema que ya usás, con revisión humana. Si hace falta un conector o una cola de importación que el sistema no trae, entra [software a medida](/software-a-medida). Eso no implica que ya esté integrada una marca puntual.
+
+## Semáforo: qué puede preparar el agente y qué no entra sin una persona
+
+El agente ordena y sugiere; el asiento y la presentación los firma el estudio. Nada entra solo a los libros.
+
+| Color | Entra a la cola de «listo para revisar» | No entra a los libros ni a una presentación |
+| --- | --- | --- |
+| Verde (con revisión) | PDF o imagen legible, cliente identificado, tipo sugerido (factura / extracto / ticket) y datos visibles (CUIT, fecha, importe, CAE si hay). | Aunque esté claro, una persona confirma antes de importar. |
+| Amarillo | Foto borrosa, ticket sin CAE, extracto cortado, duda entre dos clientes o entre factura y nota de crédito. | Queda marcado para una persona. El agente no «adivina» el CUIT ni el período. |
+| Rojo | No se identifica al cliente, el archivo no es un comprobante, hay un posible duplicado, o cualquier cosa que implique usar o pedir una clave fiscal por el chat. | Se frena. Las claves fiscales no se piden ni se reciben por WhatsApp. |
+
+## Datos de tus clientes: lo que hay que cuidar (sin asesoramiento legal)
+
+Un estudio maneja información confidencial (constancias, facturas y, a veces, claves de acceso a ARCA). La [Ley 25.326](https://www.argentina.gob.ar/normativa/nacional/norma-64790/actualizacion) (texto actualizado) establece, entre otras cosas, el deber de adoptar medidas de seguridad y confidencialidad (art. 9) y el deber de secreto (art. 10). Este post lo señala y remite a la norma. No dice si un proveedor «cumple la ley» ni dónde tiene que estar el servidor.
+
+Reglas operativas, no jurídicas: las claves fiscales no se piden ni se guardan en WhatsApp; el archivo original queda asociado al cliente, con registro de cuándo llegó y quién lo revisó; el estudio define qué datos no se suben a una herramienta de IA de uso general (ChatGPT u otra) por fuera de su circuito. Para el cumplimiento puntual, consulta a un especialista. Este post no lo resuelve.
+
+## Cómo arrancar con un grupo chico de clientes
+
+No hace falta empezar por toda la cartera ni por todos los tipos de comprobante. Un ejemplo ilustrativo de recorte, no un caso real ni un tamaño recomendado: un grupo chico, como los clientes de un mismo régimen o los que más tardan en mandar material, y un solo tipo de documento el primer mes (facturas de compra, o extractos). Revisá a mano todo lo que clasifique el agente. Recién después ampliá la cartera. No empieces por «todos los clientes, todos los comprobantes, carga directa al sistema».
+
+Antes de automatizar, conviene medir cómo está hoy el circuito: en [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion) hablamos de arrancar por ese número, sin inventar horas ahorradas.
+
+## Checklist: qué preguntarle a quien te arme este circuito
+
+- [ ] ¿El agente se monta sobre el WhatsApp que el estudio ya usa, o hay que pasar a los clientes a otra app o portal?
+- [ ] ¿Qué pide, con qué texto y con qué tope de recordatorios? ¿Quién arma la lista de lo que falta?
+- [ ] ¿Qué tipos clasifica (factura, extracto, ticket, otro) y qué hace cuando duda?
+- [ ] ¿Dónde deja el archivo: carpeta del cliente, formato de importación de ONVIO, Holistor u otro, cola de revisión?
+- [ ] ¿Algún comprobante entra solo a los libros o a una presentación, sin que lo mire una persona?
+- [ ] ¿Cómo se detecta un duplicado o un archivo mandado dos veces?
+- [ ] ¿Qué queda registrado (quién pidió, cuándo llegó, quién revisó)?
+- [ ] ¿Dónde se guardan los archivos y las conversaciones? ¿Se usan para entrenar un modelo de un tercero?
+- [ ] ¿El circuito pide o almacena claves fiscales? (la respuesta esperable es no).
+- [ ] ¿Qué pasa si el cliente responde con una consulta que no es un comprobante? ¿Se deriva a una persona?
+
+Nimbo arma [automatizaciones](/automatizaciones) y [agentes de IA](/agentes-de-ia) como una capa encima del sistema que el estudio ya usa, con revisión humana donde hace falta. En [cómo implementar un agente de IA](/blog/agentes-de-ia-para-pymes-como-implementarlos) y en [IA para pymes argentinas](/blog/ia-para-pymes-argentinas-guia-2026) hay más contexto sobre este tipo de procesos. El canal, en general, lo cubrimos en [automatizar con un chatbot de WhatsApp](/blog/automatizar-pyme-ia-chatbot-whatsapp); acá el proceso es el del estudio que pide y ordena comprobantes, no el de una pyme que atiende ventas.
+
+## En resumen
+
+El cuello de botella de un estudio suele ser perseguir lo que no está en ARCA, no el software. Un agente puede pedir, recordar, recibir, clasificar y dejar los archivos listos en la carpeta o en el formato de importación del sistema que ya usás. ONVIO, Holistor, Aconpy, ConciliaBot y Kontari ya cubren partes de ese trabajo, según sus sitios al 25 de noviembre de 2026. Un SaaS alcanza cuando el estudio y los clientes van a usar ese portal o esas importaciones; una capa a medida tiene sentido cuando los clientes ya escriben por WhatsApp y el registro tiene que seguir en el sistema actual. El agente ordena y sugiere; una persona revisa antes de que algo entre a los libros. Las claves fiscales no van por el chat.
+
+Si querés ver cómo está hoy el pedido de comprobantes de tu estudio y qué parte se puede armar sobre el WhatsApp y el sistema que ya tenés, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que uses hoy.
+
+## Preguntas frecuentes
+
+### ¿Se puede usar IA en un estudio contable para pedir comprobantes por WhatsApp sin cambiar de software?
+
+Sí, en parte. Un agente puede pedir lo que falta, enviar recordatorios, recibir lo que el cliente manda por WhatsApp, clasificarlo (factura, extracto, ticket u otro) y dejarlo en la carpeta o en el formato de importación del sistema que el estudio ya usa, por ejemplo ONVIO u Holistor. La importación a los libros y cualquier presentación las revisa y firma una persona del estudio. No hace falta migrar de software para dar este paso.
+
+### ¿ONVIO, Holistor, Aconpy, ConciliaBot o Kontari ya resuelven este circuito?
+
+Cada uno cubre una parte, según su propio sitio (consulta del 25 de noviembre de 2026). ONVIO importa comprobantes del Portal IVA, tiene Portal del Cliente y permite responder por WhatsApp con Onvio Messenger. Holistor es el software del estudio e incluye comunicaciones por mail, no un agente de WhatsApp. Aconpy automatiza sobre todo la descarga de comprobantes desde ARCA. ConciliaBot envía vencimientos por WhatsApp, convierte documentos a Excel o al formato de importación de varios sistemas (entre ellos Holistor y Onvio) y, en su portal, documenta pedidos de documentación. Kontari redacta pedidos de documentación con confirmación de una persona, puede enviar campañas por WhatsApp y, en el plan Portal, deja que el cliente suba archivos. Ninguno, en lo verificado esa fecha, reemplaza por sí solo un agente sobre el WhatsApp del estudio que clasifique lo recibido y lo deje listo en el sistema que ya está en uso, con revisión humana.
+
+### ¿Qué comprobantes hay que seguir pidiéndole al cliente?
+
+Las facturas electrónicas con CAE suelen consultarse o bajarse desde los servicios oficiales de ARCA (Mis Comprobantes y Portal IVA). Lo que sigue haciendo falta pedir, en la práctica, son tickets o comprobantes que no están ahí, fotos, extractos bancarios o de billeteras, rendiciones y cualquier papel que el cliente todavía no mandó. Eso es lo que un agente puede pedir y ordenar; no reemplaza la revisión del estudio.
+
+### ¿Qué tiene que revisar una persona antes de cargar?
+
+Aunque el archivo esté claro, una persona confirma antes de importar. Si la foto está borrosa, falta el CAE, hay duda de cliente o de tipo, o aparece un posible duplicado, queda marcado y no entra solo. Cualquier cosa que implique pedir o usar una clave fiscal por el chat se frena. El agente ordena y sugiere; el asiento y la presentación los firma el estudio.
+
+### ¿Qué pasa con los datos confidenciales de los clientes?
+
+Un estudio trata información confidencial. La Ley 25.326 exige medidas de seguridad y confidencialidad (art. 9) y el deber de secreto (art. 10). Las claves fiscales no se piden ni se guardan en WhatsApp. El archivo original queda asociado al cliente, con registro de cuándo llegó y quién lo revisó. El detalle del cumplimiento lo ve un especialista; este post no lo resuelve.
+
+### ¿Cuándo alcanza un SaaS y cuándo conviene una capa a medida?
+
+Un SaaS suele alcanzar cuando las compras son casi todas facturas con CAE que se importan desde ARCA, o cuando el estudio y sus clientes van a usar un portal para pedidos y cargas. Una capa a medida, encima del sistema actual, tiene sentido si los clientes ya mandan (o solo contestan) por WhatsApp, y hay que clasificar lo que llega y dejarlo en el sistema que el estudio no quiere abandonar.
+
+### ¿Cómo arranco si hoy pido todo a mano por WhatsApp?
+
+Empezá por un grupo chico de clientes y un solo tipo de documento el primer mes. Revisá a mano todo lo que clasifique el agente y recién después ampliá la cartera. No empieces por todos los clientes, todos los comprobantes y una carga directa al sistema.
+    `.trim(),
+  },
+  {
+    slug: 'controlar-gastos-de-mi-pyme-con-ia',
+    title: 'Controlá los gastos de tu pyme con IA: presupuesto vs. real y alertas de desvíos',
+    description:
+      'Cómo controlar los gastos de tu pyme con IA: cruzá presupuesto vs. real, leé el desvío con el IPC y recibí una alerta con el comprobante. Guía práctica.',
+    date: '2026-11-24',
+    category: 'Automatización & IA',
+    readTime: '15 min',
+    content: `
+## Respuesta corta
+
+Sí, en parte. Controlar los gastos de una pyme con IA es cruzar el presupuesto con el gasto real del sistema de gestión, de los bancos y de Mercado Pago, y avisar cuando un rubro se pasa. El agente puede importar, clasificar con reglas, calcular el desvío y mandar un WhatsApp con el motivo y el comprobante. No paga, no frena un pago ni cambia el presupuesto: eso lo decide una persona. Tampoco reemplaza al contador.
+
+**Puntos clave**
+
+- El cruce tiene que mostrar dos lecturas: el desvío contra el presupuesto **nominal** (los pesos de cuando se armó) y, si se configura, contra el presupuesto **ajustado** por el IPC nivel general nacional del INDEC.
+- El agente importa, clasifica cuando la regla es clara, calcula el desvío y avisa. Una persona decide si se recorta, se reasigna, se amplía el presupuesto o se deja pasar.
+- Para arrancar alcanza un presupuesto por rubros (aunque esté en Excel), una fuente de gastos reales y una persona dueña del presupuesto. No hace falta empezar con todos los bancos ni con todos los centros de costo.
+- En octubre de 2026 el IPC nivel general nacional subió 2,2% mensual y acumuló 26,3% en el año (respecto de diciembre de 2025), con una variación interanual de 33,1% ([INDEC, informe técnico de octubre de 2026](https://www.indec.gob.ar/uploads/informesdeprensa/ipc_11_269335F5BA6B.pdf)). Es el dato para el ejemplo; no es la inflación de cada rubro de tu pyme.
+
+¿Querés ver si este circuito se puede armar con lo que ya tenés? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## El problema: te enterás tarde, y en pesos que ya no valen lo mismo
+
+El problema no es «no tener un presupuesto». Es enterarte del desvío cuando el mes ya cerró, y leerlo en pesos nominales como si la inflación no existiera. En una pyme argentina los gastos están repartidos: el sistema de gestión, una o varias cuentas bancarias y, casi siempre, Mercado Pago. El dueño o la administración armó un presupuesto a principio de año (o lo tiene en una planilla) y lo mira, si lo mira, a fin de mes. Para entonces el desvío ya está, y una parte puede ser inflación, no un gasto de más.
+
+El 17 de noviembre de 2026, [Hoy Diario](https://hoydiario.es/reportajes/argentina/inteligencia-artificial/ia-pymes-buenos-aires-masterclasses-gratis.html) cubrió un ciclo de masterclasses virtuales de Academia BA Emprende. Según esa nota de prensa, la clase del martes 17 se tituló «Respetá tu presupuesto con IA: qué herramienta usar y cómo controlar los gastos de tu pyme», a cargo de Joaquín Mazoud, socio fundador de HitOcean, con una demostración de un agente que identifica desvíos presupuestarios. No es una ficha oficial del curso ni un recuento de lo que se mostró en la clase.
+
+Al 24 de noviembre de 2026, en los blogs de Duotach, Signos Agency y Varka no hay una guía práctica de back office sobre este circuito (presupuesto vs. real, bancos, Mercado Pago y sistemas locales). Sí hay piezas vecinas: Duotach publicó el 6 de noviembre sobre [rendiciones de gastos](https://duotach.com/blog/automatizar-rendiciones-gastos) de empleados y, en [ERP con agentes de IA](https://duotach.com/blog/integrar-ia-erp), menciona «desvíos de presupuesto» como un tipo de alerta; Signos publicó el 22 de noviembre [IA para pymes](https://signos.agency/post/ia-para-pymes), con foco en atención, comercial y contenido; Varka cubre [distribuidoras](https://varka.tech/blog/automatizar-una-distribuidora-con-ia), listas de precios y WhatsApp. En internet sí hay productos y notas generales: el hueco, solo en esos tres sitios, es la guía local. Más contexto, en [IA para pymes argentinas](/blog/ia-para-pymes-argentinas-guia-2026).
+
+Esta es una guía de proceso, no un tutorial de un software, ni un reemplazo del contador, ni asesoramiento impositivo o contable.
+
+## Cómo es el circuito de punta a punta
+
+El agente cruza y avisa; una persona decide. «Automático» es el cruce y el aviso, no la decisión de gastar o de ampliar el presupuesto.
+
+Este circuito no reemplaza la conciliación bancaria ni la carga de facturas de proveedores. Si un gasto no está registrado, o el extracto no cierra, el desvío puede ser un error de carga, no un exceso real. Por eso la alerta tiene que traer el comprobante y no solo un total.
+
+| Paso | Qué pasa | Quién interviene |
+| --- | --- | --- |
+| 1. Tener un presupuesto por rubros y por período | Aunque sea una planilla. Sin esto no hay «desvío», solo un listado de gastos | La persona dueña del presupuesto |
+| 2. Traer el gasto real | Del sistema de gestión (compras, pagos, egresos), de los extractos bancarios y de los reportes de Mercado Pago | El agente importa; una persona revisa si una fuente no entró |
+| 3. Clasificar y cruzar | Cada movimiento va a un rubro, con el comprobante cuando existe, y se compara con el presupuesto de ese rubro (nominal y, si está configurado, ajustado) | El agente propone; una persona corrige la clasificación dudosa |
+| 4. Detectar el desvío | Si el rubro supera el umbral acordado (por ejemplo el 100%, o un aviso al 80%), se arma el caso: rubro, monto, diferencia, posible motivo y comprobante | Automático, con reglas escritas |
+| 5. Avisar por WhatsApp | El mensaje tiene que servir para decidir: qué rubro, cuánto iba, cuánto va, si el desvío se sostiene en la lectura ajustada, cuál es el comprobante y qué se pide | El agente notifica; no ejecuta el pago ni cambia el presupuesto |
+| 6. Decidir y dejar registro | Ampliar, recortar, reasignar, pedir más información o dejar constancia de que se acepta el desvío | Solo una persona. Queda un registro de la decisión |
+
+:::flow
+{ "title": "Del presupuesto al aviso y a la decisión", "steps": [
+  { "title": "1. Tener un presupuesto", "text": "Por rubros y por período, aunque esté en una planilla. Sin esto no hay desvío." },
+  { "title": "2. Traer el gasto real", "text": "Entra el sistema, el extracto bancario y el reporte de Mercado Pago. Si una fuente no llega, se avisa." },
+  { "title": "3. Clasificar y cruzar", "text": "Cada movimiento va a un rubro y se compara con el presupuesto nominal y, si está configurado, con el ajustado." },
+  { "title": "4. Detectar el desvío", "text": "Si el rubro supera el umbral, se arma el caso con montos, diferencia, motivo y comprobante." },
+  { "title": "5. Avisar por WhatsApp", "text": "El mensaje trae los números, el comprobante y una pregunta concreta. El agente no paga ni cambia el presupuesto." },
+  { "title": "6. Decidir y dejar registro", "text": "Una persona amplía, recorta, reasigna o acepta el desvío. Cada decisión queda anotada." }
+] }
+:::
+
+### 1. Tener un presupuesto por rubros y por período
+
+Sin un presupuesto no hay desvío: hay solo un listado de lo que se gastó. Puede estar en una planilla; lo que no puede faltar es un dueño de esa cifra.
+
+### 2. Traer el gasto real
+
+Entra lo registrado en el sistema, el extracto bancario y los reportes de Mercado Pago. Si una fuente no llega, el circuito no inventa movimientos: avisa y espera.
+
+### 3. Clasificar y cruzar
+
+Cada movimiento va a un rubro, con el comprobante cuando existe, y se compara con el presupuesto (nominal y, si está configurado, ajustado). El agente propone cuando la regla es clara; una persona corrige lo dudoso.
+
+### 4. Detectar el desvío
+
+Si el rubro supera el umbral escrito (por ejemplo, un aviso al 80% y otro al 100%), se arma el caso con montos, diferencia, posible motivo y comprobante.
+
+### 5. Avisar por WhatsApp
+
+El mensaje tiene que servir para decidir: rubro, período, presupuesto (y, si aplica, el ajustado), gastado, diferencia, fecha del movimiento, proveedor o cuenta, referencia del comprobante y una pregunta concreta («¿lo revisamos o lo damos por esperado?»). El agente no paga ni cambia el presupuesto.
+
+### 6. Decidir y dejar registro
+
+Una persona decide si se recorta, se reasigna, se amplía el presupuesto, se pide más información o se acepta el desvío. Cada decisión queda anotada.
+
+## Qué datos hacen falta
+
+| Dato | Para qué | De dónde suele salir | Qué no asumir |
+| --- | --- | --- | --- |
+| Presupuesto por rubro y período | Es la base del cruce | Planilla, centros de costo, o lo que el sistema ya permita cargar. En Colppy, la página de funcionalidades menciona «Centros de costo por cliente/proyecto». En Xubio, «Presupuestos» es un comprobante de **ventas**, no un presupuesto financiero | Que el sistema «ya tiene el presupuesto» sin chequearlo |
+| Gasto real del sistema | Lo que la empresa registró (facturas de compra, pagos, egresos) | Exportes y reportes oficiales de cada sistema (ver más abajo) | Que todos los gastos están cargados y bien imputados |
+| Extractos bancarios | Lo que efectivamente salió de las cuentas | El mismo tipo de extracto que se usa para conciliar. No hace falta listar bancos | Que todas las cuentas entran solas |
+| Movimientos de Mercado Pago | Cobros, ajustes y, sobre todo, **retiros y transferencias** desde la cuenta | Reportes oficiales (ver la sección de Mercado Pago) | Que Xubio o Colppy ya importan los *gastos* pagados con Mercado Pago |
+| Comprobante o factura | Para que la alerta no sea un número suelto | PDF, mail, o el archivo adjunto en el sistema | Que la IA «siempre encuentra» el comprobante |
+| Mapeo de rubros | Para que el banco, el sistema y el presupuesto hablen del mismo concepto | Una tabla simple, acordada con administración y el contador | Que la IA inventa el plan de cuentas |
+| Reglas de aviso y dueño del presupuesto | Umbral, destinatario del WhatsApp, quién puede cambiar el presupuesto | Definición de la pyme | Que el agente decide solo |
+| Serie del IPC (si se usa la lectura ajustada) | Para actualizar el presupuesto nominal | INDEC, IPC nivel general nacional, con el mes de inicio y el de corte | Que el IPC general es la inflación de cada rubro |
+
+## Presupuesto nominal vs. presupuesto ajustado por inflación
+
+En Argentina, un desvío en pesos nominales puede ser inflación, no un gasto de más. El cruce, si se configura, tiene que mostrar las dos lecturas: contra el presupuesto armado en su momento y contra ese mismo presupuesto actualizado por un índice acordado.
+
+Los importes de presupuesto y de gasto real de esta tabla son un **ejemplo ilustrativo**. Los porcentajes de inflación son del INDEC y se citan con mes y fuente. El ejemplo usa el IPC **nivel general, total nacional**. Fuente: INDEC, *Índice de precios al consumidor. Cobertura nacional. Octubre de 2026* ([informe técnico](https://www.indec.gob.ar/uploads/informesdeprensa/ipc_11_269335F5BA6B.pdf), vol. 10, n.º 277). El resumen ejecutivo dice que el nivel general registró un alza mensual de 2,2% en octubre de 2026 y acumuló en el año una variación de 26,3%. La variación interanual de octubre de 2026 es 33,1% (cuadro del mismo informe).
+
+Ejemplo: una pyme armó en diciembre de 2025 un presupuesto **nominal** de **$5.000.000** para el rubro «insumos y materiales» de enero a octubre de 2026. En esos diez meses el gasto real (ejemplo) fue de **$6.000.000**.
+
+| Concepto | Importe o dato | Cómo se lee |
+| --- | --- | --- |
+| Presupuesto nominal ene–oct 2026 (ejemplo; armado en dic-2025) | $5.000.000 | Pesos de cuando se armó, sin ajustar |
+| IPC nivel general nacional, oct-2026 vs. dic-2025 (INDEC) | +26,3% | Dato oficial, no es un supuesto del ejemplo |
+| Presupuesto ajustado por ese IPC | $6.315.000 | $5.000.000 × 1,263 |
+| Gasto real ene–oct (ejemplo) | $6.000.000 | Pesos corrientes de lo que se registró |
+| Desvío vs. presupuesto nominal | +$1.000.000 (+20%) | En la lectura nominal, el rubro **se pasó** |
+| Desvío vs. presupuesto ajustado | −$315.000 (aprox. −5%) | En términos de poder de compra del IPC general, el rubro **quedó debajo** |
+
+Si solo se mira el nominal, la alerta dice «nos pasamos». Si también se mira el ajustado, la decisión puede ser otra: revisar precios, no recortar volumen, o al revés.
+
+El 26,3% es el **nivel general** del IPC, no la inflación de cada rubro. En el mismo informe, la división «Vivienda, agua, electricidad, gas y otros combustibles» acumuló **41,3%** respecto de diciembre de 2025. Si el presupuesto que estás mirando es de energía o de alquiler, usar el nivel general puede **subestimar** la inflación de ese rubro. Qué índice usar, de qué mes a qué mes se ajusta y cómo se asienta en la contabilidad lo confirma tu contador: este post no elige un índice por vos ni explica el ajuste por inflación contable. Tango y Colppy anuncian un «ajuste por inflación» en sus módulos de contabilidad; es un proceso contable, con sus normas, y no es este ejercicio de gestión. La variación mensual de octubre (2,2%) y la interanual (33,1%) dan contexto; el ejemplo del período enero–octubre usa el **26,3% acumulado en el año**.
+
+## Semáforo: qué hace el agente y qué decide una persona
+
+No todo tiene que esperar un clic, ni conviene que el agente recorte gastos o cambie el presupuesto por su cuenta. Un semáforo simple alcanza. Es la misma lógica que en un [agente de IA](/blog/agentes-de-ia-para-pymes-como-implementarlos): lo rutinario corre con reglas y lo dudoso lo aprueba alguien de administración.
+
+| Color | Qué puede hacer el agente | Qué no puede hacer |
+| --- | --- | --- |
+| **Verde** | Traer movimientos de las fuentes ya conectadas; imputar un gasto a un rubro cuando la regla es clara (mismo proveedor, misma cuenta, mismo centro de costo); calcular presupuesto vs. real (nominal y ajustado, si está configurado); armar el aviso con montos, diferencia, posible motivo y el comprobante; dejar registro de que avisó | Cambiar el presupuesto, pagar, frenar un pago o «cerrar» un desvío |
+| **Amarillo** (lo revisa una persona) | Proponer una clasificación cuando el proveedor es nuevo, el texto del extracto es ambiguo, no hay comprobante, o el monto se sale de lo habitual; avisar cuando el rubro llega a un umbral de prealerta (si lo definieron) | Dar por buena una imputación dudosa |
+| **Rojo** (lo decide una persona) | — | Ampliar o recortar el presupuesto; autorizar un gasto; cambiar las reglas de imputación; usar un índice distinto al acordado; cualquier movimiento de plata |
+
+Sin un WhatsApp que traiga el rubro, los montos, el comprobante y una pregunta concreta, el aviso es una alarma inútil.
+
+## Qué dicen Tango, Xubio y Colppy en su documentación
+
+Tango, Xubio y Colppy, en sus páginas oficiales, ya permiten registrar, consultar o exportar compras, pagos o resultados. No se encontró, en las páginas consultadas el 24 de noviembre de 2026, un módulo que ellos mismos llamen «presupuesto vs. real» o «alerta de desvío por WhatsApp». El ángulo honesto es usar lo que el sistema ya exporta o reporta, y sumar una capa que cruce esas cifras con un presupuesto, ajuste por inflación si se configura, y avise.
+
+| Sistema | Qué dice la fuente oficial | Qué no afirmar |
+| --- | --- | --- |
+| **Tango** (Axoft) | La página de [Compras](https://www.axoft.com/tango/software-de-gestion/soluciones/compras.php) se titula «Software de control de gastos y compras»: solicitudes y órdenes de compra, recepción, facturas de proveedores, cuentas corrientes, «múltiples informes y estadísticas sobre la gestión de Compras», generación de asientos. La de [Cash Flow](https://www.axoft.com/tango/software-de-gestion/soluciones/cashflow.php) («Software de planificación financiera») habla de proyectar ingresos y egresos, comparar escenarios, analizar el flujo de fondos y **exportar a Microsoft Excel**; también menciona API en ciertos planes (Evo, Plus, XPlus y Gold). La de [Contabilidad](https://www.axoft.com/tango/software-de-gestion/soluciones/contabilidad.php) incluye registración, **ajuste por inflación** (proceso contable) e informes. Tango Tablero se presenta como consulta de indicadores en tiempo real | No decir que Tango ya hace «presupuesto vs. real con alerta por WhatsApp». No listar bancos. No usar el ajuste por inflación contable como si fuera el ejemplo de gestión de este post |
+| **Xubio** | El [Estado de Resultados](https://ayuda.xubio.com/es-ar/como-veo-mi-estado-de-resultados/) se filtra por fechas y se **imprime o exporta en Excel, CSV o TXT**; muestra categorías de ingresos y egresos. La ayuda [«¿Cómo exporto información?»](https://ayuda.xubio.com/es-ar/como-exporto-informacion/) documenta la exportación, entre otros, de **comprobantes de compra**, **pagos**, **cuentas a pagar**, **salidas de fondos** y **movimientos de fondos**. La [integración con Mercado Pago](https://ayuda.xubio.com/es-ar/como-vinculo-cuenta-mercadopago/) sirve para enviar links de pago e [importar cobros y facturarlos](https://ayuda.xubio.com/es-ar/como-facturo-mis-cobros-de-mercadopago/) | No presentar «Ventas > Presupuestos» como control presupuestario: en la ayuda de Argentina, [«Presupuestos»](https://ayuda.xubio.com/es-ar/como-veo-presupuestos/) es un comprobante de cotización de ventas. No afirmar que Xubio exporta un reporte llamado «presupuesto vs. real». No decir que la integración con Mercado Pago trae los gastos pagados con esa cuenta |
+| **Colppy** | La página de [funcionalidades para empresas](https://colppy.com/funcionalidades-clave-para-empresas) anuncia «Reportes automáticos, flujo de fondos y resultados», «Centros de costo por cliente/proyecto» (seguimiento de ingresos, egresos y gastos) y la posibilidad de conectar y sincronizar el banco. En la comparativa de planes figuran ajuste por inflación, conciliación bancaria, «Conectá tu banco» e «Integración con Mercado pago». No detalla en esa página *qué* hace esa integración sobre los gastos | No inventar un módulo de presupuesto vs. real. No describir la integración con Mercado Pago más allá de que está listada |
+
+*Fuentes: páginas oficiales de Axoft, Xubio y Colppy, consultadas el 24 de noviembre de 2026. Las funciones dependen del plan y de la configuración. Verificá en tu sistema o con tu implementador qué está habilitado en tu cuenta.*
+
+## Cómo sacar los movimientos de Mercado Pago
+
+Mercado Pago no clasifica tus retiros en los rubros del presupuesto: ese mapeo lo arma la empresa. Según la [documentación de desarrolladores de Mercado Pago Argentina](https://www.mercadopago.com.ar/developers/es/docs/reports/activities-reports), consultada el 24 de noviembre de 2026, los reportes de «Otras operaciones» permiten configurar, generar y descargar información financiera de la cuenta, en **CSV o XLSX**, y se pueden usar para conciliar cobros, devoluciones, contracargos, reclamos y retiros con los sistemas internos. Se pueden generar **manualmente desde Tus integraciones > Ver mis cobros y movimientos** o [por API](https://www.mercadopago.com.ar/developers/es/docs/reports/activities-reports/api); cada generación manual admite hasta un año de datos. También se pueden programar en forma diaria, semanal o mensual.
+
+| Tipo de reporte (docs AR, reportId) | Qué incluye, según Mercado Pago | Para este post |
+| --- | --- | --- |
+| **Reporte de cobros** (activities_collection) | Cobros por checkout, QR, Point, marketplace y otros canales | Es plata que entra. No tratarlo como gasto |
+| **Reporte poscobro** (activities_after_collection) | Devoluciones, contracargos, reclamos y ajustes posteriores al cobro | Puede afectar el neto, no es un «rubro de gasto» por sí solo |
+| **Reporte de retiros** (activities_withdraw) | Retiros y transferencias de fondos **desde** la cuenta | Es la pieza más relevante para ver plata que sale de Mercado Pago |
+
+La documentación remite a «Campos del reporte» para las columnas de cada archivo: no las inventamos acá. El reporte de cobros no es un listado de gastos; para este circuito, lo que más importa es lo que sale de la cuenta (los retiros) y, cuando corresponda, los ajustes del reporte poscobro.
+
+## Qué necesitás para arrancar
+
+**Qué necesitás para controlar los gastos de tu pyme con IA**
+
+1. Un presupuesto por rubros y por período, aunque esté en una planilla. Sin eso no hay desvío, hay solo un listado de gastos.
+2. Una persona dueña de ese presupuesto: quién lo arma, quién recibe el aviso y quién puede cambiarlo.
+3. El gasto real de **una** fuente para empezar: el sistema de gestión, un banco o Mercado Pago. No hace falta conectar todo el primer mes.
+4. Un mapeo simple: cómo se llama el mismo rubro en el presupuesto, en el sistema y en el extracto.
+5. Los comprobantes al alcance (PDF, mail o el archivo en el sistema), para que el aviso no sea un total suelto.
+6. Un umbral escrito (por ejemplo, avisar al 80% y otra vez al 100%). Si no está escrito, el agente no sabe cuándo hablar.
+7. Si van a leer el desvío también en términos reales, definir de antemano qué índice usan (el ejemplo de este post usa el IPC nivel general nacional del INDEC) y de qué mes a qué mes se ajusta. Eso lo confirma el contador.
+8. Un registro de lo que se avisó y de lo que se decidió (se recortó, se amplió, se reasignó o se aceptó).
+9. Qué queda siempre en rojo: el agente no paga, no frena un pago y no cambia el presupuesto.
+
+Arrancá por un rubro y una fuente, medí un período si los avisos llegan a tiempo y si las imputaciones cierran, y recién ahí sumá otra fuente. Si más adelante querés medir el cambio, partí del tiempo que te lleva hoy, como en [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion).
+
+Cuando los números ya entran con regularidad, un [tablero](/datos-y-tableros) ayuda a verlos juntos: es un complemento, no reemplaza el cruce ni la alerta. Nimbo arma [automatizaciones e integraciones](/automatizacion-e-integracion) entre las fuentes que ya tenés y el aviso, con aprobación humana donde hace falta ([automatizaciones](/automatizaciones), [agentes de IA](/agentes-de-ia)). En [Automatizá tu negocio con IA](/blog/automatiza-tu-negocio-con-ia) ampliamos cómo encarar este tipo de procesos. No prometemos un control «en tiempo real, sin que mires», ni que el agente recorte gastos solo.
+
+Si querés ver si este circuito se puede armar con lo que ya tenés, el [diagnóstico](/diagnostico) es de 20 minutos y no tiene cargo.
+
+## En resumen
+
+Controlar los gastos de tu pyme con IA es cruzar el presupuesto con el gasto real del sistema, de los bancos y de Mercado Pago, y avisar cuando un rubro se pasa. El agente importa, clasifica con reglas, calcula el desvío y manda un WhatsApp con el motivo y el comprobante; una persona decide si se recorta, se reasigna, se amplía el presupuesto o se deja pasar. En Argentina conviene mirar el desvío también contra un presupuesto ajustado: un rubro que «se pasó» en pesos nominales puede no haberse pasado en términos del IPC, o al revés. Tango, Xubio y Colppy, según su documentación oficial, ya reportan y exportan gastos; lo que no documentan es un presupuesto vs. real con alerta por WhatsApp. Arrancá por un presupuesto, una fuente y un umbral escrito, y no ensanches el circuito hasta que quede registro de lo que se avisó y de lo que se decidió.
+
+Si querés ver cómo está hoy tu control de gastos y qué parte se puede cruzar con un aviso, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que tengas hoy.
+
+## Preguntas frecuentes
+
+### ¿Cómo puedo controlar los gastos de mi pyme con IA?
+
+Controlar los gastos de una pyme con IA es cruzar el presupuesto con el gasto real del sistema de gestión, de los bancos y de Mercado Pago, y avisar cuando un rubro se pasa. El agente no paga ni cambia el presupuesto: eso lo decide una persona.
+
+### ¿Qué es el presupuesto vs. real y por qué en Argentina hay que mirarlo también ajustado por inflación?
+
+Es comparar lo que habías presupuestado para un rubro y un período con lo que efectivamente se gastó. En Argentina, un desvío en pesos nominales puede ser inflación, no un gasto de más. El ejemplo de este post usa el IPC nivel general nacional del INDEC: en octubre de 2026 el índice acumuló 26,3% respecto de diciembre de 2025. El IPC general no es la inflación de cada rubro.
+
+### ¿Qué necesitás para arrancar?
+
+Hace falta un presupuesto por rubros, una fuente de gasto real, un umbral, un destinatario del aviso y una persona dueña del presupuesto. No hace falta conectar todos los bancos el primer mes.
+
+### ¿Tango, Xubio o Colppy ya hacen presupuesto vs. real con alerta por WhatsApp?
+
+Según las páginas oficiales consultadas el 24 de noviembre de 2026, los tres permiten registrar, consultar o exportar compras, pagos o resultados. No se encontró un módulo que ellos mismos llamen «presupuesto vs. real» o «alerta de desvío por WhatsApp». Las funciones dependen del plan y de la configuración.
+
+### ¿La integración de Xubio con Mercado Pago trae los gastos?
+
+No está documentado así. En la ayuda oficial, esa integración sirve para enviar links de pago e importar cobros y facturarlos, no los gastos pagados con Mercado Pago. En Colppy, la integración aparece listada, sin detallar qué hace sobre los gastos.
+
+### ¿Qué tiene que traer una alerta de desvío por WhatsApp?
+
+Como mínimo: rubro, período, presupuesto (y, si aplica, el ajustado), gastado, diferencia, fecha del movimiento que disparó el aviso, proveedor o cuenta, referencia del comprobante y una pregunta concreta. Sin el comprobante, es un total suelto.
+
+### ¿El agente puede recortar gastos o cambiar el presupuesto?
+
+No. Puede importar, clasificar con reglas, calcular el desvío, avisar y dejar registro. Ampliar o recortar el presupuesto, autorizar un gasto, cambiar las reglas de imputación o mover plata lo decide una persona.
+
+### ¿El IPC general es la inflación de cada rubro de mi pyme?
+
+No. El 26,3% acumulado en el año a octubre de 2026 es el nivel general nacional. En el mismo informe del INDEC, «Vivienda, agua, electricidad, gas y otros combustibles» acumuló 41,3% respecto de diciembre de 2025. Qué índice usar y cómo se trata en la contabilidad lo confirma tu contador: este post no es asesoramiento impositivo ni contable.
+`,
+  },
+  {
+    slug: 'pago-a-proveedores-automatizado-ia-lote-de-pagos',
+    title: 'Pago a proveedores automatizado con IA: controles antes de pagar y un lote que aprueba una persona',
+    description:
+      'Cómo armar la agenda de vencimientos, controlar duplicados, CUIT e importes, y dejar un lote de transferencias listo para que el dueño lo apruebe. Qué ya ofrecen Tango, Xubio y Colppy.',
+    date: '2026-11-24',
+    category: 'Automatización & IA',
+    readTime: '14 min',
+    content: `
+## Respuesta corta
+
+Sí, en parte. Se pueden tomar las facturas ya cargadas en el sistema de gestión, armar una agenda de vencimientos, correr controles (duplicados, CUIT, importes inusuales, cruce con la orden de compra o el remito) y dejar un lote de transferencias listo. Una persona revisa y aprueba antes de que la plata salga por el banco o por Interbanking. Sistemas como Tango, Xubio y Colppy ya documentan cuentas a pagar, órdenes de pago o pagos masivos; la IA no reemplaza esa aprobación ni decide por su cuenta si corresponde una retención.
+
+**Puntos clave**
+
+- Se puede automatizar una parte: la agenda de lo que vence, los controles y un lote de transferencias listo. Una persona revisa y aprueba antes de que la plata salga. No es «pagar solo».
+- Antes de pagar hay que controlar que la factura no esté duplicada ni ya pagada, que el CUIT figure en la [constancia de inscripción de ARCA](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do), que el importe no se salga de lo habitual o de la orden de compra o el remito, y que el CBU o el alias sea el del proveedor. Lo dudoso no entra al lote.
+- La herramienta propone qué vence, marca alertas y arma el lote. El dueño o quien tenga firma en el banco o en Interbanking aprueba. Nadie deja que la herramienta envíe transferencias ni calcule retenciones «como le parece».
+- SIRCIP es una percepción de Ingresos Brutos que, si aplica, ya viene en la factura; no se descuenta al armar el lote. Si tu pyme es agente de retención, el neto a transferir puede ser menor que el total de la factura: eso lo define tu contador.
+
+¿Querés ver cómo está hoy tu circuito de pagos a proveedores y qué parte se puede armar en un lote con controles, sin que la plata salga sola? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## De la factura cargada al pago: qué problema queda
+
+Cargar la factura no es pagarla. Aunque el comprobante ya esté en el sistema —a mano o con una lectura automática—, el dueño sigue sin saber con tranquilidad qué vence esta semana, si hay un duplicado, si el CUIT o el CBU son los del proveedor, si el importe se fue de lo habitual o si nadie cruzó la orden de compra o el remito.
+
+En muchas pymes las facturas entran y los vencimientos se amontonan. Alguien arma una lista, copia CBU y teme pagar dos veces la misma factura o transferir a una cuenta que no es. Si la empresa retiene, el neto no es el total de la factura y eso también se calcula a mano. Después hay que mirar en el extracto si salió bien: eso es la conciliación bancaria, no este paso.
+
+El tema está en la agenda pública. El 24 de noviembre de 2026 a las 09:30 se dio, en la Academia BA Emprende, una masterclass gratuita de TONIC3, «Pago a proveedores con IA», autorizada por la [Disposición N.º 23/DGIP/26](http://api-restboletinoficial.buenosaires.gob.ar/download/5405803) del Boletín Oficial de CABA. Esta guía no resume esa clase: recorre el paso que sigue a tener las facturas cargadas, con controles, una agenda de vencimientos y un lote listo para que una persona lo apruebe. La plata no sale sola.
+
+## El circuito de punta a punta
+
+El punto de partida son las facturas ya cargadas en tu sistema de gestión, no un PDF suelto sin registro. Un «lote» es el conjunto de transferencias listo para autorizar y enviar: así lo nombra, por ejemplo, la app de Interbanking («autorizar y enviar lotes y transferencias»). En el sistema de gestión ese mismo conjunto puede llamarse pago masivo u orden de pago.
+
+| Paso | Qué pasa | Quién interviene |
+| --- | --- | --- |
+| 1. Partir de las facturas ya cargadas | Entran las facturas pendientes del sistema (y, si aplica, notas de crédito) | El sistema de gestión es la fuente |
+| 2. Armar la agenda de vencimientos | Se listan las deudas por fecha, proveedor e importe, para una semana o el período que defina la empresa | Automático a partir de lo cargado; una persona define el período y la prioridad |
+| 3. Correr los controles | Duplicados, CUIT, importe inusual, cruce con orden de compra o remito, datos de cuenta del proveedor | La herramienta marca alertas; no «limpia» en silencio lo dudoso |
+| 4. Calcular el neto a pagar | Se parte del saldo de la factura. Si hay retenciones, el neto puede ser menor: el criterio lo pone el estudio o la administración | Persona / estudio; la herramienta aplica reglas ya definidas, no inventa alícuotas |
+| 5. Armar el lote | Queda un conjunto de pagos (por proveedor o por factura) con cuenta destino, importe y concepto, en el formato que después use el banco, Interbanking o el módulo de pagos del sistema | La herramienta propone; el lote nace como borrador, no como pago enviado |
+| 6. Aprobar y enviar | El dueño o quien tenga firma revisa, saca lo que no corresponde y aprueba. Recién ahí se envía por el canal del banco o de Interbanking | Siempre una persona. Después, la conciliación de si salió bien es otro paso |
+
+### 1. Partir de las facturas ya cargadas
+
+La fuente es tu sistema de gestión: facturas pendientes y, si aplica, notas de crédito. Este post no cubre cómo se cargan los comprobantes; lo que importa es no pagar desde un PDF suelto sin registro.
+
+### 2. Armar la agenda de vencimientos
+
+La herramienta lista lo que vence. Una persona decide qué se paga ahora y qué se posterga. Si la agenda vive en una planilla paralela, después cuesta imputar el pago en el sistema.
+
+### 3. Correr los controles
+
+Se vuelven a chequear duplicados, CUIT, importes, el cruce con la orden de compra o el remito (si los usás) y la cuenta destino. La herramienta marca alertas; lo dudoso va a revisión.
+
+### 4. Calcular el neto a pagar
+
+Se parte del saldo. Si tu pyme es agente de retención, el neto puede ser menor que el total y suele emitirse un certificado: eso lo define tu contador. La IA no improvisa alícuotas.
+
+### 5. Armar el lote
+
+Queda un conjunto de pagos —por proveedor o por factura— con cuenta destino, importe y concepto. Nace como borrador: todavía no se envió nada.
+
+### 6. Aprobar y enviar
+
+Quien tenga firma revisa, saca lo que no corresponde y aprueba. Recién ahí se envía por el canal que la empresa ya usa. Mirar en el extracto si salió bien es un paso posterior: la conciliación bancaria.
+
+## Controles antes de pagar
+
+Estos controles se corren sobre facturas ya cargadas, justo antes de armar el lote. Conviene dejar registro de qué se miró, cuándo y con qué resultado.
+
+| Control | Qué mira | Qué pasa si no cierra | Fuente o criterio |
+| --- | --- | --- | --- |
+| Duplicados | Mismo CUIT + punto de venta + número, o mismo CAE, o un pago ya aplicado a esa factura | No entra al lote; va a revisión (puede ser una nota de crédito, un recálculo o un doble envío) | Criterio operativo: se vuelve a chequear antes de pagar |
+| CUIT del proveedor | Que el CUIT exista y esté inscripto, con la [constancia de inscripción de ARCA](https://www.arca.gob.ar/landing/portal-noticias/constancia-de-inscripcion.asp) | Si no hay constancia, o el nombre no coincide con el proveedor, se frena | La constancia es pública y se consulta de a un CUIT, con código de seguridad; la consulta vale 30 días corridos ([formulario de ARCA / AFIP SETI](https://seti.afip.gob.ar/padron-puc-constancia-internet/ConsultaConstanciaAction.do)) |
+| Importe inusual | El total (o el neto) se sale de lo habitual de ese proveedor o de lo que dice la orden de compra | Revisión; no se «redondea» solo | Criterio de la empresa (la regla la define ella; no hay un umbral universal) |
+| Orden de compra o remito | Que exista OC o remito y que cantidad e importe cierren, cuando la empresa trabaja con esos comprobantes | Si no hay match, no entra al lote salvo aprobación expresa | Criterio operativo. Tango, por ejemplo, documenta un aviso si hay diferencias al pagar |
+| Cuenta destino | CBU o alias igual al cargado para ese proveedor | Cualquier cambio de cuenta va a revisión (no se actualiza solo) | Pedido mínimo de control; los bancos piden CBU o alias y CUIT para transferir (BBVA lo lista entre los datos de una transferencia a otro banco) |
+| Ya pagada o vencimiento | Que no esté cancelada; que entre en el período que se quiere pagar | Se saca del lote | Agenda del sistema (cuentas a pagar / vencimientos) |
+
+Si se consulta la constancia de ARCA, conviene guardar la constancia o la captura: la propia ARCA indica usar «Imprimir pantalla». Lo verificado acá es esa consulta pública, de a un CUIT, no un padrón masivo que se baja y se cruza contra el lote entero.
+
+## Qué se automatiza y qué aprueba una persona
+
+La herramienta propone, marca y arma el borrador. Una persona decide qué entra, qué se saca y cuándo se envía. En [agentes de IA para pymes](/blog/agentes-de-ia-para-pymes-como-implementarlos) ampliamos esa misma idea de supervisión; acá se baja a un proceso concreto: el pago a proveedores.
+
+| Color | Qué es | Ejemplo | Quién decide |
+| --- | --- | --- | --- |
+| Verde | Factura pendiente, sin alertas, cuenta destino igual a la habitual, importe alineado con lo cargado y (si aplica) con la OC o el remito | Una factura ya controlada al cargar, que vence esta semana, del proveedor de siempre | Puede armarse sola en el borrador del lote; igual el lote completo lo aprueba una persona |
+| Amarillo | Hay una diferencia o un dato a confirmar | Importe distinto de la OC, pago parcial, vencimiento reprogramado, retención a revisar | Administración o el estudio |
+| Rojo | Riesgo de pagar mal o dos veces | Duplicado o CAE repetido, CUIT sin constancia o a nombre de otro, CBU que cambió, proveedor nuevo sin alta, factura que ya tiene un pago | No se paga hasta que una persona lo resuelva |
+
+Nunca es «verde» enviar la plata sin firma. Aunque todas las facturas del lote pasen los controles, el envío lo autoriza quien ya firma hoy en el banco o en Interbanking.
+
+## Qué dicen Tango, Xubio y Colppy en su documentación
+
+Tango, Xubio y Colppy ya tienen cuentas a pagar, órdenes de pago o pagos masivos. La IA va como capa encima: arma y controla el lote, no reemplaza el módulo. Si tu sistema ya hace eso, la automatización tiene que apoyarse en esas funciones, no crear una tesorería paralela en una planilla que después no se imputa.
+
+La tabla resume lo que dicen sus páginas oficiales, consultadas el 24 de noviembre de 2026. No afirmamos que exporten por sí el archivo de un banco o de Interbanking: eso no está en las fuentes citadas.
+
+| Sistema | Qué dice la documentación oficial (24/11/2026) | Qué no afirmamos |
+| --- | --- | --- |
+| [Tango (Axoft)](https://www.axoft.com/tango/software-de-gestion/soluciones/proveedores.php) | Cuentas corrientes acreedoras, órdenes de pago, autorización de facturas a pagar, [pagos masivos](https://net.axoft.com/images/asistencia/compras/Compras_Pagos-Masivos.pdf), pagos a cuenta y cálculo de retenciones (incluye archivo para SICORE). Los comprobantes quedan bajo un número de «Pago Masivo»; puede haber autorización antes de concretar, y después se genera una orden de pago por proveedor. Puede avisar (y, si se habilita, permitir) el pago con diferencias de cantidades o precios | Que Tango exporte, con un clic, el archivo de un banco o de Interbanking |
+| [Xubio](https://ayuda.xubio.com/es-ar/como-veo-mis-cuentas-a-pagar/) | [Cuentas a pagar](https://ayuda.xubio.com/es-ar/como-veo-mis-cuentas-a-pagar/) con vencimiento; [nuevo pago](https://ayuda.xubio.com/es-ar/como-ingreso-nuevo-pago/) (con retenciones, si se practicaron); [pago masivo](https://ayuda.xubio.com/es-ar/como-pago-masivamente-comprobantes-compra/) (un pago por comprobante); [importación vía Excel](https://ayuda.xubio.com/es-ar/como-importo-pagos-via-excel/) (un pago por fila; una retención y una factura; Xubio no recalcula las retenciones del archivo); [envío de pagos por mail](https://ayuda.xubio.com/es-ar/como-envio-mis-pagos-por-mail/), también masivo, con certificado de retención si corresponde | Que Xubio arme por sí un archivo de lote para un banco o Interbanking |
+| [Colppy](https://colppy.com/gestion-clientes-proveedores) | Vencimientos, «programá recordatorios y órdenes de pago», informes de antigüedad, órdenes de compra, cálculo automático de retenciones y percepciones ARBA / CABA (según el plan) y envío de comprobantes de pagos por email. La [factura de compra en cuenta corriente](https://intercom.help/Colppy/es/articles/1263204-factura-de-compra-en-cuenta-corriente) (ayuda del 30/4/2025) trae condición de pago, vencimiento y régimen de retención de Ganancias | Un «pago masivo» o la generación de un lote o archivo para el banco: no lo encontramos en la ayuda consultada |
+
+### Cómo llega el lote al banco o a Interbanking
+
+Armar el lote en el sistema no es lo mismo que enviar la plata. Los canales oficiales hablan de lotes, archivos o pagos masivos, con firma. Esta sección no es un tutorial de un banco, ni cita comisiones, horarios de corte ni formatos de archivo.
+
+| Canal (ejemplos oficiales, 24/11/2026) | Qué se puede citar | Qué no afirmamos |
+| --- | --- | --- |
+| [Interbanking](https://www.interbanking.com.ar/soluciones) | Tesorería digital para centralizar bancos, consultar saldos, transferir y pagar, con permisos. La app permite «autorizar y enviar lotes y transferencias» y usar token. Las APIs transaccionales automatizan pagos «con aprobación segura desde Interbanking». El [portal de desarrolladores](https://developers.interbanking.com.ar/api/prod/taxonomy/term/15) menciona la preconfección de transferencias a cuentas propias, sueldos y pago a proveedores | El formato del archivo, o que Tango, Xubio o Colppy «ya se conectan» a Interbanking para pagos |
+| [BBVA Empresas](https://www.bbva.com.ar/empresas/productos/cobros-pagos/pagos/transferencias.html) | Se puede operar con BBVA Empresas o Interbanking. «Podés realizar transferencias por lote o de manera individual». Para el lote hay que firmar el formulario LS520. Se aprueba con clave de operaciones y token, y se pueden aprobar varias al mismo tiempo. Para transferir a otro banco piden alias o CBU y CUIT | Límites o comisiones generalizados a otros bancos |
+| [Banco Macro](https://www.macro.com.ar/empresas-registros-pago-proveedores) | «Herramientas para operar con Pagos Masivos» desde Banca Internet Empresas, con plantillas Excel descargables: orden de pago, beneficiarios, retenciones, transferencias masivas y mail a beneficiarios | Los campos de esas planillas, o que todos los bancos usen la misma |
+
+El lote tiene que terminar en el canal que la empresa ya usa, con la firma que ese canal pide. Si no se puede exportar o conectar, se puede empezar por una lista de control y una carga asistida: es un límite, no una promesa. Si hace falta un conector que el sistema no trae, a veces entra un desarrollo [a medida](/software-a-medida); no afirmamos acá que Nimbo ya tenga hecha esa integración.
+
+*Información verificada el 24 de noviembre de 2026. Si al publicar cambiaron menús o páginas de ayuda, priman esas fuentes oficiales.*
+
+## SIRCIP y retenciones: qué toca al lote y qué no
+
+SIRCIP no cambia la mecánica del lote. Según la [Comisión Arbitral (COMARB)](https://www.ca.gob.ar/sistemas/sircip), el SIRCIP (Sistema Informático de Recaudación, Control e Información de Agentes de Percepción) armoniza regímenes de percepción locales de Ingresos Brutos de las jurisdicciones adheridas ([preguntas frecuentes](https://www.ca.gob.ar/preguntas-frecuentes/sistemas/sircip); [Resolución General CA 9/2025](https://www.argentina.gob.ar/normativa/nacional/norma-411698/texto)). Lo aplican los agentes de percepción en la factura. Si al comprador le percibieron, el importe ya está (o debería estar) en el comprobante cargado. El lote paga esa deuda; no «aplica SIRCIP» en la transferencia.
+
+El arranque es el **1 de diciembre de 2026** en seis jurisdicciones: Chaco, La Pampa, Río Negro, San Juan, Santiago del Estero y Tierra del Fuego, según la [Disposición 13/2026](https://www.boletinoficial.gob.ar/detalleAviso/primera/350641/20261120) (Boletín Oficial del 20/11/2026). Si te preguntás si te aplica, consultalo con tu contador y con la nómina y el padrón de COMARB. Este post no es asesoramiento impositivo y no indica alícuotas.
+
+Las retenciones son otro régimen, distinto de SIRCIP y también distinto de SIRCREB (las retenciones bancarias). Si tu pyme está designada como agente de retención (IVA, Ganancias, IIBB u otro), el neto a transferir puede ser menor que el total de la factura, y suele emitirse un certificado. Tango, Xubio y Colppy documentan el cálculo o la carga de retenciones en el pago, según las páginas de la tabla anterior. El post no dice quién está obligado ni con qué alícuota. Si retenés, el lote tiene que salir con el neto y los certificados que defina tu contador; no lo improvisa la IA.
+
+| Concepto | Qué es | Qué implica para el lote |
+| --- | --- | --- |
+| SIRCIP | Percepción de Ingresos Brutos que, si aplica, ya viene en la factura | Forma parte de la deuda cargada; no se calcula al transferir |
+| Retenciones (IVA, Ganancias, IIBB u otras) | Solo si tu pyme es agente de retención, según lo que defina tu contador | El neto a transferir puede ser menor que el total; el lote sale con ese neto y los certificados |
+
+*Fuente: Comisión Arbitral ([ca.gob.ar/sistemas/sircip](https://www.ca.gob.ar/sistemas/sircip)) y Boletín Oficial, consultados el 24/11/2026. Verificá las jurisdicciones vigentes y la nómina de agentes en sircip.comarb.gob.ar. Información verificada el 24 de noviembre de 2026.*
+
+## Cómo arrancar con un banco y una semana de vencimientos
+
+No hace falta empezar por todos los bancos y todos los proveedores el mismo día. Elegí un banco, o un solo canal (home banking o Interbanking), y los vencimientos de **una semana**. Usá las facturas ya cargadas en el sistema, corré los controles, armá un lote borrador chico y que lo apruebe quien ya firma hoy. Después mirá en el extracto si salió bien.
+
+Antes de automatizar, conviene medir cómo está hoy el circuito: en [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion) hablamos de arrancar por ese número, sin inventar horas ahorradas. Estas son las preguntas que vale la pena hacerle a quien te arme el pago automático a proveedores.
+
+- [ ] ¿De dónde sale la agenda? ¿Usa las facturas y los vencimientos del sistema, o una planilla paralela?
+- [ ] ¿Qué considera un duplicado (CUIT + número, CAE, factura ya pagada) y qué hace cuando encuentra uno?
+- [ ] ¿Consulta la constancia de inscripción de ARCA y deja registro de esa consulta?
+- [ ] ¿Cómo detecta un importe inusual y quién define esa regla?
+- [ ] ¿Cruza con orden de compra o remito cuando existen? ¿Qué pasa si no cierran?
+- [ ] ¿La cuenta destino (CBU o alias) sale del proveedor cargado? ¿Un cambio de cuenta frena el lote?
+- [ ] ¿El lote nace como borrador? ¿Quién lo aprueba y se registra esa aprobación?
+- [ ] ¿La herramienta puede enviar la transferencia sola, sin firma en el banco o en Interbanking?
+- [ ] ¿Cómo se tratan las retenciones? ¿Quién carga o valida el neto? ¿Se emite o se adjunta el certificado?
+- [ ] ¿El pago queda imputado en el sistema (no solo «enviado» en el banco)?
+- [ ] ¿Se puede sacar un ítem del lote, cancelar el envío o cortar el proceso si algo sale mal?
+- [ ] ¿Qué queda registrado para después conciliar con el extracto?
+
+Nimbo arma [automatizaciones e integraciones](/automatizacion-e-integracion) entre el sistema de gestión, las planillas y los pagos, con aprobación humana donde hace falta ([automatizaciones](/automatizaciones)). Si además querés ver vencimientos y saldos juntos, hay [tableros](/datos-y-tableros) que juntan esos números. En [Automatizá tu negocio con IA](/blog/automatiza-tu-negocio-con-ia) y en [transformación digital para pymes](/blog/transformacion-digital-pymes-argentina) ampliamos cómo encarar este tipo de procesos, paso a paso.
+
+## En resumen
+
+La IA puede armar la agenda de vencimientos y un lote de transferencias con controles; la tranquilidad está en esos controles y en que una persona apruebe antes de transferir. Tango, Xubio y Colppy, según su documentación oficial, ya tienen cuentas a pagar, órdenes de pago o pagos masivos: la automatización rinde cuando se apoya en eso, no cuando pretende pagar sola o inventar retenciones. SIRCIP, si aplica, ya viene en la factura; las retenciones las define tu contador. Arrancá por un banco y una semana de vencimientos, y no ensanches el circuito hasta que el lote salga con firma y quede registrado.
+
+Si querés ver cómo está hoy tu circuito de pagos a proveedores y qué parte se puede armar en un lote con controles, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que tengas hoy.
+
+## Preguntas frecuentes
+
+### ¿Se puede automatizar el pago a proveedores con IA en una pyme argentina?
+
+Sí, en parte. Se pueden tomar las facturas ya cargadas en el sistema de gestión, armar una agenda de vencimientos, correr controles (duplicados, CUIT, importes inusuales, cruce con la orden de compra o el remito) y dejar un lote de transferencias listo. Una persona revisa y aprueba antes de que la plata salga por el banco o por Interbanking. Sistemas como Tango, Xubio y Colppy ya documentan cuentas a pagar, órdenes de pago o pagos masivos; la IA no reemplaza esa aprobación ni decide por su cuenta si corresponde una retención.
+
+### ¿Qué controles hay que hacer antes de pagarle a un proveedor?
+
+Hay que verificar que la factura no esté duplicada ni ya pagada, que el CUIT del proveedor figure en la constancia de inscripción de ARCA (consulta pública, con una validez de 30 días corridos), que el importe no se salga de lo habitual o de la orden de compra o el remito, y que el CBU o el alias sea el del proveedor. Lo que no cierra no entra al lote. El registro de cada control sirve después para conciliar.
+
+### ¿SIRCIP o las retenciones cambian el lote de pagos?
+
+SIRCIP es un régimen de percepciones de Ingresos Brutos de la Comisión Arbitral: si aplica, la percepción ya viene en la factura y forma parte de la deuda. No se calcula al transferir. Arranca el 1 de diciembre de 2026 en seis jurisdicciones (Chaco, La Pampa, Río Negro, San Juan, Santiago del Estero y Tierra del Fuego). Las retenciones son otra cosa: si tu pyme es agente de retención, el neto a transferir puede ser menor que el total de la factura. Eso lo define tu contador, no la herramienta.
+
+### ¿Tango, Xubio o Colppy ya tienen cuentas a pagar?
+
+Sí, según su documentación oficial consultada el 24 de noviembre de 2026. Tango documenta órdenes de pago, autorización y pagos masivos; Xubio, cuentas a pagar, pago (también masivo) e importación de pagos por Excel; Colppy, vencimientos, cuenta corriente de proveedores y órdenes de pago. No encontramos documentado que esos sistemas armen por sí el archivo de lote de un banco o de Interbanking.
+
+### ¿La herramienta puede pagar sola, sin que nadie firme?
+
+No. El lote nace como borrador. Aunque las facturas pasen los controles, el envío lo aprueba el dueño o quien tenga firma en el banco o en Interbanking. Si una herramienta promete «pagar sola», no la uses así.
+
+### ¿Cómo arranco si hoy armo los pagos en una planilla?
+
+Empezá por un banco (o un solo canal) y los vencimientos de una semana, con las facturas ya cargadas en el sistema. Corré los controles, armá un lote borrador chico y que lo apruebe quien ya firma hoy. Después mirá en el extracto si salió bien. No empieces por todos los bancos y todos los proveedores el mismo día.
+    `.trim(),
+  },
+  {
+    slug: 'condicion-iva-receptor-arca-rg-5616',
+    title: 'Desde el 1 de diciembre ARCA rechaza facturas sin la condición frente al IVA del cliente: qué revisar en tu sistema',
+    description:
+      'Desde el 1/12/2026 ARCA no autoriza el comprobante si falta la condición frente al IVA del cliente. Qué dice la RG 5616, qué códigos devuelve el web service y qué revisar en tu sistema y tus automatizaciones.',
+    date: '2026-11-23',
+    category: 'Automatización & IA',
+    readTime: '13 min',
+    content: `
+## Respuesta corta
+
+Desde el 1° de diciembre de 2026, según el [Manual del Desarrollador WSFEv1 versión 4.8](https://www.afip.gob.ar/fe/ayuda/documentos/wsfev1-RG-4291.pdf) de ARCA, si facturás por web service y el pedido de autorización no informa la condición frente al IVA del cliente, ARCA no autoriza el comprobante: no hay CAE y la factura no se emite. La obligación está en el artículo 2° de la [RG 5616/2024](https://servicios.infoleg.gob.ar/infolegInternet/anexos/405000-409999/407369/norma.htm). Tenerlo en la ficha o en el PDF no alcanza: tiene que ir en la solicitud al web service.
+
+**Puntos clave**
+
+- Si el campo va vacío, nulo o sin informar, a partir del 1/12/2026 el pedido se rechaza.
+- La obligación sale de la RG 5616/2024 ([Boletín Oficial](https://www.boletinoficial.gob.ar/detalleAviso/primera/318374/20241218) del 18/12/2024). El artículo 5° había fijado el 15/04/2025 como uso obligatorio de la nueva versión del web service. El manual v4.8 fija el **1° de diciembre de 2026** como la fecha en que el campo pasa a ser obligatorio y dejan de usarse las observaciones 10245 y 825.
+- En CAE, el **10246** es «no se informó el campo»; el **10242**, «no es un valor permitido»; el **10243**, «no es válido para la clase del comprobante». En los tres casos no hay autorización.
+- Los valores aceptados son los del método FEParamGetCondicionIvaReceptor. No todos sirven para todas las clases (A, B, C o tipo 49).
+- No hace falta, necesariamente, cambiar de sistema. Hay que confirmarlo con el proveedor, completar el maestro —también el de los consumidores finales— y probar en homologación antes del 1/12.
+
+¿Querés revisar si tu sistema, el maestro de clientes y los flujos que facturan solos mandan ese dato? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## Qué cambia el 1° de diciembre (y de dónde sale la fecha)
+
+El riesgo es que el 1° de diciembre se corte la facturación si el sistema, la ficha del cliente o una automatización no mandan el dato en el pedido a ARCA. La regla está en la RG 5616; la fecha de rechazo, en el manual oficial v4.8, publicado en la [página de homologación de ARCA](https://www.afip.gob.ar/fe/ayuda/homologacion_externa.asp), con la portada «Revisión correspondiente al 1 de Diciembre de 2026».
+
+El historial de esa versión lo dice así: «Será obligatorio el campo Condición Frente al IVA del receptor, atento a la entrada en vigencia reglamentada por la Resolución General N° 5616.» A partir de entonces quedan en desuso los códigos 10245 (CAE) y 825 (CAEA), que eran el aviso de transición.
+
+| Fecha | Qué dice la fuente | Fuente |
+| --- | --- | --- |
+| 18/12/2024 | Se publica la RG 5616/2024. El art. 2° exige identificar, en los comprobantes electrónicos de la RG 4291, la condición ante el IVA del cliente (comprador, locatario o prestatario) | [Boletín Oficial](https://www.boletinoficial.gob.ar/detalleAviso/primera/318374/20241218); [InfoLEG](https://servicios.infoleg.gob.ar/infolegInternet/anexos/405000-409999/407369/norma.htm) |
+| 15/01/2025 | Art. 5°: se publican los manuales y se habilita la homologación externa. Misma fecha para «Comprobantes en línea» | RG 5616, art. 5° inc. a) y b) |
+| 05/03/2025 | Art. 5°: «Facturador Móvil» y «Facturador» (tiques electrónicos, RG 5198) | RG 5616, art. 5° inc. c) y d) |
+| 06/04/2025 | El campo se puede enviar en forma opcional, hasta que entre en vigencia la obligatoriedad | Manual WSFEv1 v4.0 / texto conservado en la v4.8 |
+| 15/04/2025 | Fecha original de uso obligatorio de la nueva versión del web service | RG 5616, art. 5° inc. a) |
+| 01/12/2026 | El campo pasa a ser obligatorio. Quedan en desuso los códigos 10245 (CAE) y 825 (CAEA) | [Manual WSFEv1 v4.8](https://www.afip.gob.ar/fe/ayuda/documentos/wsfev1-RG-4291.pdf); [página de homologación](https://www.afip.gob.ar/fe/ayuda/homologacion_externa.asp) |
+
+Colegios profesionales, por ejemplo el [CPBA (20/11/2026)](https://www.cpba.com.ar/noticias/item/16065-arca-sera-obligatorio-informar-la-condicion-frente-al-iva-del-receptor), y la prensa tributaria vienen advirtiendo lo mismo. [iProfesional (9/09/2026)](https://www.iprofesional.com/impuestos/464104-nuevo-requisito-arca-puede-trabar-emision-facturas) relató que ARCA habría enviado avisos a emisores en los que detectó comprobantes sin el dato. Eso es contexto: la fuente de la fecha es el manual.
+
+*Información verificada el 23 de noviembre de 2026. Si ARCA publicara una versión posterior del manual, priman esa versión y el catálogo vigente del método oficial.*
+
+## A quién alcanza y qué comprobantes
+
+El artículo 2° de la RG 5616 aplica a los comprobantes electrónicos de la [RG 4291](https://www.afip.gob.ar/ws/documentacion/ws-factura-electronica.asp): quienes facturan con un sistema propio o una aplicación conectada a los web services, sean responsables inscriptos o monotributistas que emiten factura C por ese régimen. El CPBA lo señala especialmente para sistemas propios e integraciones.
+
+El WSFEv1 cubre comprobantes A, B, C y M sin detalle de ítem (facturas, notas de crédito y de débito, entre otros). El dato va en cada solicitud, en el campo CondicionIVAReceptorId. La factura C también entra: figura en la tabla oficial, en la columna C.
+
+Si tu sistema usa WSMTXCA (comprobantes con detalle de ítem), el campo se llama condicionIVAReceptor y los códigos son otros: **190** (no se informó), **191** (combinación inválida) y **198** (condición no contemplada). El [manual WSMTXCA v0.25.10](https://www.afip.gob.ar/fe/ayuda/documentos/Web-Service-MTXCA-Homo-Externa.pdf) (9/10/2026) ya trata esos casos como rechazo. No los mezcles con los del WSFEv1.
+
+No está confirmado, al 23 de noviembre de 2026, que el mismo campo sea obligatorio en comprobantes de exportación (factura E / WSFEX) ni en controladores fiscales. El artículo 3° de la RG 5616, sobre controladores, habla de moneda extranjera, no de este dato. Si facturás en esos circuitos, consultalo con tu contador.
+
+Tampoco está confirmado el comportamiento actual de «Comprobantes en línea» o del «Facturador». El artículo 5° ya había fijado fechas de 2025 para esas herramientas (15 de enero y 5 de marzo). No afirmamos que recién el 1/12 empiecen a pedir el dato. Si facturás solo con las herramientas de ARCA, revisá que el campo aparezca y esté completo, y confirmalo con tu contador.
+
+## Qué códigos devuelve ARCA
+
+En WSFEv1 hay dos modalidades. El **CAE** es la autorización de cada comprobante. El **CAEA** es una autorización anticipada, de contingencia. Los códigos no son los mismos, y no todos rechazan. Los textos se parafrasean del manual (el original tiene erratas del tipo «consular»; acá va «consultar»).
+
+| Código | Modalidad | Tipo | Qué significa | Qué hacer |
+| --- | --- | --- | --- | --- |
+| 10246 | CAE | Error excluyente | No se informó el campo, y es obligatorio según la RG 5616 | Mandar el campo con un valor del catálogo oficial |
+| 10242 | CAE | Error excluyente | El valor no es un valor permitido | Usar un código vigente de FEParamGetCondicionIvaReceptor |
+| 10243 | CAE | Error excluyente | El valor existe, pero no combina con la clase del comprobante (A, B o C) | Corregir la condición o la clase, con el criterio del contador |
+| 10245 | CAE | Observación (en desuso desde la v4.8) | Aviso de transición: el campo *resultará* obligatorio. Antes, el comprobante se podía autorizar igual | No lo esperes a partir del 1/12: si falta el dato, ahora corresponde el 10246 |
+| 826 | CAEA | Error excluyente | Equivalente al 10246 (campo obligatorio) | Igual que el 10246 |
+| 823 | CAEA | Error excluyente | Equivalente al 10242 (valor no permitido) | Igual que el 10242 |
+| 824 | CAEA | Observación | Equivalente al 10243 (no válido para la clase) | Revisar la combinación; en CAEA esta validación observa, no necesariamente rechaza |
+| 825 | CAEA | Observación (en desuso desde la v4.8) | Equivalente al 10245 | Igual que el 10245 |
+
+El propio manual aclara: si el valor informado no es válido, en CAE se rechaza y en CAEA se observa; si el valor no existe, se rechaza en ambos casos. En CAE, 10246, 10242 y 10243 son validaciones excluyentes: el comprobante no se autoriza.
+
+## Qué valores admite el campo, según la clase del comprobante
+
+Los valores aceptados son los del método oficial [FEParamGetCondicionIvaReceptor](https://servicios1.afip.gov.ar/wsfev1/service.asmx?op=FEParamGetCondicionIvaReceptor). Esta es la tabla del manual WSFEv1 v4.8. Si al consultarlo el método devolviera un alta o una baja, prima esa respuesta.
+
+| Código | Descripción (texto del manual) | A / ALEY* | B | C | Tipo 49 (bienes usados) |
+| --- | --- | --- | --- | --- | --- |
+| 1 | IVA Responsable Inscripto | Sí |  | Sí |  |
+| 4 | IVA Sujeto Exento |  | Sí | Sí |  |
+| 5 | Consumidor Final |  | Sí | Sí | Sí |
+| 6 | Responsable Monotributo | Sí |  | Sí |  |
+| 7 | Sujeto No Categorizado |  | Sí | Sí |  |
+| 8 | Proveedor del Exterior |  | Sí | Sí |  |
+| 9 | Cliente del Exterior |  | Sí | Sí |  |
+| 10 | IVA Liberado – Ley N° 19.640 |  | Sí | Sí |  |
+| 13 | Monotributista Social | Sí |  | Sí |  |
+| 15 | IVA No Alcanzado |  | Sí | Sí |  |
+| 16 | Monotributo Trabajador Independiente Promovido | Sí |  | Sí |  |
+
+ALEY es «A con leyenda “operación sujeta a retención”».
+
+Esta tabla no te dice qué factura tenés que emitir. Te dice qué códigos acepta ARCA para cada clase. La clase (A, B o C) y la condición correcta de cada cliente las confirma tu contador. Un error típico de una automatización es mandar «consumidor final» (código 5) en una factura A, o no cargar condición en un cliente nuevo que entró por la tienda o el CRM: eso puede disparar el 10243 o el 10246.
+
+## Qué revisar en tu sistema, en el maestro de clientes y en las automatizaciones
+
+Falla cualquiera de estos tres frentes y el 1/12 se corta la emisión.
+
+| Frente | Qué controlar | Si falla el 1/12 |
+| --- | --- | --- |
+| Sistema o desarrollo que pide el CAE | Que la solicitud al web service incluya el campo (CondicionIVAReceptorId, o condicionIVAReceptor si es WSMTXCA), con un valor del catálogo, en facturas, notas de crédito y notas de débito | Rechazo 10246 (o 190 en WSMTXCA) |
+| Maestro de clientes | Cada cliente tiene condición cargada y vigente, también los consumidores finales; no hay códigos viejos o vacíos; si alguien cambió de régimen, la ficha se actualizó | Rechazo 10242 o 10243 |
+| Automatizaciones que emiten | Tienda, Mercado Libre, CRM, n8n/Zapier, un agente de IA o cualquier flujo que arme el comprobante sin que una persona lo mire: de dónde sale la condición, qué pasa si falta, y que no se «adivine» un código | El flujo factura mal en silencio o no puede facturar |
+
+:::flow
+{ "title": "Qué revisar antes del 1° de diciembre", "steps": [
+  { "title": "1. Listá lo que factura", "text": "Sistema de gestión, facturador aparte, tienda, punto de venta, flujos automáticos o un agente." },
+  { "title": "2. Preguntale al proveedor", "text": "Si la versión en uso ya manda la condición frente al IVA del cliente en cada pedido de autorización a ARCA." },
+  { "title": "3. Completá el maestro", "text": "Cada cliente tiene condición cargada y vigente, también los consumidores finales y quienes cambiaron de régimen." },
+  { "title": "4. Revisá las automatizaciones", "text": "Tienda, CRM o un flujo que emite solo: de dónde sale la condición y qué pasa si falta." },
+  { "title": "5. Probá en homologación", "text": "Emití comprobantes de prueba de cada tipo, con clientes de distintas condiciones, y anotá el código completo si algo se rechaza." }
+] }
+:::
+
+### El sistema o la integración
+
+Preguntale por escrito a tu proveedor si la versión que usás ya manda el campo en cada pedido de CAE o CAEA, desde qué versión y si lo probaron en el [entorno de homologación de ARCA](https://www.afip.gob.ar/fe/ayuda/homologacion_externa.asp). Si el sistema es a medida o un conector propio, revisá el armado del pedido: es el lugar donde más suele faltar el dato. No alcanza un valor que solo se imprime en el PDF.
+
+Al 23 de noviembre de 2026 no encontramos un comunicado oficial público de Tango, Xubio, Colppy, Contabilium, Alegra, Mercado Pago o Tiendanube sobre este rechazo del 1/12. No podemos decirte que tu sistema «ya lo manda» o que «no lo manda»: pedíselo por escrito y pedí respuesta antes de esa fecha. Como antecedente, no como garantía del estado de tu instalación, Tango Software dedicó un [vivo oficial el 26 de junio de 2025](https://www.youtube.com/watch?v=Zge1e2FHDFE) a la implementación de la RG 5616.
+
+### El maestro de clientes
+
+Completá las fichas vacías, revisá códigos que no estén en la tabla y no dejes clientes de e-commerce o de mostrador como «sin condición». Si un cliente cambió de régimen en el año, la ficha tiene que estar actualizada. Qué código le corresponde a un caso dudoso (sujeto no categorizado, no alcanzado, cliente del exterior) lo define tu contador: no lo resuelve este post ni un flujo automático.
+
+### Las automatizaciones que facturan solas
+
+Si un checkout, un CRM o un escenario de n8n o Zapier da de alta el cliente y [dispara la factura](/blog/automatiza-tu-negocio-con-ia), hay que mapear la condición (o pedírsela al comprador cuando corresponde) y frenar el envío a ARCA si el dato falta, en lugar de rellenar con un 5 «por las dudas». Un [agente de IA](/blog/agentes-de-ia-para-pymes-como-implementarlos) que emita o desarme comprobantes entra en la misma regla: puede armar el pedido, no inventar la condición ni mandar a autorizar un comprobante sin ese campo. Lo dudoso lo ve una persona.
+
+Antes del 1/12, emití en homologación comprobantes de prueba de cada tipo que usen (factura, nota de crédito, nota de débito) con clientes de distintas condiciones. Si algo se rechaza, anotá el código completo. El 1/12, no reemitas a ciegas: se puede duplicar un comprobante.
+
+## Qué pedirle al proveedor y al contador
+
+**Al proveedor del sistema o a quien mantiene la integración** (por escrito, y con respuesta antes del 1/12):
+
+1. ¿La versión que estamos usando ya envía la condición frente al IVA del cliente en cada pedido de CAE o CAEA?
+2. ¿Desde qué versión, y lo probaron en el entorno de homologación de ARCA?
+3. ¿Cubre facturas, notas de crédito y notas de débito, de las clases que emitimos (A, B, C, M u otras)?
+4. ¿Qué hace el sistema si la ficha del cliente no tiene condición o tiene un código que ARCA no acepta para esa clase? ¿Frena o manda igual?
+5. ¿Se puede probar en homologación, con un caso de cada condición?
+6. Si facturamos también desde la tienda, el CRM u otro flujo, ¿esos caminos usan la misma integración o hay otro pedido al web service que hay que revisar?
+
+**Al contador o al estudio:**
+
+1. Revisar el maestro: condición frente al IVA de cada cliente, incluidos consumidores finales y los que cambiaron de régimen en el año.
+2. Definir qué código corresponde en los casos dudosos (sujeto no categorizado, no alcanzado, cliente del exterior, etc.): eso no lo resuelve el post ni un flujo automático.
+3. Confirmar la clase de comprobante (A, B o C) que se está emitiendo a cada tipo de cliente, para no chocar con la tabla oficial (error 10243).
+
+**En la empresa, esta semana:** listar todo lo que factura (sistema de gestión, facturador aparte, tienda, punto de venta, flujos automáticos, un agente); completar fichas vacías y corregir códigos que no estén en la tabla; probar en homologación; y dejar un responsable por si el 1/12 aparece un rechazo.
+
+Si facturás desde un sistema a medida, un conector o un [flujo automático](/automatizacion-e-integracion) y no tenés claro si el campo viaja en el pedido, en Nimbo podemos revisar esa integración, el maestro y las [automatizaciones](/automatizaciones) que emiten solos, y dejar armado un control para lo que no tiene que salir sin una persona. Si el caso es un desarrollo o un conector propio, también se puede ver por el lado de [software a medida](/software-a-medida). Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Este post no es asesoramiento impositivo: qué código le corresponde a un cliente y qué clase de comprobante emitir lo define tu contador.
+
+## En resumen
+
+El 1° de diciembre no perdona un campo vacío: si el pedido al web service no lleva la condición frente al IVA del cliente, ARCA no autoriza el comprobante. La obligación viene de la RG 5616/2024; la fecha de rechazo, del manual oficial WSFEv1 v4.8. En muchos casos se puede ajustar la integración y completar el maestro, sin cambiar de sistema. Lo impositivo —qué código le corresponde a cada cliente y qué clase de factura emitir— lo ve tu contador.
+
+Si querés revisar tu sistema, el maestro y los flujos que facturan solos antes del 1/12, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que tengas hoy.
+
+## Preguntas frecuentes
+
+### ¿Qué pasa si mi factura no informa la condición frente al IVA del cliente?
+
+Desde el 1° de diciembre de 2026, según el Manual del Desarrollador WSFEv1 versión 4.8 de ARCA, la solicitud de autorización que no informe ese dato se rechaza: no hay CAE y la factura no se emite. El dato tiene que ir en el pedido al web service, en el campo CondicionIVAReceptorId. Tenerlo en la ficha del cliente o impreso en el PDF no alcanza.
+
+### ¿Desde cuándo es obligatorio y de qué norma sale?
+
+La obligación de identificar la condición ante el IVA del cliente está en el artículo 2° de la Resolución General 5616/2024, publicada en el Boletín Oficial el 18 de diciembre de 2024, y alcanza a los comprobantes electrónicos emitidos en los términos de la RG 4291. El artículo 5° había fijado el 15 de abril de 2025 como fecha de uso obligatorio de la nueva versión del web service. El manual oficial v4.8 establece que a partir del 1° de diciembre de 2026 el campo es obligatorio y dejan de usarse las observaciones de transición (códigos 10245 y 825).
+
+### ¿Qué significa el error 10246, el 10242 o el 10243?
+
+Son validaciones excluyentes del web service WSFEv1, en la modalidad CAE. El 10246 indica que no se informó el campo CondicionIVAReceptorId. El 10242, que el valor enviado no es un valor permitido (hay que usar un código del método FEParamGetCondicionIvaReceptor). El 10243, que el valor existe pero no es válido para la clase del comprobante (A, B o C). En los tres casos el comprobante no se autoriza. El código 10245 era solo un aviso previo y, en la versión 4.8 del manual, queda en desuso.
+
+### ¿Qué valores acepta el campo CondicionIVAReceptorId?
+
+Los del método oficial FEParamGetCondicionIvaReceptor. El manual v4.8 publica una tabla con los códigos 1, 4, 5, 6, 7, 8, 9, 10, 13, 15 y 16, y no todos combinan con todas las clases (A, B, C o tipo 49). Un valor que existe pero no corresponde a la clase dispara el error 10243. Qué código le corresponde a un cliente y qué clase de comprobante emitir lo confirma tu contador.
+
+### ¿Tengo que cambiar de sistema o alcanza con ajustar la integración?
+
+No necesariamente. En muchos casos alcanza con que el sistema o la integración ya manden el campo, y con tener completa y correcta la condición de cada cliente, también la de los consumidores finales. Confirmáselo por escrito al proveedor y probá en homologación antes del 1/12. Al 23 de noviembre de 2026 no hay un aviso oficial público de los sistemas de gestión más usados sobre este rechazo: no asumas que «ya está».
+
+### ¿También aplica si soy monotributista o si emito facturas C?
+
+Sí, entra en el recorte de la RG 4291 y en la tabla oficial del manual (columna C). No es un requisito solo para responsables inscriptos. El campo va en cada solicitud, también en las facturas C y en las notas de crédito y de débito de ese régimen.
+
+### ¿Aplica a facturas de exportación o a controladores fiscales?
+
+No está confirmado, al 23 de noviembre de 2026, que el mismo campo sea obligatorio en comprobantes de exportación (factura E / WSFEX) ni en controladores fiscales. El artículo 3° de la RG 5616, sobre controladores, habla de moneda extranjera, no de este dato. Si facturás en esos circuitos, consultalo con tu contador.
+
+### ¿Qué le pregunto a mi proveedor y a mi contador?
+
+Al proveedor, por escrito: si la versión en uso ya envía el campo en cada pedido, si lo probaron en homologación, si cubre todas las clases que emitís y qué hace el sistema cuando la ficha está vacía o el código no combina. Al contador: que revise el maestro, que defina los casos dudosos y que confirme la clase de comprobante de cada tipo de cliente. Este post no reemplaza ese criterio.
+    `.trim(),
+  },
+  {
+    slug: 'meta-one-empresas-agente-ia-whatsapp',
+    title: 'Meta One para empresas: qué incluye cada plan, qué queda gratis del agente de IA de Meta y cuándo te conviene uno propio',
+    description:
+      'Qué trae cada plan de Meta One, qué queda gratis del agente de IA de Meta en WhatsApp y cuándo a una pyme le conviene un agente conectado a su sistema.',
+    date: '2026-11-23',
+    category: 'Inteligencia Artificial',
+    readTime: '11 min',
+    content: `
+## Respuesta corta
+
+Meta One es la suscripción paga que Meta presentó el 15 de septiembre de 2026 para sumar, en planes Essential, Advanced, Expert y Max, más uso de su agente de IA en WhatsApp y herramientas de presencia en Instagram, Facebook y WhatsApp. Las apps y Meta AI siguen siendo gratis. En la app de WhatsApp Business el agente de Meta tiene un cupo mensual gratis cuyo tamaño la compañía no publica; al alcanzarlo podés pasar a un plan o esperar a que se renueve. Pagar Meta One no conecta solo ese agente con tu stock ni con tu sistema: si tiene que operar con tus datos, hace falta una integración.
+
+¿Querés ver si te alcanza el agente de Meta o si hace falta conectarlo a tu sistema? Lo vemos en un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)**.
+
+## Qué es Meta One (y qué no es)
+
+Meta One es una suscripción paga que agrupa funciones extra de Instagram, Facebook y WhatsApp, y más uso de IA, con planes para personas, creadores y empresas. Este post cubre **los planes para empresas**: Essential, Advanced, Expert y Max.
+
+La experiencia básica de las apps y de Meta AI sigue siendo gratis, según el [anuncio del 15 de septiembre de 2026](https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/) (actualizado el 16/9). El despliegue es gradual. No es un lanzamiento de esta semana: las notas de mediados de noviembre repiten ese anuncio de septiembre.
+
+Para no mezclar productos: **WhatsApp Plus** es un plan personal (temas, stickers, fijar chats), no el de empresa. **Meta Business Agent** responde a tus clientes; no es Meta AI ni el asistente de IA para negocios, que te ayuda a vos con tareas internas, como aclara la [ayuda de WhatsApp](https://faq.whatsapp.com/1153795669452207). **Meta Verified** es un producto anterior, centrado en la insignia y la protección contra suplantación. Meta One lo toma como base y suma más funciones y más uso de IA; no es lo mismo, y Verified no «desapareció».
+
+La ayuda oficial, consultada el 23 de noviembre de 2026, sigue diciendo que Meta One está en **prueba limitada** y que no está en todos lados. El 15/9 Meta habló de un despliegue gradual a nivel global, para empresas elegibles. Eso no alcanza para afirmar que ya está —o que no está— en Argentina: hay que mirarlo en tu cuenta, en WhatsApp Business, en Ajustes > Suscripciones o en Herramientas > Agente de IA.
+
+## Qué queda gratis del agente de IA de Meta
+
+En la app de WhatsApp Business, si el agente está disponible para tu cuenta, se activa en Herramientas > Agente de IA. Aprende del catálogo, la descripción, la dirección, los horarios, los perfiles públicos y los sitios web. Según lo que le hayas cargado, puede responder horarios y ubicación, productos, recomendaciones, precios, descuentos, pagos y envíos.
+
+Hay un **cupo mensual gratis**. Si lo alcanzás, podés pasar a un plan Meta One o esperar a que se renueve. **Meta no publica de cuántas respuestas es ese cupo ni cuántas suma cada plan.** Si la app te muestra un número, ese es el que vale para tu cuenta; no lo tomes de blogs de terceros.
+
+Suscribirse a un plan que nombra al agente **no garantiza** que te lo habiliten. El agente no está en todos los países ni para todos los rubros, y el idioma depende del número de la empresa. Se chequea en la app. Si no aparece, la ayuda remite a una lista de espera, sin fecha ni garantía.
+
+El cliente ve un aviso de que el negocio usa IA de Meta. Puede pedir hablar con una persona; vos también podés tomar el chat.
+
+Al activarlo se pausan los saludos y los mensajes de ausencia; pueden verse afectadas las listas de difusión y los mensajes que desaparecen; se desconectan los dispositivos vinculados (algunos, como WhatsApp para Windows, no se pueden volver a vincular). Meta puede usar la información del negocio y los chats donde el agente está activo para mejorar su IA, también si lo silenciás; eso deja de ocurrir si lo eliminás.
+
+### Si lo usás por la API, el cobro es otro
+
+Por la plataforma de WhatsApp Business, desde el 1 de agosto de 2026 Meta cobra el agente a **USD 2 por millón de tokens**, una tarifa global que incluye el procesamiento de IA y la entrega (solo tokens de entrada y salida, no los de caché). Según Meta, un mensaje típico consume 20.000 a 25.000 tokens, unos 4 a 5 centavos de dólar. No hay mensajes gratis y se cobra también en la ventana gratuita de los anuncios de clic a WhatsApp. Hace falta un medio de pago: si no está cargado, Meta no entrega esos mensajes. Los 1.000 mensajes de servicio gratis por número y por mes, vigentes desde el 1 de octubre de 2026, son para respuestas de una persona o de una IA de terceros: **no aplican** al agente de Meta. Por esta vía sí se le pueden agregar conexiones a tus sistemas; eso es un trabajo de integración, no un plan Meta One. *Fuente: Meta, [Pricing on the WhatsApp Business Platform](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing) y [Upcoming pricing updates for Meta Business Agent](https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing/non-template-messages), consultadas el 23/11/2026.*
+
+## Qué trae cada plan de Meta One para empresas
+
+Los cuatro planes suman, en distinto grado, más acceso al agente de Meta y herramientas de presencia. Los precios oficiales son «desde», en dólares y por perfil o cuenta. El importe y las funciones que valen son los que te muestra tu cuenta al suscribirte.
+
+| Plan | Precio oficial publicado | Cómo lo presenta Meta | Lo más relevante para una pyme que vende por WhatsApp o Instagram |
+| --- | --- | --- | --- |
+| Essential | Desde USD 14,99 al mes | Establecer la presencia y ganar confianza | Más acceso a Meta Business Agent en WhatsApp, insignia y canal verificado (si se aprueba la verificación) y protección contra suplantación |
+| Advanced | Desde USD 49,99 al mes | Herramientas profesionales | Todavía más respuestas del agente, programación (historias hasta 30 días), enlaces en posts y Reels orgánicos, analíticas exportables, acceso de equipo sin compartir la contraseña, más dispositivos vinculados y créditos de difusión en WhatsApp |
+| Expert | Desde USD 149 al mes | Escalar y optimizar | Mayor nivel de funciones y de capacidad del agente, para equipos que operan a escala |
+| Max | Desde USD 499 al mes | El nivel más alto | Máximo acceso a funciones y a la capacidad del agente, para equipos a gran escala |
+
+*Fuente: Meta, [Introducing Meta One](https://about.fb.com/news/2026/09/introducing-meta-one-subscription-service-more-features-ai/) (15/9/2026, actualizada el 16/9) y [Introducing Meta One plans for businesses](https://www.facebook.com/business/news/introducing-meta-one-plans-for-businesses) (15/9/2026). La versión para América Latina del mismo anuncio ([Presentamos Meta One](https://about.fb.com/ltam/news/2026/09/presentamos-meta-one-un-servicio-de-suscripcion-con-mas-funciones-e-ia-para-crear-conectar-y-destacar/)) repite estos precios en USD y aclara que planes, beneficios, precios y disponibilidad pueden variar según la región, la app y la cuenta. Consultadas el 23/11/2026. El precio se cobra por perfil o cuenta. No conviertas estos dólares a pesos ni los tomes como tarifa cerrada para Argentina.*
+
+La prensa argentina del 15 de septiembre de 2026 ([La Nación](https://www.lanacion.com.ar/tecnologia/meta-one-es-la-nueva-suscripcion-mensual-para-acceder-a-funciones-avanzadas-de-ia-en-instagram-nid15092026/) e [Infobae](https://www.infobae.com/tecno/2026/09/15/pagar-por-whatsapp-instagram-y-facebook-ya-es-una-realidad-asi-es-meta-one-y-las-funciones-que-trae/)) publicó otros importes en dólares (10,99 / 37,99 / 109 / 379). Es un dato de prensa, no la tarifa oficial: no están en una página de Meta y no sirven para presupuestar.
+
+Esta es la parte de cada plan que más le importa a una pyme que atiende por WhatsApp e Instagram. **Meta no publica cuántas respuestas del agente suma cada plan**: solo habla de «más acceso», «todavía más» o «acceso máximo».
+
+| Beneficio | Essential | Advanced (suma lo de Essential) | Expert (suma lo de Advanced) | Max (suma lo de Expert) |
+| --- | --- | --- | --- | --- |
+| Meta Business Agent | Más acceso a respuestas 24/7 en WhatsApp Business | Todavía más acceso en WhatsApp Business | Créditos de IA adicionales, según la ayuda de WhatsApp (sin una cifra de respuestas) | Acceso máximo a respuestas 24/7 en WhatsApp Business |
+| Insignia verificada (Instagram, Facebook, WhatsApp Business) | Sí, si se aprueba la verificación | Igual | Igual | Igual |
+| Canales verificados en WhatsApp Business | 1 | 3 | La ayuda general no publica un cupo distinto | 10 |
+| Dispositivos vinculados | La ayuda general no publica un cupo puntual | 6 | La ayuda general no publica un cupo distinto | 10 |
+| Acceso de equipo en Instagram (sin compartir la contraseña) | — | Hasta 4 personas más | Hasta 8 | Hasta 30 |
+| Créditos de difusión en WhatsApp | — | 500 | 1.250 | 5.000 |
+| Cuentas comerciales protegidas | — | — | — | Hasta 50 |
+
+*Fuente: [About Meta One plans](https://www.meta.com/help/960854640235758/) (ayuda de Meta, consultada el 23/11/2026) y, para el agente y la verificación, [About using Meta Business Agent with Meta One](https://faq.whatsapp.com/2112106596314330) y [About Meta One plans](https://faq.whatsapp.com/975910528178219) (ayuda de WhatsApp, misma fecha). Si un beneficio no está disponible en tu país, la ayuda dice que el resto del plan no se ve afectado.*
+
+A partir de Advanced también hay herramientas de publicación y analíticas. La ayuda lista, además, soporte humano y almacenamiento en la nube de Edits. La insignia, el canal verificado y la protección contra suplantación **solo aplican si la verificación se aprueba**: no es automática ni está garantizada. Si no te verifican, el resto del plan se mantiene. Edits Plus aparece en el anuncio como algo que vendrá: no es un plan disponible hoy.
+
+### Cómo se contrata y cómo se cancela
+
+Se contrata desde las apps de Meta en el celular. Para mirar los planes, Meta apunta al [sitio de Meta One](https://www.meta.com/meta-one-plans/). La ayuda dice que se puede cancelar en cualquier momento. El precio y los beneficios concretos salen en tu cuenta; no describimos un flujo que no hayamos recorrido en una cuenta argentina.
+
+## Meta One, el cupo gratis o un agente conectado a tu sistema
+
+Son caminos distintos, y no siempre excluyentes. Meta One compra más cupo del agente de Meta y herramientas de presencia. Un [agente de IA conectado a tu sistema](/agentes-de-ia) compra la capacidad de operar con tus datos. Podés pagar un plan por la insignia o el acceso del equipo y, igual, necesitar esa [integración](/automatizacion-e-integracion).
+
+:::flow
+{ "title": "Tres caminos, no siempre excluyentes", "steps": [
+  { "title": "1. Cupo gratis del agente de Meta", "text": "Si te aparece en la app, sirve para consultas de catálogo, horarios, pagos y envíos, hasta el límite mensual que Meta no publica." },
+  { "title": "2. Un plan Meta One", "text": "Suma más acceso al mismo agente y herramientas de presencia (insignia, equipo, difusión). Pagar el plan no conecta solo el agente a tu sistema." },
+  { "title": "3. Un agente conectado a tu sistema", "text": "Consulta stock, precios y cuenta, y puede cargar pedidos o turnos. Se puede complementar con un plan Meta One." }
+] }
+:::
+
+| | Cupo gratis del agente de Meta (app, si está disponible) | Un plan Meta One (Essential a Max) | Agente propio conectado a tu sistema |
+| --- | --- | --- | --- |
+| Para qué sirve | Responder consultas frecuentes con lo que cargaste en Meta | Lo mismo, con más cupo del agente, más insignia, equipo, difusión y herramientas de presencia | Operar: consultar stock, precios y cuenta, y cargar pedidos o turnos en tu sistema |
+| De dónde saca los datos | Catálogo, perfil, web, descripción, horarios y lo que le enseñes en la app | Igual, si usás el agente de Meta | Tu CRM, tu sistema de gestión, tu stock y las reglas que definas |
+| Cupo del agente | Un límite mensual gratis; Meta no publica el tamaño | «Más» acceso; Meta no publica cuántas respuestas suma cada plan | Lo definís vos; si va por la API, se suman los mensajes que cobra Meta (servicio u otra categoría) |
+| Precio | Gratis hasta el cupo | Precios oficiales «desde» de la tabla de arriba; el importe local se ve en tu cuenta | Puesta en marcha, abono, IA y lo que cobre Meta por los mensajes |
+| ¿Se conecta solo a tu sistema? | No | No: pagar el plan no arma esa conexión | Sí: esa es la diferencia |
+| Datos de las conversaciones | Meta puede usar los chats con el agente activo para mejorar su IA | Igual, si usás el agente de Meta | Depende de cómo se arme; se puede dejar la lógica y el registro en tus sistemas |
+| Insignia, equipo, programación | No (son beneficios de los planes pagos) | Según el plan | No vienen en el agente; son otra decisión |
+
+El agente de Meta por API puede consultar tu sistema si alguien le construye esa conexión: no es lo mismo que un plan Meta One. Si todavía no tenés clara la diferencia entre un agente y un bot de respuestas fijas, arrancá por [agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots).
+
+## Cuándo te puede alcanzar Meta (con o sin Meta One) y cuándo conviene uno propio
+
+El agente de Meta te puede alcanzar si las consultas se resuelven con el catálogo, los horarios, los pagos y los envíos que ya le cargaste. Si tiene que mirar stock real, aplicar tu lista de precios, consultar la cuenta de un cliente o cargar el pedido en tu sistema, hace falta un agente conectado a esos datos. Eso no se resuelve pagando un plan de Meta One.
+
+**Te puede alcanzar el de Meta** (el cupo gratis o un plan, si está disponible) si:
+
+- las consultas son horarios, zonas, catálogo, formas de pago y envío;
+- esa información ya está en el catálogo o en la web;
+- te sirve una cobertura fuera de hora, con derivación a una persona;
+- no precisás que el agente escriba en tu sistema.
+
+**Conviene un agente conectado a tu sistema** si:
+
+- hay que leer el stock del día, los precios por cliente o la cuenta corriente;
+- hay que cargar el pedido en el sistema de gestión o en el CRM;
+- hace falta un registro de lo que se acordó;
+- no querés que esos chats alimenten la IA de Meta.
+
+Eso se puede construir sobre la API del agente de Meta o con un agente propio. La diferencia no es «Meta o un proveedor»: es **quién arma y mantiene la conexión con tu sistema** y dónde vive la lógica. Pagar Essential u otro plan no reemplaza esa integración: puede sumar la insignia o el acceso del equipo, pero el pedido no entra solo al sistema.
+
+En Nimbo armamos [agentes de IA](/agentes-de-ia) para WhatsApp e Instagram conectados a stock, precios y pedidos, que derivan a una persona cuando hace falta. Para quien vende por WhatsApp, está la [página del agente de WhatsApp](/wsp); si el trabajo es conectar sistemas, [automatización e integración](/automatizacion-e-integracion). Los controles para implementar un agente están en [cómo implementarlo](/blog/agentes-de-ia-para-pymes-como-implementarlos) y en [cómo automatizar tu pyme con IA](/blog/automatizar-pyme-ia-chatbot-whatsapp).
+
+## Qué mirar antes de suscribirte
+
+Antes de pagar un plan o de encargar un agente, conviene revisar esto en tu cuenta y en tu operación:
+
+1. ¿Me aparece Meta One o el Agente de IA en *esta* cuenta, en Argentina, hoy?
+2. ¿De cuánto es el cupo gratis que me muestra la app? (Si no lo muestra, no asumas un número.)
+3. ¿El precio y los beneficios de mi cuenta coinciden con el anuncio global, o son otros?
+4. ¿La verificación está aprobada o solo «incluida sujeta a aprobación»?
+5. ¿Qué tiene que hacer el agente: responder el catálogo, o mirar stock y cargar pedidos?
+6. ¿Dónde van a vivir esos datos y quién los usa para entrenar un modelo?
+7. ¿Quién arma y mantiene la conexión con mi sistema, y cómo se deriva a una persona?
+
+## En resumen
+
+Las apps y Meta AI siguen siendo gratis. El agente de Meta, en la app, tiene un cupo mensual que la compañía no cuantifica; los planes pagos suman más de ese cupo y herramientas de presencia. Si el agente tiene que operar con tu sistema, hace falta una integración, con o sin Meta One.
+
+Si querés ver qué le conviene a tu pyme, **[agendá un diagnóstico de 20 minutos, sin cargo](/diagnostico)**. Lo vemos con lo que tengas hoy.
+
+## Preguntas frecuentes
+
+### ¿Qué es Meta One para empresas?
+
+Meta One es la suscripción paga que Meta presentó el 15 de septiembre de 2026 para sumar, en planes Essential, Advanced, Expert y Max, más uso de su agente de IA en WhatsApp y herramientas de presencia en Instagram, Facebook y WhatsApp. Las apps y Meta AI siguen siendo gratis. En la app de WhatsApp Business el agente de Meta tiene un cupo mensual gratis cuyo tamaño la compañía no publica; al alcanzarlo podés pasar a un plan o esperar a que se renueve. Pagar Meta One no conecta solo ese agente con tu stock ni con tu sistema: si tiene que operar con tus datos, hace falta una integración.
+
+### ¿El agente de IA de Meta para WhatsApp es gratis?
+
+En la app de WhatsApp Business, Meta dice que hay un cupo mensual gratis; si lo alcanzás, podés pasar a un plan Meta One o esperar a que se renueve. Meta no publica de cuántas respuestas es ese cupo ni cuántas suma cada plan. Por la API, el agente de Meta se cobra a USD 2 por millón de tokens desde el 1 de agosto de 2026 (unos 4 a 5 centavos de dólar por mensaje, según Meta), sin mensajes gratis.
+
+### ¿Qué incluye cada plan (Essential, Advanced, Expert y Max)?
+
+Los cuatro suman, en distinto grado, más acceso al agente, insignia y canal verificado (si se aprueba la verificación), programación, analíticas, acceso de equipo, dispositivos vinculados y créditos de difusión en WhatsApp. La lista puntual está en la tabla de este post, siempre con la salvedad de que beneficios y disponibilidad pueden variar por región, app y cuenta.
+
+### ¿Cuándo conviene un agente conectado a mi sistema en vez del de Meta?
+
+El agente de Meta te puede alcanzar si las consultas se resuelven con el catálogo, los horarios, los pagos y los envíos que ya le cargaste. Si tiene que mirar stock real, aplicar tu lista de precios, consultar la cuenta de un cliente o cargar el pedido en tu sistema, hace falta un agente conectado a esos datos. Eso no se resuelve pagando un plan de Meta One. No siempre es uno o el otro: podés usar un plan por la presencia y, igual, necesitar esa integración.
+
+### ¿Cuánto cuesta Meta One en Argentina?
+
+Según el anuncio oficial de Meta, los planes para empresas empiezan en USD 14,99, 49,99, 149 y 499 al mes (Essential, Advanced, Expert y Max), por perfil. Meta aclara que planes, beneficios, precios y disponibilidad pueden variar según la región, la app y la cuenta. No hay una lista oficial de precios para Argentina en las páginas de Meta: el importe que vale es el que te muestra tu cuenta.
+
+### ¿Meta One ya está disponible en Argentina?
+
+El 15 de septiembre Meta dijo que los planes se estaban desplegando de forma gradual a nivel global, para empresas elegibles. La ayuda oficial, consultada el 23 de noviembre de 2026, sigue diciendo que Meta One está en prueba limitada y que no está en todos lados. No se puede afirmar que sí o que no: hay que mirarlo en WhatsApp Business, en Ajustes > Suscripciones, o en Herramientas > Agente de IA.
+
+### ¿Si pago Meta One, el agente se conecta solo a mi stock o a mi CRM?
+
+No por pagar el plan. En la app, el agente responde con lo que le cargaste (catálogo, perfil, web, horarios). Conectarlo a tu sistema es un trabajo de integración, y eso es otro producto: la API del agente de Meta, o un agente propio.
+
+### ¿Ya pago Meta Verified: me cambia algo?
+
+Según el anuncio de Meta One para empresas, a las suscripciones actuales no les cambia nada por ahora; Meta dice que te va a avisar cuando puedas cambiarte. Una [ayuda posterior](https://www.meta.com/help/subscriptions/1118238814392042/) explica el pasaje de Verified a Meta One: la opción se está introduciendo de forma gradual y puede no aparecerte todavía.
+    `.trim(),
+  },
+  {
     slug: 'conciliacion-bancaria-automatica-ia-pyme',
     title: 'Conciliación bancaria automática con IA para pymes argentinas: qué se cruza solo y qué revisa una persona',
     description:
