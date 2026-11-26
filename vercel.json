@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/((?!api/|robots\\.txt|sitemap\\.xml|favicon\\.svg|.*\\.(?:png|jpg|jpeg|webp|svg|ico|woff2?|css|js|txt|xml)$).*)",
+      "source": "/((?!api/|robots\\.txt|sitemap\\.xml|favicon\\.svg|.*\\.(?:png|jpg|jpeg|webp|svg|ico|woff2?|css|js|txt|xml|mp4|webm)$).*)",
       "destination": "/_spa.html"
     }
   ],

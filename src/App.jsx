@@ -36,6 +36,7 @@ const WspPage = lazy(() => import('./pages/Wsp'))
 const BlogIndice = lazy(() => import('./pages/BlogIndice'))
 const Articulo = lazy(() => import('./pages/Articulo'))
 const Empecemos = lazy(() => import('./pages/Empecemos'))
+const ManifiestoPage = lazy(() => import('./pages/Manifiesto'))
 
 // robots.nimbodata.com (VPS) publica este mismo build y muestra el informe en la raíz.
 const IS_ROBOTS_HOST = typeof window !== 'undefined' && window.location.hostname.startsWith('robots.')
@@ -107,12 +108,14 @@ export default function App() {
     (IS_AUTO_HOST && pathname === '/')
   // El resto del sitio usa el diseño blanco ("Nimbodata Landing v2"): encabezado, botón flotante y pie blancos.
   const isSite = !isLanding && !isReport
+  // /manifiesto (NIMBO.md) es una página de lectura propia: sin encabezado, pie ni botón flotante del sitio
+  const isManifiesto = pathname === '/manifiesto'
   const isNew = !IS_ROBOTS_HOST && !IS_AUTO_HOST && NS_PATH.test(pathname)
   useNdPage(isSite)
   // las páginas viejas usan Poppins, Inter y Garamond: se cargan recién al entrar a una (ver index.html)
   useEffect(() => {
-    if (!isNew) window.__legacyFonts?.()
-  }, [isNew])
+    if (!isNew && !isManifiesto) window.__legacyFonts?.()
+  }, [isNew, isManifiesto])
   // si el splash índigo de index.html quedó (p. ej. /robots redirigido a la home), en el sitio blanco no va
   useEffect(() => {
     if (isSite) document.getElementById('splash')?.remove()
@@ -124,10 +127,10 @@ export default function App() {
         <DiagnosticoProvider>
         <AgendarProvider>
         {!ready && !isSite && <SplashScreen onDone={onSplashDone} />}
-        <div className={`app-shell${isSite && !isNew ? ' nd' : ''}`}>
+        <div className={`app-shell${isSite && !isNew && !isManifiesto ? ' nd' : ''}`}>
           {isReport && <GDefs />}
           <ScrollManager />
-          {isSite && !isAuto && !isNew && <NdHeader />}
+          {isSite && !isAuto && !isNew && !isManifiesto && <NdHeader />}
           <Suspense fallback={null}>
             <Frame isNew={isNew}>
             <Routes>
@@ -141,6 +144,7 @@ export default function App() {
               <Route path="/pyme" element={<PymePage />} />
               <Route path="/pyme/contacto" element={<PymeContacto />} />
               <Route path="/wsp" element={<WspPage />} />
+              <Route path="/manifiesto" element={<ManifiestoPage />} />
               <Route path="/proyectos" element={<Proyectos />} />
               <Route path="/trabajos/:slug" element={<LegacyProject />} />
               <Route path="/nosotros" element={<Nosotros />} />
@@ -163,8 +167,8 @@ export default function App() {
             </Routes>
             </Frame>
           </Suspense>
-          {!isLanding && !isNew && <Footer />}
-          {isSite && !isAuto && !isNew && <NdFloat />}
+          {!isLanding && !isNew && !isManifiesto && <Footer />}
+          {isSite && !isAuto && !isNew && !isManifiesto && <NdFloat />}
         </div>
         </AgendarProvider>
         </DiagnosticoProvider>
