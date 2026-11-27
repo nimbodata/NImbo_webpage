@@ -4068,19 +4068,19 @@ No hace falta transformar todo. En la práctica, casi toda pyme puede mejorar en
 
 ### 1. Presencia digital (que te encuentren)
 
-Es la base. Si cuando te buscan en Google no aparecés, todo lo demás no importa. Una página web profesional, un perfil de Google Business optimizado y presencia en las redes donde está tu cliente. Este frente es el que convierte desconocidos en consultas.
+Es la base. Si cuando te buscan en Google no aparecés, todo lo demás no importa. Una página web profesional, un perfil de Google Business optimizado y presencia en las redes donde está tu cliente. Este frente es el que convierte desconocidos en consultas. Si estás en este punto, te sirven dos guías: [cuánto cuesta una página web en Argentina en 2026](/blog/cuanto-cuesta-una-pagina-web-en-argentina-2026) y [cómo aparecer en Google con SEO local](/blog/seo-local-argentina-como-aparecer-en-google). Y si querés que la armemos con vos, mirá [desarrollo web para pymes](/desarrollo-web-pymes).
 
 ### 2. Automatización de tareas repetitivas (que trabajes menos)
 
-Todo lo que hacés todos los días y no requiere tu criterio es candidato a automatizarse: responder las mismas preguntas, coordinar turnos, mandar recordatorios, cargar datos de un lado a otro. Acá es donde más tiempo se recupera.
+Todo lo que hacés todos los días y no requiere tu criterio es candidato a automatizarse: responder las mismas preguntas, coordinar turnos, mandar recordatorios, cargar datos de un lado a otro. Acá es donde más tiempo se recupera. Así lo encaramos en [automatizaciones para pymes](/automatizaciones), y para decidir si te conviene, mirá [cómo medir el ROI de una automatización](/blog/como-medir-el-roi-de-una-automatizacion).
 
 ### 3. Inteligencia artificial aplicada (que escales sin contratar)
 
-La IA permite que una pyme haga cosas que antes necesitaban un equipo: un chatbot que atiende 24 horas, respuestas automáticas bien redactadas, generación de contenido, análisis de consultas. No reemplaza tu criterio, pero multiplica tu capacidad.
+La IA permite que una pyme haga cosas que antes necesitaban un equipo: un chatbot que atiende 24 horas, respuestas automáticas bien redactadas, generación de contenido, análisis de consultas. No reemplaza tu criterio, pero multiplica tu capacidad. Si no tenés clara la diferencia entre un bot de respuestas y un agente que hace tareas, leé [agentes de IA vs. chatbots](/blog/agentes-de-ia-vs-chatbots) y [cómo implementar agentes de IA en tu pyme](/blog/agentes-de-ia-para-pymes-como-implementarlos), o mirá qué hacemos en [agentes de IA](/agentes-de-ia).
 
 ### 4. Datos y decisiones (que dejes de manejar a ciegas)
 
-La mayoría de las pymes toma decisiones por intuición porque no mira sus números. ¿Qué producto deja más margen? ¿En qué horario vendés más? ¿Cuántos clientes vuelven? Ordenar esos datos en un tablero simple cambia la calidad de tus decisiones.
+La mayoría de las pymes toma decisiones por intuición porque no mira sus números. ¿Qué producto deja más margen? ¿En qué horario vendés más? ¿Cuántos clientes vuelven? Ordenar esos datos en un tablero simple cambia la calidad de tus decisiones. Es lo que armamos en [datos y tableros](/datos-y-tableros): tus números clave en un solo lugar, al día.
 
 ---
 
@@ -4120,7 +4120,7 @@ La transformación digital no es un proyecto gigante ni un gasto de lujo. Es una
 
 Lo importante es empezar por el cuello de botella real, resolver una cosa a la vez, y medir. El resto viene solo.
 
-En Nimbo acompañamos a pymes argentinas en ese camino: automatización, IA, web y datos, un paso a la vez. Si querés que veamos juntos por dónde te conviene empezar, **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo charlamos sin compromiso.
+En Nimbo acompañamos a pymes argentinas en ese camino: automatización, IA, web y datos, un paso a la vez. Si querés que veamos juntos por dónde te conviene empezar, pedí un **[diagnóstico de 20 minutos, sin cargo](/diagnostico)** o, si preferís, **[escribinos por WhatsApp](https://wa.me/5491124036836)** y lo charlamos sin compromiso.
     `.trim(),
   },
   {
