@@ -1,5 +1,5 @@
 // /pyme · Nimbodata Consultoría: la unidad de Nimbodata que hace diagnóstico y mejora de la gestión interna para pymes
-// de obras y servicios técnicos del AMBA. Es la cara al mercado del Plan de Negocio Express (Parte C del trabajo de la
+// constructoras y de obras civiles del AMBA. Es la cara al mercado del Plan de Negocio Express (Parte C del trabajo de la
 // facultad): todo lo que dice esta página tiene que coincidir con el plan (segmento, servicios, equipo, caso, modalidad).
 // El primer cliente va sin nombre: el plan pide usar el caso respetando su confidencialidad.
 import Fig from './Fig'
@@ -119,7 +119,7 @@ export default function Pyme() {
             <h1>Ordenamos la gestión de tu pyme con lo que ya tiene.</h1>
           </div>
           <div data-reveal style={{ '--d': '120ms' }}>
-            <p className="lead"><Words>Diagnóstico y mejora de la gestión interna para pymes de obras y servicios técnicos del AMBA. Encontramos qué falla, por qué falla, y te acompañamos a resolverlo.</Words></p>
+            <p className="lead"><Words>Diagnóstico y mejora de la gestión interna para pymes constructoras y de obras civiles del AMBA. Encontramos qué falla, por qué falla, y te acompañamos a resolverlo.</Words></p>
             <div className="btns">
               <a className="btn btn-acc" href="/pyme/contacto" data-cta="pyme-hero">Pedí una primera reunión <Arrow /></a>
               <a className="btn" href="#servicios">Ver servicios <Arrow /></a>
@@ -133,7 +133,7 @@ export default function Pyme() {
           <div className="py-about" data-reveal>
             <h2>Quiénes somos.</h2>
             <div>
-              <p className="lead">Nimbodata Consultoría es una consultora de gestión creada en 2026 por un equipo de seis integrantes con formación en administración de empresas, marketing y comercio exterior. Ayudamos a pymes de obras y servicios técnicos a organizar y mejorar sus procesos administrativos, operativos y de gestión.</p>
+              <p className="lead">Nimbodata Consultoría es una consultora de gestión creada en 2026 por un equipo de seis integrantes con formación en administración de empresas, marketing y comercio exterior. Ayudamos a pymes constructoras y de obras civiles a organizar y mejorar sus procesos administrativos, operativos y de gestión.</p>
               <p className="lead">Somos una extensión de Nimbodata, que hace automatizaciones e inteligencia artificial para empresas. Acá nos dedicamos a otra cosa: diagnosticar y ordenar la gestión. La IA la usamos para analizar la información de cada cliente y, si tu empresa la necesita, te la ofrecemos.</p>
             </div>
           </div>
@@ -204,7 +204,7 @@ export default function Pyme() {
           <div className="sec-head" data-reveal>
             <div>
               <h2>A quién ayudamos.</h2>
-              <p className="lead">Pymes de construcción, obras civiles, instalaciones eléctricas, energía y telecomunicaciones del AMBA, de 10 a 50 personas y con varias obras en curso, que crecieron más rápido que sus procedimientos de gestión.</p>
+              <p className="lead">Pymes constructoras y de obras civiles del AMBA, de 10 a 50 personas y con varias obras en curso, que crecieron más rápido que sus procedimientos de gestión.</p>
             </div>
           </div>
           <div className="ev-grid">

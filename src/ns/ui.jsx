@@ -72,7 +72,7 @@ function PymeFooter() {
     <footer className="wrap foot">
       <div>
         <a href="/pyme" className="logo"><Logo /><LogoWord /></a>
-        <p>Nimbodata Consultoría: diagnóstico y mejora de la gestión interna para pymes de obras y servicios técnicos del AMBA.</p>
+        <p>Nimbodata Consultoría: diagnóstico y mejora de la gestión interna para pymes constructoras y de obras civiles del AMBA.</p>
       </div>
       <div><h5>Servicios</h5><a href="/pyme#servicios">Diagnóstico de gestión</a><a href="/pyme#servicios">Diseño de procesos</a><a href="/pyme#servicios">Implementación acompañada</a><a href="/pyme#servicios">Seguimiento posterior</a></div>
       <div><h5>Explorar</h5><a href="/pyme#nosotros">Quiénes somos</a><a href="/pyme#clientes">A quién ayudamos</a><a href="/pyme#caso">Primer caso</a><a href="/pyme#proceso">Cómo trabajamos</a><a href="/pyme#propuesta">Por qué Nimbodata</a><a href="/pyme#equipo">Equipo</a></div>
