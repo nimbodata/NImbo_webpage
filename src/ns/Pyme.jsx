@@ -137,6 +137,12 @@ export default function Pyme() {
               <p className="lead">Somos una extensión de Nimbodata, que hace automatizaciones e inteligencia artificial para empresas. Acá nos dedicamos a otra cosa: diagnosticar y ordenar la gestión. La IA la usamos para analizar la información de cada cliente y, si tu empresa la necesita, te la ofrecemos.</p>
             </div>
           </div>
+          <figure className="py-video" data-reveal>
+            <video controls preload="none" playsInline poster="/pyme/video-institucional.jpg" width="1920" height="1080">
+              <source src="/pyme/video-institucional.mp4" type="video/mp4" />
+            </video>
+            <figcaption className="mono">Video institucional · 2:28</figcaption>
+          </figure>
         </section>
 
         <section id="problemas" className="sec wrap">

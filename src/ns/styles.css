@@ -697,6 +697,9 @@ html.has-cursor input, html.has-cursor textarea, html.has-cursor [contenteditabl
 .py-kicker { margin-bottom: 18px; }
 .py-about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 56px; align-items: start; }
 .py-about .lead + .lead { margin-top: 18px; }
+.py-video { margin: 56px 0 0; }
+.py-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 16px; border: 1px solid #e7e5f0; background: #f1f0fa; }
+.py-video figcaption { margin-top: 12px; font-size: 13px; color: #6b6880; }
 .py-num { display: block; color: var(--muted); margin-bottom: 14px; }
 .py-sub { margin-top: 72px; }
 .ev-grid-3 { grid-template-columns: repeat(3, 1fr); }
